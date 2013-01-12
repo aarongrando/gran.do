@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Boilerplate::Application.load_tasks
+Grrrando::Application.load_tasks

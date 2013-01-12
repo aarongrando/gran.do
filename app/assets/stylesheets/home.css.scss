@@ -1,3 +1,78 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background: url('/assets/top-bg.png') repeat-x;
+	font-size: 25px;
+}	
+
+#container {
+	width: 780px;
+	margin: 0 auto;
+	padding-top: 3.5em;
+}
+
+header {
+	h1 {
+		text-align: center;
+		font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
+		font-weight: normal;
+		font-size: 2.1em;
+
+	}
+
+	h2 {		
+		text-align: center;
+		font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
+		font-size: 1.7em;
+	}
+	
+	img {
+		display: block;
+		margin: 0 auto;
+		width: 16em;
+		height: 16em;
+	}
+}
+
+p {
+	font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
+	margin-bottom: 1em;
+	a {
+		color: #db5f6c;
+		text-decoration: none;
+		&:hover {
+			color: #85989c;
+		}
+	}	
+}
+
+hr {
+	width: 5em;
+	background-color: #bbb;
+	height: 1px;
+	border: none;
+	margin-top: 1.2em;
+	display: block;
+}
+
+nav {
+	font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
+	text-align: center;
+
+	a {
+		display: inline-block;
+		color: #ccc;
+  		font-family: "ff-netto-web-1","ff-netto-web-2";
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 1em .5em 2em .5em;
+		letter-spacing: 1px;
+		
+		&:hover {
+			color: #444;
+			
+		}
+	}
+}

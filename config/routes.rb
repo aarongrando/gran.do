@@ -1,4 +1,4 @@
-Boilerplate::Application.routes.draw do
+Grrrando::Application.routes.draw do
   
   ActiveAdmin.routes(self)
 

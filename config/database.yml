@@ -6,13 +6,13 @@ global: &global
   encoding: utf8
 
 development:
-  database: boilerplate_development
+  database: Grrrando_development
   <<: *global
 
 test: &test
-  database: boilerplate_test<%=ENV['TEST_ENV_NUMBER']%>
+  database: Grrrando_test<%=ENV['TEST_ENV_NUMBER']%>
   <<: *global
 
 production:
-  database: boilerplate_production
+  database: Grrrando_production
   <<: *global
