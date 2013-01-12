@@ -103,9 +103,6 @@ GEM
     kgio (2.7.4)
     launchy (2.1.2)
       addressable (~> 2.3)
-    lograge (0.1.2)
-      actionpack
-      activesupport
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -199,7 +196,6 @@ DEPENDENCIES
   foreman
   heroku
   jquery-rails
-  lograge
   pg
   rails (= 3.2.9)
   sass-rails (~> 3.2.3)
