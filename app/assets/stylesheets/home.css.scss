@@ -3,14 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	background: url('/assets/top-bg.png') repeat-x;
-	font-size: 25px;
+	background: url('/assets/top-bg.png') 0 -30px repeat-x;
+	font-size: 18px;
 }	
 
 #container {
-	width: 780px;
+	width: 88%;
 	margin: 0 auto;
-	padding-top: 3.5em;
+	padding-top: 1.3em;
 }
 
 header {
@@ -18,21 +18,21 @@ header {
 		text-align: center;
 		font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
 		font-weight: normal;
-		font-size: 2.1em;
+		font-size: 1.9em;
 
 	}
 
 	h2 {		
 		text-align: center;
 		font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
-		font-size: 1.7em;
+		font-size: 1.3em;
 	}
 	
 	img {
 		display: block;
 		margin: 0 auto;
-		width: 16em;
-		height: 16em;
+		width: 50%;
+		height: 50%;
 	}
 }
 
@@ -62,7 +62,7 @@ nav {
 	text-align: center;
 
 	a {
-		display: inline-block;
+		display: block;
 		color: #ccc;
   		font-family: "ff-netto-web-1","ff-netto-web-2";
 		text-transform: uppercase;
@@ -75,4 +75,75 @@ nav {
 			
 		}
 	}
+}
+
+
+// 480px & Up
+@media only screen and (min-width: 480px) {
+	#container {
+		padding-top: 3.5em;	
+	}
+	body {
+		background: url('/assets/top-bg.png') top center repeat-x;
+		font-size: 20px;
+	}
+	header {
+		h1 { font-size: 2.1em; }
+		h2 { font-size: 1.7em; }
+	}
+}
+
+// 600px & Up
+@media only screen and (min-width: 600px) {
+	body {
+		font-size: 20px;
+	}
+	header {
+		h1 { font-size: 2.1em; }
+		h2 { font-size: 1.7em; }
+	}
+	#container {
+		width: 600px;
+	}
+	nav {
+		a {
+			display: inline-block;
+		}
+	}
+}
+
+// 768px & Up
+@media only screen and (min-width: 768px) {
+	body {
+		font-size: 25px
+	}
+	header {
+		h1 { font-size: 1.9em; width: 708px; margin: .7em auto; }
+		h2 { font-size: 1.6em; width: 708px; margin: .7em auto; }
+		img {
+			width: 35%;
+			width: 35%;
+		}
+	}
+	#container {
+		width: 700px;
+	}
+}
+
+// 992px & Up
+@media only screen and (min-width: 992px) {
+	#container {
+		width: 860px;
+	}
+	header {
+		img {
+			width: 35%;
+			width: 35%;
+		}
+	}
+}
+
+// 1382px & Up
+@media only screen and (min-width: 1382px) {
+	// @import "1382";
 }
