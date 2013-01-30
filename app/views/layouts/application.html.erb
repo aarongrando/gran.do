@@ -10,7 +10,8 @@
 		<meta name="description" content="I'm Aaron Grando. I'm a web designer and developer. I create websites that help people reach their goals.">
 		<meta name="viewport" content="width=device-width">
 		<link rel="shortcut icon" href="/assets/yo.png"> 
-		<link rel="apple-itouch-icon" href="/assets/yo.png">
+		<link rel="apple-touch-icon-precomposed" href="/assets/touchicon.jpg" />
+
 		<%= stylesheet_link_tag    "application", :media => "all" %>
 		<script type="text/javascript" src="//use.typekit.net/tgv7mqo.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -19,14 +20,18 @@
     </head>
     <body>
         <!-- Add your site or application content here -->
+		<nav>
+			<div class="in"></div>
+		</nav>
 		<div id="container">
         	<%= yield %>
         </div>
-		<hr>
 		<nav>
-			<a href="http://twitter.com/grrrando">@grrrando</a>
-			<a href="http://redtettemer.com">Red Tettemer + Partners</a>
-			<a href="http://whatsay.co">What Say Co.</a>
+			<div class="in">
+				<a href="http://twitter.com/grrrando">@grrrando</a>
+				<a href="http://redtettemer.com">Red Tettemer + Partners</a>
+				<a href="http://whatsay.co">What Say Co.</a>
+			</div>
 		</nav>
 		<script>
             var _gaq=[['_setAccount','UA-12672794-2'],['_trackPageview']];

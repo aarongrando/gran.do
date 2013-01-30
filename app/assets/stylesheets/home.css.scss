@@ -3,14 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	background: url('/assets/top-bg.png') 0 -30px repeat-x;
 	font-size: 18px;
 }	
 
 #container {
 	width: 88%;
 	margin: 0 auto;
-	padding-top: 1.3em;
 }
 
 header {
@@ -43,7 +41,7 @@ p {
 		color: #db5f6c;
 		text-decoration: none;
 		&:hover {
-			color: #85989c;
+			color: rgb(59, 0, 71);
 		}
 	}	
 }
@@ -60,18 +58,29 @@ hr {
 nav {
 	font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
 	text-align: center;
-
+	background: rgb(59, 0, 71);
+	background: -moz-linear-gradient(20deg, rgb(59, 0, 71) 30%, rgb(112, 201, 233) 100%);
+	background: -webkit-linear-gradient(20deg, rgb(59, 0, 71) 30%, rgb(112, 201, 233) 100%);
+	background: -o-linear-gradient(20deg, rgb(59, 0, 71) 30%, rgb(112, 201, 233) 100%);
+	background: -ms-linear-gradient(20deg, rgb(59, 0, 71) 30%, rgb(112, 201, 233) 100%);
+	background: linear-gradient(110deg, rgb(59, 0, 71) 30%, rgb(112, 201, 233) 100%);
+	
+	div.in {	
+		padding: .3em;
+		background-image: url('/assets/top-bg.png');
+	}
+	
 	a {
 		display: block;
-		color: #ccc;
+		color: #ddd;
   		font-family: "ff-netto-web-1","ff-netto-web-2";
 		text-transform: uppercase;
 		text-decoration: none;
-		padding: 1em .5em 2em .5em;
+		padding: 1em .5em .8em .5em;
 		letter-spacing: 1px;
 		
 		&:hover {
-			color: #444;
+			color: #fff;
 			
 		}
 	}
@@ -81,10 +90,8 @@ nav {
 // 480px & Up
 @media only screen and (min-width: 480px) {
 	#container {
-		padding-top: 3.5em;	
 	}
 	body {
-		background: url('/assets/top-bg.png') top center repeat-x;
 		font-size: 20px;
 	}
 	header {
