@@ -4,6 +4,7 @@
 
 body {
 	font-size: 18px;
+	background: #fffffd;
 }	
 
 #container {
@@ -18,7 +19,7 @@ header {
 		font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
 		font-weight: normal;
 		font-size: 1.9em;
-
+		padding-top: .2em;
 	}
 
 	h2 {		
@@ -37,11 +38,14 @@ header {
 p {
 	font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
 	margin-bottom: 1em;
+	text-align: justify;
+	
 	a {
-		color: #db5f6c;
+		color: #4c407b;
 		text-decoration: none;
+		display: inline-block;
 		&:hover {
-			color: rgb(59, 0, 71);
+			color: #24b4ea;
 		}
 	}	
 }
@@ -76,8 +80,8 @@ nav {
   		font-family: "ff-netto-web-1","ff-netto-web-2";
 		text-transform: uppercase;
 		text-decoration: none;
-		padding: 1em .5em .8em .5em;
-		letter-spacing: 1px;
+		padding: 1em .7em .8em .7em;
+		letter-spacing: .07em;
 		
 		&:hover {
 			color: #fff;
@@ -110,7 +114,7 @@ nav {
 		h2 { font-size: 1.7em; }
 	}
 	#container {
-		width: 600px;
+		width: 540px;
 	}
 	nav {
 		a {
@@ -136,6 +140,9 @@ nav {
 
 // 992px & Up
 @media only screen and (min-width: 992px) {
+	body {
+		font-size: 27px
+	}
 	#container {
 		width: 860px;
 	}
