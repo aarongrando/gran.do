@@ -8,7 +8,7 @@ class HomeController < ApplicationController
       @rss = SimpleRSS.parse RssStore.last.xml 
     else
       @rss = SimpleRSS.parse open('https://medium.com/feed/@grrrando/')
-      RssStore.create({xml: pull.source})
+      RssStore.create({xml: @rss.source})
     end
     @rss_images = Array.new
     @rss.items.each do |item|
