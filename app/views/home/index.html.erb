@@ -8,3 +8,21 @@
 <p>In 2012, I created a line of <a href="http://twitter.com/horse_ebooks">equine-inspired</a> tee-shirts for my small apparel company, <a href="http://whatsay.co">What Say Co.</a></p>
 <p>This year, I'm working on something that will help you communicate with your friends and coworkers. It's called Crews, and it's coming this summer.</p>
 <p>You can reach me on Twitter at <a href="http://twitter.com/grrrando">@grrrando</a>. I tend to talk about web development, music, cats, and wacky liberal agendas like gun control.</p>
+<p>I've been writing on <a href="https://medium.com/@grrrando">Medium</a>; my posts are syndicated here.</p>
+<div class="medium-container">
+	<table class="writing-list">
+	<% @rss.items.each_with_index do |item, index| %>
+		<tr>
+			<td class="image-cell">
+				<a href="<%= item.link %>"><div class="image" style="background-image: url('<%= @rss_images[index] %>');"></div></a>
+			</td>
+			<td>
+				<h4><%= item.title.scan(/\"([^"]+)/)[1][0].split(' ').map(&:capitalize).join(' ') %></h4>
+				<h3><%= link_to item.title.scan(/\"([^"]+)/)[0][0], item.link %></h3>
+				<strong>Published</strong>
+				<em><%= item.pubDate.strftime('%B %e, %Y') %></em>
+			</td>
+		</tr>
+	<% end %>
+	</table>
+</div>

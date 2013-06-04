@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'            # Ruby on Rails framework
+gem 'rails', '~>3.2'            # Ruby on Rails framework
 gem 'pg'                        # PostgreSQL
 gem 'jquery-rails'              # jQuery...Rails...
-gem 'activeadmin'               # For managing models with an admin GUI
-# gem 'lograge'                   # Makes our prod logs much easier to grok
 gem 'unicorn'                   # A nice HTTP Server
 gem 'foreman'                   # Use unicorn locally
+gem 'simple-rss'
+gem 'nokogiri'
 
 # OPTIONAL GEMS - Pick your features
 
