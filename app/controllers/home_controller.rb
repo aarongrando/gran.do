@@ -10,10 +10,17 @@ class HomeController < ApplicationController
       @rss = SimpleRSS.parse open('https://medium.com/feed/@grrrando/')
       RssStore.create({xml: @rss.source})
     end
-    @rss_images = Array.new
-    @rss.items.each do |item|
-      item_dom = Nokogiri::HTML(item.description)
-      @rss_images << item_dom.css('img').attribute('src')
+    if @rss.present?
+      @rss_images = Array.new
+      @rss.items.each do |item|
+        item_dom = Nokogiri::HTML(item.description)
+        if item_dom.present?
+          img = item_dom.css('img')
+          if img.present?
+            @rss_images << img.attribute('src')
+          end
+        end
+      end
     end
   end
 end

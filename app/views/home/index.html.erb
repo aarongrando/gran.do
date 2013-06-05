@@ -13,14 +13,11 @@
 	<table class="writing-list">
 	<% @rss.items.each_with_index do |item, index| %>
 		<tr>
-			<td class="image-cell">
-				<a href="<%= item.link %>"><div class="image" style="background-image: url('<%= @rss_images[index] %>');"></div></a>
-			</td>
 			<td>
-				<h4><%= item.title.scan(/\"([^"]+)/)[1][0].split(' ').map(&:capitalize).join(' ') %></h4>
-				<h3><%= link_to item.title.scan(/\"([^"]+)/)[0][0], item.link %></h3>
+				<h3><%= link_to item.title, item.link %></h3>
 				<strong>Published</strong>
 				<em><%= item.pubDate.strftime('%B %e, %Y') %></em>
+				<p><%= Nokogiri::HTML(item.description).css('p.medium-feed-snippet').to_s.html_safe %></p>
 			</td>
 		</tr>
 	<% end %>
