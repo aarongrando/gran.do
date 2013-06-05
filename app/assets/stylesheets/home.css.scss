@@ -64,7 +64,6 @@ a {
 	width: 100%;
 	padding: 1.5rem;
 	margin: 0 auto;
-	font-size: .8rem;
 	
 	tr {
 		@extend .clearfix;
@@ -121,6 +120,11 @@ a {
 		
 		p {
 			font-size: 1rem;
+			margin: 0;
+			
+			&.medium-feed-snippet {
+				margin-top: .5rem;
+			}
 		}
 		
 		strong, em {
@@ -136,6 +140,7 @@ a {
 			font-size: .9em;
 			font-family: "freight-sans-pro-1","freight-sans-pro-2"
 		}
+		
 		em {
 			display: block;
 			font-size: .9em;
