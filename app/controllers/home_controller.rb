@@ -23,4 +23,9 @@ class HomeController < ApplicationController
       end
     end
   end
+  
+  def resume
+    
+  end
+  
 end

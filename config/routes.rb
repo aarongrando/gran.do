@@ -4,4 +4,6 @@ Grrrando::Application.routes.draw do
 
   root to: 'home#index', as: :home
 
+  get '/resume', to: 'home#resume'
+
 end

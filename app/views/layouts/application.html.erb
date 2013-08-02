@@ -18,7 +18,7 @@
 		<%= javascript_include_tag "application" %>
 		<%= csrf_meta_tags %>
     </head>
-    <body>
+    <body class="<%= params[:action] %>">
         <!-- Add your site or application content here -->
 		<nav>
 			<div class="in"></div>
@@ -29,7 +29,8 @@
 		<nav>
 			<div class="in">
 				<a href="http://twitter.com/grrrando">@grrrando</a>
-				<a href="http://redtettemer.com">Red Tettemer + Partners</a>
+				<a href="http://crews.io">Crews</a>
+				<a href="http://redtettemer.com">RTO+P</a>
 				<a href="http://whatsay.co">What Say Co.</a>
 			</div>
 		</nav>
