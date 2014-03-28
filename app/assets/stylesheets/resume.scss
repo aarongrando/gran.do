@@ -1,4 +1,4 @@
-.resume {
+.heroku, .resume {
 	
 	header {
 		padding-top: 2rem;
@@ -17,6 +17,13 @@
 		font-weight: 600;
 		margin-bottom: .5em;
 		font-size: 1.3em;
+	}
+	
+	h4 {
+		font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
+		font-weight: 600;
+		margin-bottom: .5em;
+		font-size: 1em;
 	}
 	
 	p {
@@ -69,6 +76,13 @@
 			}
 		}
 
+	}
+}
+
+.heroku {
+	font-size: 22px;
+	p {
+		text-align: left;
 	}
 }
 

@@ -38,8 +38,4 @@ group :assets do
 end
 
 group :development do
-  gem 'heroku'      # For using Heroku's CLI tools
-  gem 'taps'        # For database transferring
-  gem 'sqlite3'     # For compatibility with taps gem
-  gem 'debugger'    # For debuggin'
 end

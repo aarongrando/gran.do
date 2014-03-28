@@ -5,5 +5,6 @@ Grrrando::Application.routes.draw do
   root to: 'home#index', as: :home
 
   get '/resume', to: 'home#resume'
+  get '/blog/heroku', to: 'blog#heroku'
 
 end

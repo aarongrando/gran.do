@@ -1,0 +1,140 @@
+<header>
+	<img src="/assets/blog/heroku.png" />
+	<h1>An Intro to Heroku Add-ons<br /></h1>
+</header>
+
+<section>
+	<h3>Purpose</h3>
+	<p>
+		Heroku is a great platform and the speed that it allows its customers to work at is wonderful. But the learning curve, especially for its third-party add-ons, can be rough. If you're just
+		Here are some app add-ons that have helped me tremendously, and which I use on most or all applications I've created. I hope this list helps you build the foundation of your app.
+	</p>
+</section>
+<section>
+	<h4>Heroku Postgres</h4>
+	<p>
+		Chances are you're using a database. This one comes by default on your app, but the "Hobby Dev" service level
+		is really only suitable for just that. The upgrade, Hobby Basic, works well for low-traffic apps. If you're expecting
+		any signifigant amount of simultaneous users, upgrade to Standard Yanari. The biggest differentiating factor
+		between the databases at this level is the amount of simultaneous connections allowed. (At least) one connection is
+		established for each web dyno you're running - and usually more (commonly, if you're using Unicorn to split dynos).
+	</p>
+	<dl>
+		<dt>Relevant Links</dt>
+		<dd><a href="https://addons.heroku.com/heroku-postgresql#hobby-basic">Heroku Postgres <span class="address">addons.heroku.com</span></a></dd>
+		<dd><a href="https://devcenter.heroku.com/articles/upgrade-heroku-postgres-with-pgbackups">How to upgrade a Heroku database and keep all your data<span class="address">devcenter.heroku.com</span></a></dd>
+	</dl>
+	
+	<h4>PG Backups</h4>
+	<p>
+		Heroku's PG Backups add-on <em>should</em> come by default on your app. But it doesn't. Choose the "Auto - One
+		Month Retention" plan. This will save both daily and weekly backups of your database automatically, and keeps them
+		around for a month. It's set-and-forget and there's no reason to not use it (it's free!)
+	</p>
+	<dl>
+		<dt>Relevant Links</dt>
+		<dd><a href="https://addons.heroku.com/pgbackups#auto-month">PG Backups <span class="address">addons.heroku.com</span></a></dd>
+		<dd><a href="https://devcenter.heroku.com/articles/pgbackups">PG Backups docs, including how to restore your database from a backup<span class="address">devcenter.heroku.com</span></a></dd>
+	</dl>
+	
+	<h4>Loggly</h4>
+	<p>
+		Sometimes you need to check your logs, but `heroku logs -t` will only take you so far. Loggly saves all your
+		logs and lets you search, filter, and monitor them. The free plan is useful for basic applications where keeping logs
+		for a long time isn't necessary. The paid plans get pricey, but if you're dealing with an application where it's critical
+		to save and parse logs for longer than 24 hours, you might have the budget.
+	</p>
+	<dl>
+		<dt>Relevant Link</dt>
+		<dd><a href="https://addons.heroku.com/loggly#mole">Loggly <span class="address">addons.heroku.com</span></a></dd>
+	</dl>
+	
+	<h4>Sendgrid / Mandrill</h4>
+	<p>
+		If you're sending transactional emails, one of these addons will help you. Both will get you where you need to
+		go, so pick your flavor. I've had luck with both. Mandrill is from Mailchimp, so if you're loyal to their email
+		campaign manager, go with them to support their business. Both have a free plan which is useful for
+		dev and hobby projects.
+	</p>
+	<dl>
+		<dt>Relevant Links</dt>
+		<dd><a href="https://addons.heroku.com/mandrill">Mandrill by Mailchimp <span class="address">addons.heroku.com</span></a></dd>
+		<dd><a href="https://addons.heroku.com/sendgrid">Sendgrid <span class="address">addons.heroku.com</span></a></dd>
+		<dd><a href="https://devcenter.heroku.com/articles/mandrill">Mandrill docs<span class="address">devcenter.heroku.com</span></a></dd>
+		<dd><a href="https://devcenter.heroku.com/articles/sendgrid">Sendgrid docs<span class="address">devcenter.heroku.com</span></a></dd>
+	</dl>
+
+	<h4>Heroku Scheduler</h4>
+	<p>
+		Heroku's version of "cron jobs". This addon lets you run a command-line command at a repeating daily/hourly interval. This will
+		help you do stuff like run an hourly Twitter scrape or sending batches of emails in the background without fussing with delayed jobs.
+	</p>
+	<dl>
+		<dt>Relevant Link</dt>
+		<dd><a href="https://addons.heroku.com/scheduler">Heroku Scheduler <span class="address">addons.heroku.com</span></a></dd>
+	</dl>
+	
+	<h4>New Relic</h4>
+	<p>
+		New Relic is Google Analytics for your back-end. It will point out slow database queries, controller actions, and give you insight
+		into exactly how quickly and efficiently your pages are loading in near-realtime. The "Stark" plan is free,
+		which gives you a fully-featured suite for an application that runs on 1.5 dynos or less, on average (in other
+		words, an app that's in development).
+	</p>
+	<dl>
+		<dt>Relevant Links</dt>
+		<dd><a href="https://addons.heroku.com/newrelic#stark">New Relic <span class="address">addons.heroku.com</span></a></dd>
+		<dd><a href="https://devcenter.heroku.com/articles/newrelic">New Relic docs, including install and config instructions <span class="address">devcenter.heroku.com</span></a></dd>
+	</dl>
+	
+	<h4>Honeybadger</h4>
+	<p>
+		I'll spare you the internet joke. Honeybadger monitors your app and lets you know (via email or SMS) when an
+		error occurs, as it occurs. It also saves the full context of the error - the request data, headers, browser version, OS, and a lot more. There's not a
+		free plan, but the cheapest plan will serve most of your needs. It's been a lifesaver for me (despite also being an "oh, crap" moment generator).
+		There's a handful of other error monitoring services offered as add-ons, too, but I've found Honeybadger to be the most reliable and least annoying.
+	</p>
+	<dl>
+		<dt>Relevant Links</dt>
+		<dd><a href="https://addons.heroku.com/honeybadger#development">Honeybadger <span class="address">addons.heroku.com</span></a></dd>
+		<dd><a href="https://devcenter.heroku.com/articles/honeybadger">Honeybadger docs, including install and config instructions <span class="address">devcenter.heroku.com</span></a></dd>
+	</dl>
+	
+	<h4>Zencoder</h4>
+	<p>
+		If you're processing video uploads, Zencoder is a great transcoder. It works by grabbing a video file
+		from one URL and spitting it out somewhere else, like S3. It works really well with the carrierwave_direct gem, which sends user-uploaded
+		videos directly to S3 (and helps you bypass Heroku's 30MB / 30-second request limits).
+	</p>
+	<p>
+		<em>That said</em>, if you want to use Zencoder as a transcoder, you're better off signing up for their service on their website, 
+		and not using the Heroku add-on. It's <em>much</em> cheaper, and the steps to integrate into your app are almost the same. 
+	</p>
+	<dl>
+		<dt>Relevant Links</dt>
+		<dd><a href="https://addons.heroku.com/zencoder#1k">Zencoder Addon <span class="address">addons.heroku.com</span></a></dd>
+		<dd><a href="http://zencoder.com/en/">Official Zencoder Website <span class="address">zencoder.com</span></a></dd>
+		<dd><a href="https://github.com/dwilkie/carrierwave_direct">carrierwave_direct <span class="address">github.com</span></a></dd>
+	</dl>
+	
+	<h4>Adept Scale</h4>
+	<p>
+		Adept Scale keeps track of your website's average response times and scales your web dynos in response to slowness. You can
+		set upper and lower limits on the dynos, and set the thresholds of how eager your dynos are to scale. This
+		helps protect your site from sudden bursts of traffic. If you're running a production-level
+		application, Adept Scale is almost always worth using. It will scale your dynos <em>down</em> when traffic is low, which will
+		you more more money than the cost of the add-on (the lowest cost plan is $18/mo, while Heroku's dynos are currently ~$34/mo). This type of scaling
+		is also possible to do with some app-level coding, but Adept Scale is considerably easier and quicker to set up. 
+	</p>
+	<dl>
+		<dt>Relevant Link</dt>
+		<dd><a href="https://addons.heroku.com/adept-scale">Adept Scale <span class="address">addons.heroku.com</span></a></dd>
+	</dl>
+</section>
+
+<section>
+	<h3>Hope this helps</h3>
+	<p>
+		Happy building. Big ups to Jonnie Hallman for <a href="https://twitter.com/destroytoday/status/449343177544450049">pointing out</a> the usefulness of a write-up like this.
+	</p>
+</section>
