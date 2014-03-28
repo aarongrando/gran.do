@@ -81,8 +81,13 @@
 
 .heroku {
 	font-size: 22px;
+	
 	p {
 		text-align: left;
+		
+		a {
+			text-decoration: underline;
+		}
 	}
 }
 
