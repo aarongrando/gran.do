@@ -18,24 +18,16 @@
 		<%= javascript_include_tag "application" %>
 		<%= csrf_meta_tags %>
     </head>
-    <body class="<%= params[:action] %>">
+    <body id="<%= params[:controller] %>" class="<%= params[:action] %>">
         <!-- Add your site or application content here -->
-		<nav>
-			<div class="in"></div>
-		</nav>
+		<header></header>
 		<div id="container">
         	<%= yield %>
         </div>
-		<nav>
-			<div class="in">
-			<% if params[:action] != 'resume' %>
-				<a href="http://twitter.com/grrrando">@grrrando</a>
-				<a href="http://crews.io">Crews</a>
-				<a href="http://redtettemer.com">RTO+P</a>
-				<a href="http://whatsay.co">What Say Co.</a>
-			<% end %>
-			</div>
-		</nav>
+		<div id="sidebar">
+			
+		</div>
+		<footer></footer>
 		<script>
             var _gaq=[['_setAccount','UA-12672794-2'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
