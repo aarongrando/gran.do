@@ -13,17 +13,20 @@
 		<link rel="apple-touch-icon-precomposed" href="/assets/touchicon.jpg" />
 
 		<%= stylesheet_link_tag    "application", :media => "all" %>
-		<script type="text/javascript" src="//use.typekit.net/tgv7mqo.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<%= render partial: 'layouts/fonts' %>
 		<%= javascript_include_tag "application" %>
 		<%= csrf_meta_tags %>
+		
     </head>
     <body id="<%= params[:controller] %>" class="<%= params[:action] %>">
         <!-- Add your site or application content here -->
 		<header></header>
 		
 		<div id="container">
-			<div id="logo"><%= image_tag 'signature.png' %></div>
+			<div id="logo">
+				<div class="logo-shape"></div>
+				<%= image_tag 'signature_small.png' %>
+			</div>
 			<article id="main">
 	        	<%= yield %>
 	        </article>

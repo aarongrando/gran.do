@@ -3,20 +3,39 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body,html {
+	height: 100%;
 	font-size: 10px;
-	background: #fffffd;
+	background: #ffffff;
 	color: #333;
 }	
 
 #container {
+	@extend .clearfix;
+	min-height: 100%;
 	max-width: 910px;
-	margin: 0 auto;
+	margin: 0 auto 10rem auto;
 }
 
 #logo {
+	margin: 3rem 0 1.5rem 0;
+	height: 100px;
+	position: relative;
+	
+	.logo-shape {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: $purpose-background;
+		border: 1px solid $purpose-border;
+	}
 	
 	img {
-		width: 250px;
+		width: 117px;
+		position: absolute;
+		top: 30px;
+		left: -8px;
 	}
 }
 
@@ -28,28 +47,103 @@ article#main {
 aside#sidebar {
 	width: 26%;
 	float: right;
-}
-
-article {
-	p {
-		font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
-		margin-bottom: 1em;
-		font-size: 1.8rem;
+	padding-top: 2.5rem;
+	
+	img, h3, p {
+		margin: 0;
+		padding: 0;
 	}
-
-	a {
-		color: #4c407b;
-		text-decoration: none;
-		&:hover {
-			color: #24b4ea;
+	
+	img.portrait {
+		width: 6.4rem;
+		height: 6.4rem;
+		margin-bottom: 3rem;
+	}
+	
+	h3 {
+		@include font(karla);
+		font-weight: 700;
+		font-size: 1.3rem;
+		line-height: 2.15;
+		color: $header_color;
+	}
+	
+	p {
+		@include font(karla);
+		font-size: 1.5rem;
+		line-height: 1.86;
+		color: $sidebar_text_color;
+		margin-bottom: 3.5rem;
+		
+		a {
+			color: $sidebar_link_color;
+			display: block;
+			clear: both;
+			
+			&:hover {
+				color: $highlight_text_color;
+			}
 		}
 	}
 }
 
-.blog-container {
+article {
+	h1, h2, h3 {
+		@include font(karla);
+		font-weight: 400;
+		line-height: 1.21;
+		color: $header_color;
+		
+		strong {
+			font-weight: 700;
+		}
+	}
+	
+	h1 {
+		font-size: 3.2rem;
+	}
+	
+	h2 {
+		font-size: 2rem;
+	}
+	
+	h3 {
+		font-size: 1.3rem;
+		font-weight: bold;
+	}
+	
+	p {
+		@include font(ff-meta-serif);
+		font-size: 1.8rem;
+		line-height: 1.88;
+		color: $body_text_color;
+		margin: 1.6rem 0;
+		
+		a {
+			color: $body_text_color;
+		
+			&:hover {
+				color: $highlight_text_color;
+			}
+		}
+	}	
+}
+
+.divider {
+	background: #E8E8E8;
+	height: 3px;
+	width: 43px;
+	margin: 3rem 0;
+}
+
+.blog-list-container {
 	padding: 0;
 	margin:0 auto;
-	border-top: 1px solid #eee;
+	
+	p {
+		color: $highlight_text_color;
+		font-style: italic;
+	}
 }
 
 .blog-list {
@@ -64,126 +158,52 @@ article {
 	tr {
 		@extend .clearfix;
 		clear: both;
-		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid #F5F5F5;
 		
 		td {
-  			padding: 1.5em 0;
+  			padding: 0;
 		}
 		
-		.image-cell {
-			width: 6em;
-			height: 6em;
-			vertical-align: text-top;
-		}
 		
-		.image {
-			width: 6em;
-			height: 6em;
-			background-size: cover;
-			background-position: center center;
-			display: block;
-			margin: 0 auto;
-			border: .25em solid #fff;
-			box-shadow: 0 0 .2em rgba(0,0,0,0.2);
-			float: left;
-			margin-right: .7em;
-			border-radius: 99em;
-		}
-		
-		h4 {
-			font-size: .9em;
-			color: #b3b3b1;
-			font-family: "freight-sans-pro-1","freight-sans-pro-2";
-			font-weight: 500;
-			padding: 0;
-			margin: 0 0 0 0;
+		h3, span.date {
+			@include font('ff-meta-serif');
+			font-size: 1.8rem;
+			font-weight: 400;
+			line-height: 1;
+			margin: 1.25em 0 1em 0;
 		}
 		
 		h3 {
-			padding: 0;
-			width: 98%;
-			display: block;
-			margin: 0;
-			font-family: "freight-sans-pro-1","freight-sans-pro-2";
-			font-size: 1.5em;
-			line-height: 1.3;
-			margin-top: .1em;
-		
-			a {
-				color: #333;
-			}
-		}
-		
-		p {
-			font-size: 1rem;
-			margin: 0;
+			float: left;
 			
-			&.medium-feed-snippet {
-				margin-top: .5rem;
+			a {
+				color: $header_color;
+				display: block;
+				
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 		
-		strong, em {
-			display: inline-block;
-			color: #666665;
-			line-height: 1.5;
-		}	
-		
-		strong {
-			border-top: 1px solid #dedede;
-			padding-top: .3em;
-			margin-top: 0.4em;
-			font-size: .9em;
-			font-family: "freight-sans-pro-1","freight-sans-pro-2"
-		}
-		
-		em {
-			display: block;
-			font-size: .9em;
-			font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
+		span.date {
+			float: right;
+			color: $secondary-text-color;
 		}
 	}
-}
-
-hr {
-	width: 5em;
-	background-color: #bbb;
-	height: 1px;
-	border: none;
-	margin-top: 1.2em;
-	display: block;
 }
 
 header, footer {
 	clear: both;
 	font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
-	text-align: center;
 	background: rgb(59, 0, 71);
 	background: -moz-linear-gradient(20deg, rgb(59, 0, 71) 30%, rgb(112, 201, 233) 100%);
 	background: -webkit-linear-gradient(20deg, rgb(59, 0, 71) 30%, rgb(112, 201, 233) 100%);
 	background: -o-linear-gradient(20deg, rgb(59, 0, 71) 30%, rgb(112, 201, 233) 100%);
 	background: -ms-linear-gradient(20deg, rgb(59, 0, 71) 30%, rgb(112, 201, 233) 100%);
 	background: linear-gradient(110deg, rgb(59, 0, 71) 30%, rgb(112, 201, 233) 100%);
-	height: .5rem;
-	
-	a {
-		display: block;
-		color: #ccc;
-  		font-family: "ff-netto-web-1","ff-netto-web-2";
-		text-transform: uppercase;
-		text-decoration: none;
-		padding: 1em .7em .8em .7em;
-		letter-spacing: .07em;
-		
-		&:hover {
-			color: #fff;
-		}
-	}
+	height: 1rem;
 }
-
-.clearfix:before, .clearfix:after { content: ""; display: table; }
-.clearfix:after { clear: both; }
-.clearfix { zoom: 1; }
 
 // 480px & Up
 @media only screen and (min-width: 480px) {
@@ -202,15 +222,9 @@ header, footer {
 
 // 992px & Up
 @media only screen and (min-width: 992px) {
-	#container {
-		width: 615px;
-	}
-	header {
 
-	}
 }
 
 // 1382px & Up
 @media only screen and (min-width: 1382px) {
-	// @import "1382";
 }

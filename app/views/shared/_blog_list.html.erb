@@ -1,0 +1,61 @@
+<div class="blog-list-container">
+	<p>
+		<% if controller_action == "home#index" %>
+			I’m keeping a blog on this website. Please enjoy reading the entries and feel free to get in touch if you have
+			any questions, criticisms, or corrections.
+		<% else %>
+			I hope you enjoyed this blog post. It’s not the only one! Please enjoy reading another from the list below.
+		<% end %>
+	</p>
+	
+	<table class="blog-list">
+		<tr>
+			<td>
+				<h3><%= link_to "An Intro To Heroku Addons", blog_heroku_path %></h3>
+				<span class="date">March 27, 2014</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h3><%= link_to "Fall", blog_heroku_path %></h3>
+				<span class="date">November 17, 2013</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h3><%= link_to "The 1-line Productivity Hack", blog_heroku_path %></h3>
+				<span class="date">August 16, 2013</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h3><%= link_to "Complexity = Features<sup>2</sup>".html_safe, blog_heroku_path %></h3>
+				<span class="date">August 1, 2013</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h3><%= link_to "What Job Openings Are Saying Without Saying", blog_heroku_path %></h3>
+				<span class="date">June 18, 2013</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h3><%= link_to "Let's Hang Out.", blog_heroku_path %></h3>
+				<span class="date">June 5, 2013</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h3><%= link_to "Finishing", blog_heroku_path %></h3>
+				<span class="date">May 31, 2013</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h3><%= link_to "Engineers and Advertising", blog_heroku_path %></h3>
+				<span class="date">April 17, 2013</span>
+			</td>
+		</tr>
+	</table>
+</div>

@@ -1,5 +1,24 @@
+<%= image_tag "yo.png", class: 'portrait' %>
+
 <h3>MY AIM</h3>
 <p>
-	
+	Keep it simple. Resist the Silicon Valley ideal. Less technology is the best technology. Help people act like people.
 </p>
 
+<h3>ELSEWHERE</h3>
+<p>
+	<%= link_to "Twitter", "http://twitter.com/grrrando" %>
+	<%= link_to "Instagram", "http://instagram.com/grrrando" %>
+</p>
+
+<h3>WORK</h3>
+<p>
+	<%= link_to "RTO+P", "http://rtop.com/" %>
+	<%= link_to "What Say Co.", "http://whatsay.co/" %>
+	<%= link_to "Curriculum Vitae", cv_path %>
+</p>
+
+<p>
+	&copy; <%= Time.now.year %> A.G.
+	<%= link_to "See commit history.", "https://github.com/aarongrando/grrrando.com" %>
+</p>
