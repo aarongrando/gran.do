@@ -2,62 +2,57 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-	font-size: 16px;
+body,html {
+	font-size: 10px;
 	background: #fffffd;
 	color: #333;
 }	
 
 #container {
-	width: 88%;
+	max-width: 910px;
 	margin: 0 auto;
-	padding-bottom: 2em;
 }
 
-header {
-	h1 {
-		text-align: center;
-		font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
-		font-weight: normal;
-		font-size: 1.9em;
-		padding-top: .2em;
-	}
-
-	h2 {		
-		text-align: center;
-		font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
-		font-size: 1.3em;
-	}
+#logo {
 	
 	img {
-		display: block;
-		margin: 0 auto;
-		width: 10em;
+		width: 250px;
 	}
 }
 
-p {
-	font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
-	margin-bottom: 1em;
-	text-align: justify;	
+article#main {
+	width: 67%;
+	float: left;
+}
+ 
+aside#sidebar {
+	width: 26%;
+	float: right;
 }
 
+article {
+	p {
+		font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
+		margin-bottom: 1em;
+		font-size: 1.8rem;
+	}
 
-a {
-	color: #4c407b;
-	text-decoration: none;
-	&:hover {
-		color: #24b4ea;
+	a {
+		color: #4c407b;
+		text-decoration: none;
+		&:hover {
+			color: #24b4ea;
+		}
 	}
 }
 
-.medium-container {
+.blog-container {
 	padding: 0;
 	margin:0 auto;
 	border-top: 1px solid #eee;
 }
 
-.writing-list {
+.blog-list {
 	@extend .clearfix;
 	list-style-type: none;
 	padding: 0 !important;
@@ -159,7 +154,7 @@ hr {
 	display: block;
 }
 
-nav {
+header, footer {
 	clear: both;
 	font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
 	text-align: center;
@@ -169,12 +164,7 @@ nav {
 	background: -o-linear-gradient(20deg, rgb(59, 0, 71) 30%, rgb(112, 201, 233) 100%);
 	background: -ms-linear-gradient(20deg, rgb(59, 0, 71) 30%, rgb(112, 201, 233) 100%);
 	background: linear-gradient(110deg, rgb(59, 0, 71) 30%, rgb(112, 201, 233) 100%);
-	
-	div.in {	
-		padding: .3em;
-		background-image: url('/assets/top-bg.png');
-		color: #ddd;
-	}
+	height: .5rem;
 	
 	a {
 		display: block;
@@ -197,72 +187,23 @@ nav {
 
 // 480px & Up
 @media only screen and (min-width: 480px) {
-	#container {
-	}
-	body {
-		font-size: 20px;
-	}
-	header {
-		h1 { font-size: 2.1em; }
-		h2 { font-size: 1.7em; }
-	}
+
 }
 
 // 600px & Up
 @media only screen and (min-width: 600px) {
-	body {
-		font-size: 20px;
-	}
-	header {
-		h1 { font-size: 2.1em; }
-		h2 { font-size: 1.7em; }
-	}
-	#container {
-		width: 540px;
-	}
-	nav {
-		a {
-			display: inline-block;
-		}
-	}
+
 }
 
 // 768px & Up
 @media only screen and (min-width: 768px) {
-	body {
-		font-size: 25px
-	}
-	header {
-		h1 { font-size: 1.9em; width: 708px; margin: .7em auto; }
-		h2 { font-size: 1.6em; width: 708px; margin: .7em auto; }
 
-	}
-	#container {
-		width: 700px;
-	}
-	.medium-container {
-		width: 75%;
-	}
-	.writing-list {
-		
-		tr { 
-			.image-cell {
-				width: 8em;
-				height: 8em;
-				vertical-align: middle;
-			}
-			.image {
-				width: 8em;
-				height: 8em;
-			}
-		}
-	}
 }
 
 // 992px & Up
 @media only screen and (min-width: 992px) {
 	#container {
-		width: 860px;
+		width: 615px;
 	}
 	header {
 

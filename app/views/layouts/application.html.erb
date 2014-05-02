@@ -21,12 +21,17 @@
     <body id="<%= params[:controller] %>" class="<%= params[:action] %>">
         <!-- Add your site or application content here -->
 		<header></header>
+		
 		<div id="container">
-        	<%= yield %>
-        </div>
-		<div id="sidebar">
-			
+			<div id="logo"><%= image_tag 'signature.png' %></div>
+			<article id="main">
+	        	<%= yield %>
+	        </article>
+			<aside id="sidebar">
+				<%= render partial: 'shared/sidebar' %>
+			</aside>
 		</div>
+		
 		<footer></footer>
 		<script>
             var _gaq=[['_setAccount','UA-12672794-2'],['_trackPageview']];
