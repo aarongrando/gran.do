@@ -1,4 +1,14 @@
-<%= image_tag "yo.png", class: 'portrait' %>
+<%= link_to (image_tag "yo.png", class: 'portrait'), root_path %>
+
+<% if controller_action != "home#index" %>
+
+<h3>GREETINGS</h3>
+<p>
+	I’m Aaron Grando, a web developer and designer currently working as 
+	Tech Lead at RTO+P. Interested? <a href="/">Read more about me.</a>
+</p>
+
+<% end %>
 
 <h3>MY AIM</h3>
 <p>

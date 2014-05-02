@@ -1,16 +1,4 @@
-.heroku, .resume {
-	
-	header {
-		padding-top: 2rem;
-		
-		h1,h2 {
-			margin: .25rem auto;
-		}
-		
-		img {
-			width: 5em;
-		}
-	}
+.resume {
 	
 	h3 {
 		font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
@@ -31,51 +19,6 @@
 		margin-bottom: 1em;
 	}
 	
-	dl {
-		font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
-		font-size: .8em;
-		color: #666;
-		margin: 2em 0;
-		
-		dt {
-			font-size: 0.8em;
-			text-transform: uppercase;
-			letter-spacing: 0.3em;
-			margin-bottom: .3em;
-		}
-		
-		dd {
-		  text-indent: -1em;
-		  transition: padding 0.5s;
-		  margin: .2em 1em;
-		
-			&:before {
-			  content: "\2014";
-			  padding-right: 5px;
-			}
-		
-			&:hover {
-				padding-left: .25em;
-			}
-		
-		}
-		
-		a {
-			color: #666;
-			
-			&:hover {
-				color: #999;
-			}
-			
-			span {
-				font-size: .8em;
-				margin-left: .5em;
-				color: #999;
-				display: block;
-				clear: both;
-			}
-		}
-	}
 }
 
 

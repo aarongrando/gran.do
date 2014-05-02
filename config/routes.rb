@@ -2,7 +2,7 @@ Grrrando::Application.routes.draw do
   # The priority is based upon order of creation:
   # earlier in this file -> higher priority.
 
-  root to: 'home#index', as: :home
+  root to: 'home#index'
 
   get '/cv', to: 'home#cv', as: :cv
   

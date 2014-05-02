@@ -1,17 +1,20 @@
-<header>
-	<img src="/assets/blog/heroku.png" />
-	<h1>An Intro to Heroku Add-ons<br /></h1>
-</header>
+<% content_for :logo do %>
+	<%= image_tag 'blog/heroku.png', class: 'blog' %>
+<% end %>
 
-<section>
-	<h3>Purpose</h3>
+
+<h1>An Intro to Heroku Add-ons<br /></h1>
+
+<section class="purpose">
+	<h2>Purpose</h2>
 	<p>
 		Heroku is a great platform and the speed that it allows its customers to work at is wonderful. But the learning curve, especially for its third-party add-ons, can be rough.
 		Here are some app add-ons that have helped me tremendously, and which I use on most or all applications I've created. I hope this list helps you build the foundation of your app.
 	</p>
 </section>
-<section>
-	<h4>Heroku Postgres</h4>
+
+<section class="body">
+	<h2>Heroku Postgres</h2>
 	<p>
 		Chances are you're using a database. This one comes by default on your app, but the "Hobby Dev" service level
 		is really only suitable for just that. The upgrade, Hobby Basic, works well for low-traffic apps. If you're expecting
@@ -25,7 +28,7 @@
 		<dd><a href="https://devcenter.heroku.com/articles/upgrade-heroku-postgres-with-pgbackups">How to upgrade a Heroku database and keep all your data<span class="address">devcenter.heroku.com</span></a></dd>
 	</dl>
 	
-	<h4>PG Backups</h4>
+	<h2>PG Backups</h2>
 	<p>
 		Heroku's PG Backups add-on <em>should</em> come by default on your app. But it doesn't. Choose the "Auto - One
 		Month Retention" plan. This will save both daily and weekly backups of your database automatically, and keeps them
@@ -37,7 +40,7 @@
 		<dd><a href="https://devcenter.heroku.com/articles/pgbackups">PG Backups docs, including how to restore your database from a backup<span class="address">devcenter.heroku.com</span></a></dd>
 	</dl>
 	
-	<h4>Loggly</h4>
+	<h2>Loggly</h2>
 	<p>
 		Sometimes you need to check your logs, but `heroku logs -t` will only take you so far. Loggly saves all your
 		logs and lets you search, filter, and monitor them. The free plan is useful for basic applications where keeping logs
@@ -49,7 +52,7 @@
 		<dd><a href="https://addons.heroku.com/loggly#mole">Loggly <span class="address">addons.heroku.com</span></a></dd>
 	</dl>
 	
-	<h4>Sendgrid / Mandrill</h4>
+	<h2>Sendgrid / Mandrill</h2>
 	<p>
 		If you're sending transactional emails, one of these add-ons will help you. Both will get you where you need to
 		go, so pick your flavor. I've had luck with both. Mandrill is from MailChimp, so if you're loyal to their email
@@ -64,7 +67,7 @@
 		<dd><a href="https://devcenter.heroku.com/articles/sendgrid">Sendgrid docs<span class="address">devcenter.heroku.com</span></a></dd>
 	</dl>
 
-	<h4>Heroku Scheduler</h4>
+	<h2>Heroku Scheduler</h2>
 	<p>
 		Heroku's version of "cron jobs". This add-on lets you run a command-line command at a repeating daily/hourly interval. This will
 		help you do stuff like run an hourly Twitter scrape or sending batches of emails in the background without fussing with delayed jobs.
@@ -74,7 +77,7 @@
 		<dd><a href="https://addons.heroku.com/scheduler">Heroku Scheduler <span class="address">addons.heroku.com</span></a></dd>
 	</dl>
 	
-	<h4>New Relic</h4>
+	<h2>New Relic</h2>
 	<p>
 		New Relic is Google Analytics for your back-end. It will point out slow database queries, controller actions, and give you insight
 		into exactly how quickly and efficiently your pages are loading in near-realtime. The "Stark" plan is free,
@@ -87,7 +90,7 @@
 		<dd><a href="https://devcenter.heroku.com/articles/newrelic">New Relic docs, including install and config instructions <span class="address">devcenter.heroku.com</span></a></dd>
 	</dl>
 	
-	<h4>Honeybadger</h4>
+	<h2>Honeybadger</h2>
 	<p>
 		I'll spare you the internet joke. Honeybadger monitors your app and lets you know (via email or SMS) when an
 		error occurs, as it occurs. It also saves the full context of the error - the request data, headers, browser version, OS, and a lot more. There's not a
@@ -100,7 +103,7 @@
 		<dd><a href="https://devcenter.heroku.com/articles/honeybadger">Honeybadger docs, including install and config instructions <span class="address">devcenter.heroku.com</span></a></dd>
 	</dl>
 	
-	<h4>Zencoder</h4>
+	<h2>Zencoder</h2>
 	<p>
 		If you're processing video uploads, Zencoder is a great transcoder. It works by grabbing a video file
 		from one URL and spitting it out somewhere else, like S3. It works really well with the carrierwave_direct gem, which sends user-uploaded
@@ -117,7 +120,7 @@
 		<dd><a href="https://github.com/dwilkie/carrierwave_direct">carrierwave_direct <span class="address">github.com</span></a></dd>
 	</dl>
 	
-	<h4>Adept Scale</h4>
+	<h2>Adept Scale</h2>
 	<p>
 		Adept Scale keeps track of your website's average response times and scales your web dynos in response to slowness. You can
 		set upper and lower limits on the dynos, and set the thresholds of how eager your dynos are to scale. This
@@ -132,8 +135,10 @@
 	</dl>
 </section>
 
-<section>
-	<h3>Hope this helps</h3>
+<div class="divider"></div>
+
+<section class="signoff">
+	<h2>Hope this helps</h2>
 	<p>
 		Big ups to Jonnie Hallman for <a href="https://twitter.com/destroytoday/status/449343177544450049">pointing out</a> the usefulness of a write-up like this. 
 	</p>
@@ -143,3 +148,5 @@
 		<dd><a href="http://twitter.com/grrrando">Ask me a question on Twitter <span class="address">@grrrando</span></a></dd>
 	</dl>
 </section>
+
+<%= render partial: 'shared/blog_list' %>
