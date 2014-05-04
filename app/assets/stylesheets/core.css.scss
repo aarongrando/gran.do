@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body,html {
+body, html {
 	height: 100%;
 	font-size: 10px;
 	background: #ffffff;
@@ -64,10 +64,10 @@ body,html {
 	}
 	
 	img.self {
-		width: 117px;
+		width: 125px;
 		position: absolute;
-		top: 30px;
-		left: -8px;
+		top: 25px;
+		left: -12px;
 		
 		&.variable {
 			opacity: 0;
@@ -119,11 +119,21 @@ aside#sidebar {
 		
 		a {
 			color: $sidebar_link_color;
-			display: block;
-			clear: both;
+			display: inline-block;
+			text-decoration: none;
+			background-image: linear-gradient(to bottom, rgba(0,0,0,0) 75%, $sidebar_link_color 75%);
+			background-repeat: repeat-x;
+			background-size: 2px 2px;
+			background-position: 0 18px;
+			white-space: pre;
 			
 			&:hover {
 				color: $highlight_text_color;
+				background-image: linear-gradient(to bottom, rgba(0,0,0,0) 75%, $highlight_text_color 75%);
+			}
+			
+			&:after {
+				content: '\A';
 			}
 		}
 	}
@@ -154,21 +164,82 @@ article {
 		font-weight: bold;
 	}
 	
-	p {
+	p, blockquote, li {
 		@include font(ff-meta-serif);
 		font-size: 1.8rem;
-		line-height: 1.88;
+		line-height: 1.82;
 		color: $body_text_color;
-		margin: 1.6rem 0;
+		margin: 1.7rem 0;
 		
 		a {
+			text-decoration: none;
 			color: $body_text_color;
+			background-image: linear-gradient(to bottom, rgba(0,0,0,0) 75%, $body_text_color 75%);
+			background-repeat: repeat-x;
+			background-size: 2px 2px;
+			background-position: 0 18px;
 		
 			&:hover {
 				color: $highlight_text_color;
+				background-image: linear-gradient(to bottom, rgba(0,0,0,0) 75%, $highlight_text_color 75%);
 			}
 		}
 	}	
+	
+	blockquote {
+		color: $secondary_text_color;
+		font-style: italic;
+		margin: 2.5rem 4rem 3rem 2rem;
+		quotes: "\201C""\201D""\2018""\2019";
+	}
+	
+	ul {
+		margin-bottom: 1.7rem;
+		padding-left: 1.5rem;
+		
+		li {
+			margin: .8rem;
+		}
+	}
+	
+	
+	pre {
+		font-family: Consolas, monospace;
+		background: #222;
+		padding: 1em 3%;
+		line-height: 1.6;
+		width: 100%;
+		margin-left: -3%;
+		color: #f4e8e7;
+		font-size: 1.8rem;
+		display: block;
+		width: auto;
+		white-space: pre-wrap;       /* css-3 */
+		white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+		white-space: -pre-wrap;      /* Opera 4-6 */
+		white-space: -o-pre-wrap;    /* Opera 7 */
+		word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	}
+	
+	blockquote:before {
+	  color: #ccc;
+	  content: open-quote;
+	  font-size: 3em;
+	  line-height: 0.1em;
+	  margin-right: 0.25em;
+	  vertical-align: -0.4em;
+	}
+
+	section.body, section.signoff {
+		h2 {
+			margin-top: 1.5em;
+			margin-bottom: .5em;
+		}
+		p {
+			margin-top: 0;
+			margin-bottom: 1.6rem;
+		}
+	}
 }
 
 section.purpose {
@@ -288,9 +359,13 @@ section.body, section.signoff {
 			a {
 				color: $header_color;
 				display: block;
+				text-decoration: none;
 				
 				&:hover {
-					text-decoration: underline;
+					background-image: linear-gradient(to bottom, rgba(0,0,0,0) 75%, $header_color 75%);
+					background-repeat: repeat-x;
+					background-size: 2px 2px;
+					background-position: 0 14px;
 				}
 			}
 		}

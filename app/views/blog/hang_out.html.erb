@@ -1,0 +1,44 @@
+<% content_for :logo do %>
+	<%= image_tag 'blog/hang-out.jpg', class: 'blog' %>
+<% end %>
+
+
+<h1>Let's Hang Out</h1>
+<span class="dateline">June 5, 2013</span>
+
+<section class="body">
+
+	<p>
+		No, really. Me and you. This is an invitation. Let’s get together and grab coffee or lunch or drinks or something (I’m trying my hardest to always cook dinner these days, so that’s off-limits). We’ll get to know each other for some small chunk of a day, and it’ll be cool, even if we never hang out again.
+	</p>
+	<p>
+		This isn’t a Meedup or a Networking Swizzler or a Mackathon or anything. Just hanging out. 
+	</p>
+	<p>
+		I just moved to New York City, a place where 8 million other humans live. I should be hanging out. But I’ve just been working, mostly, and that’s pretty lame. So I’m hacking hanging out back into my life.
+	</p>
+	<p>
+		Here’s how we’ll work it:
+	</p>
+	<ul>
+		<li><%= mail_to 'aaron.grando@gmail.com', "Send me an email", encode: :javascript %>, or get at me on Twitter.</li>
+		<li>We’ll work out a time and a place; I’ll go anywhere I can reasonably reach via public transportation in NYC.</li> 
+		<li>We’ll meet up, and it’ll be fun. How does a no-pressure, friendly appointment sound to you?</li>
+		<li>Sometimes I may bring a friend, and you can too if you’d like.</li>
+		<li>I’ll do my best to actually hang out with everyone who contacts me, no prejudices or expectations.</li>
+		<li>And that’s it. I’m leaving it open from that point on.</li>
+	</ul>
+	<p>
+		I’m hoping the idea of spending just a little time with a stranger isn’t too, well, strange, for you. I’m approaching this exercise, and any meetings that come out of it, without any expectations. If we do wind up hanging out, I hope you approach it the same way. 
+	</p>
+	<p>
+		I don’t think I’ll document individual hangouts, but I do hope to hear some interesting stories and perhaps glean some inspiration out of meeting new people. I’d love to be able to follow this story up with things I’ve learned hanging out with a bunch of strangers. 
+	</p>
+	<p>
+		So, please, let me know. If you can spare the time, let’s hang out.
+	</p>
+	
+</section>
+
+
+<%= render partial: 'shared/blog_list' %>

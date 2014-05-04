@@ -1,0 +1,125 @@
+<% content_for :logo do %>
+	<%= image_tag 'blog/productivity.jpg', class: 'blog' %>
+<% end %>
+
+
+<h1>The 1-line Productivity Hack</h1>
+<span class="dateline">August 16, 2013</span>
+
+<section class="body">
+
+	<p>
+		I always try to keep things simple, and this is about as simple as it gets. This is a 1-line productivity hack. Minimal
+		effort, maximal effect.
+	</p>
+	
+	<p>
+		I’ve found that when I need to focus, the best thing for me to do is put on a pair blinders. In our digital age,
+		especially while doing digital work, that means voluntarily blocking your favorite time-sink link-trap websites. Good
+		news: It’s very easy to do.
+	</p>
+	
+	<p>
+		But real quick before we get to it, a disclaimer: You’ll be editing your Hosts file (on disk: /etc/hosts), which
+		controls how IP addresses are mapped to URLs. It’s a damn important file. If you’re worried about mucking it up, this
+		isn’t the hack for you. Nothing here is irrevocable; it won’t break your computer. But you should still be safe. You
+		should backup this file before you mess with it. Also, these instructions pertain to OSX/Unix but the process on
+		Windows should be similar.
+	</p>
+	
+	<p>
+		Alright! Let’s do it.
+	</p>
+	
+	<div class="divider"></div>
+	
+	<p>
+		<strong>Step 1:</strong> Copy this command:
+	</p>
+
+	<pre>echo ‘127.0.0.1 huffingtonpost.com www.huffingtonpost.com reddit.com www.reddit.com cnn.com www.cnn.com news.ycombinator.com’ | sudo tee -a /etc/hosts</pre>
+	
+	<p>
+		<strong>Step 2:</strong> Open Terminal.
+	</p>
+	
+	<p>
+		<strong>Step 3:</strong> Paste the above line, and sub in your time-sink websites. Make sure to double-up with “www.” — lots of browsers
+		will automatically add “www.” if a naked domain doesn’t respond.
+	</p>
+	
+	<p>
+		<strong>Step 4:</strong> Hit “Enter”. Type your password to confirm the edit to your file.
+	</p>
+	
+	<p>
+		<strong>Step 5:</strong> GTD / JFDI / PROFIT
+	</p>
+	
+	<p>
+		What this does is map your favorite websites to show content from the IP address “127.0.0.1" — otherwise known as “your computer”. To be totally clear: when you go to these URLs, nothing will show up.
+	</p>
+	
+	<div class="divider"></div>
+	
+	<p>
+		By a very unscientific measure, I reclaim about an hour a day by keeping myself from idly loading up Hacker News or HuffPo. I’d typically check the front page of either to fill some empty time between calls, while my code is compiling, etc.. The time spent adds up, very quickly.
+	</p>
+	
+	<p>
+		The first couple days are the hardest; content addiction is a lot like a lot of other addictions. If you’re like me, your muscle memory will have you typing these URLs into your browser’s address bar without a thought, a couple dozen times, before you’re able to consciously stop yourself.
+	</p>
+	
+	<p>
+		But then, after a while, you’ll get used to it. You’ll be better off for it.
+	</p>
+	
+	<p>
+		The best part comes after a couple of weeks: you’ll realize you don’t need to visit these link-trap middlemen to get through your digital days. You’ll be more productive. You’ll find blogs and authors to follow and be closer to the content than you’ve been in years.
+	</p>
+	
+	<h2>The 1-line Undo</h2>
+	<p>
+		There will come a time when you need to get back on to one of these sites. It’s just as easy to unblock these sites as it is to block them.
+	</p>
+	
+	<p>
+		(If you frequently work in your Hosts file — you know who you are — you should probably not use the instructions below, to be safe. Thankfully, you’ll know what’s happening and you’ll know how to undo it without the instructions below.)
+	</p>
+	
+	<div class="divider"></div>
+	
+	<p>
+		<strong>Undo Step 1:</strong> Copy this command:
+	</p>
+	
+	<pre>sudo sed ‘s/^/#/g’ -i /etc/hosts</pre>
+	
+	<p>
+		<strong>Undo Step 2:</strong> Open Terminal.
+	</p>
+	
+	<p>
+		<strong>Undo Step 3:</strong> Paste the above line.
+	</p>
+	
+	<p>
+		<strong>Undo Step 4:</strong> Hit “Enter”. Type your password to confirm the edit to your file.
+	</p>
+	
+	<p>
+		<strong>Undo Step 5:</strong> You’re Un-blocked. Resubmerge yourself. Take a moment, revel in it. Hold your breath, get what you’ve got to get done, done, and then re-enable your block. You don’t need these websites.
+	</p>
+	
+	<p>
+		The command above simply “comments out” the last line of your Hosts file. Which, if you didn’t edit the Hosts file in the mean time, will unblock the sites you entered.
+	</p>
+	
+	<p>	
+		I hope this helps you find some focus. Get out there and get it done!
+	</p>
+	
+</section>
+
+
+<%= render partial: 'shared/blog_list' %>

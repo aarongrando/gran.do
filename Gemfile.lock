@@ -14,6 +14,8 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
+    actionview-encoded_mail_to (1.0.4)
+      rails
     activemodel (3.2.17)
       activesupport (= 3.2.17)
       builder (~> 3.0.0)
@@ -112,6 +114,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionview-encoded_mail_to
   coffee-rails
   foreman
   jquery-rails

@@ -1,12 +1,13 @@
 #blog {
-	section.body, section.signoff {
-		h2 {
-			margin-top: 1.5em;
-			margin-bottom: .5em;
-		}
-		p {
-			margin-top: 0;
-			margin-bottom: 1.6rem;
-		}
+	h1 {
+		margin-bottom: 0;
+	}
+	
+	span.dateline {
+		@include font(ff-meta-serif);
+		margin: 0 0 2.5rem 0;
+		display: block;
+		color: $header_color;
+		font-size: 1.6rem;
 	}
 }

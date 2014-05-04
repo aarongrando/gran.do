@@ -1,0 +1,100 @@
+<% content_for :logo do %>
+	<%= image_tag 'blog/complexity.jpg', class: 'blog' %>
+<% end %>
+
+
+<h1>Complexity = Features²</h1>
+<span class="dateline">August 1, 2013</span>
+
+<section class="body">
+
+	<p>
+		I have developed a simple formula (or, more accurately, a rule-of-thumb) for measuring the impact of an added feature on a software product.
+	</p>
+	
+	<pre>Complexity = Features²</pre>
+	
+	<p>
+		Let me show you how this works in practice — Kickstarter reward style:
+	</p>
+	
+	<h2>1 Feature² = 1cu (Complexity Unit)</h2>
+	<p>A website that shows a single static image.</p>
+
+	<h2>2 Feature² = 4cu</h2>
+	<p>All the above, plus a third-party email newsletter signup field</p>
+
+	<h2>3 Features² = 9cu</h2>
+	<p>
+		All the above, but instead of one static image, we’ll throw in a carousel because reasons. Oh, and put that newsletter
+		signup gadget on the 3rd page of the carousel.
+	</p>
+
+	<h2>4 Features² = 16cu</h2>
+	<p>
+		All the above, but each of those 6 carousel pages should link to a new page with some info. The pages all share a
+		template so it’s easy, right?
+	</p>
+	
+	<h2>5 Features² = 25cu</h2>
+	<p>
+		All the above, plus a Facebook “Like” button on each page. And we want the content that’s shared to look good, so don’t
+		forget to set unique OpenGraph metadata for each page.
+	</p>
+
+	<h2>6 Features² = 36cu</h2>
+	<p>
+		All the above, plus a blog. Gotta have a blog, man. How will they know if we don’t have a blog? Please use Wordpress
+		because I’m used to it.
+	</p>
+
+	<h2>7 Features² = 49cu</h2>
+	<p>
+		All the above, plus, why can’t I use Wordpress to edit all the content on the site? It will save you work in the long
+		run.
+	</p>
+	
+	<h2>8 Features² = 64cu</h2>
+	<p>
+		All the above, plus a simple sweepstakes. It’s only open to the people who signed up through our newsletter provider,
+		so there’s not too many possible entries you have to worry about.
+	</p>
+	
+	<h2>9 Features² = 81cu</h2>
+	<p>
+		All the above, plus we’re extending the contest because hardly anyone signed up. We need you to help us promote the
+		sweeps on every page with a cartoon puppy that animates on screen and audibly barks once a day. And we need to send out
+		an HTML email to let people know they can win the prize. And can we let people enter the sweeps more than once, but
+		only once a day? I know we established the rules differently, but you can change them, right?
+	</p>
+	
+	<div class="divider"></div>
+	
+	<p>
+		My definition of feature is fairly loose. It’s a “you’ll know it when you see it” sort of thing. And it’s not always the case, but as you get deeper into a project’s build, newly devised features tend to involve more work than older ones.
+	</p>
+	
+	<p>
+		Features aren’t inherently bad, of course; we need them to do anything; duh. It’s just, too much of a good thing can be…not so good. Especially when they pop up late in a project’s build or on top of an already complex piece of software.
+	</p>
+	
+	<p>
+		Where’s the Features² rule-of-thumb come in to play in a real-life project? For me, it helps me explain how any given feature could affect a project’s timeline, budget, crunch-level, etc.. Something with 9 features of increasing difficulty will take me roughly 80 times as much time to put together as something with a single feature.
+	</p>
+	
+	<p>
+		It should cost roughly 80 times more.
+	</p>
+	
+	<p>
+		The codebase will be roughly 80 times bigger.
+	</p>
+	
+	<p>
+		The risk of failure is 80 times greater.
+	</p>
+	
+</section>
+
+
+<%= render partial: 'shared/blog_list' %>

@@ -1,4 +1,4 @@
-<%= link_to (image_tag "yo.png", class: 'portrait'), root_path %>
+<%= link_to (image_tag "yo.jpg", class: 'portrait'), root_path %>
 
 <% if controller_action != "home#index" %>
 
@@ -15,20 +15,35 @@
 	Keep it simple. Resist the Silicon Valley ideal. Less technology is the best technology. Help people act like people.
 </p>
 
+<% if params[:controller] == "blog" %>
+
+<h3>DISCUSS THIS POST</h3>
+<p>
+	<%= link_to "On Twitter", "http://twitter.com/grrrando" %>		<br />
+	<%= mail_to "aaron.grando@gmail.com", "Send a personal note", encode: :javascript %>
+</p>
+
+<% else %>
+
+
 <h3>ELSEWHERE</h3>
 <p>
-	<%= link_to "Twitter", "http://twitter.com/grrrando" %>
+	<%= link_to "Twitter", "http://twitter.com/grrrando" %>		<br />
 	<%= link_to "Instagram", "http://instagram.com/grrrando" %>
 </p>
 
 <h3>WORK</h3>
 <p>
-	<%= link_to "RTO+P", "http://rtop.com/" %>
-	<%= link_to "What Say Co.", "http://whatsay.co/" %>
+	<%= link_to "RTO+P", "http://rtop.com/" %>			<br />
+	<%= link_to "What Say Co.", "http://whatsay.co/" %>	<br />
 	<%= link_to "Curriculum Vitae", cv_path %>
 </p>
 
+<% end %>
+
+
+
 <p>
-	&copy; <%= Time.now.year %> A.G.
+	&copy; <%= Time.now.year %> A.G. <br />
 	<%= link_to "See commit history.", "https://github.com/aarongrando/grrrando.com" %>
 </p>
