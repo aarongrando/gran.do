@@ -8,6 +8,8 @@ body, html {
 	background: #ffffff;
 	color: #333;
     -webkit-overflow-scrolling: touch;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
 }	
 
 #container {
