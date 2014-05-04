@@ -1,0 +1,105 @@
+<% content_for :logo do %>
+	<%= image_tag 'blog/about.jpg', class: 'blog' %>
+<% end %>
+<% content_for :title do %>
+	This Website
+<% end %>
+
+<h1>This Website</h1>
+<span class="dateline">March 27, 2014</span>
+
+<section class="purpose">
+	<h2>Purpose</h2>
+	<p>
+		This page was created to give some insight on my influences, ideas, and frame-of-mind while creating this
+		most-recent version of my website. This post also serves as the site's &ldquo;slash purpose&rdquo; page, which
+		you can read more about <%= link_to 'here', 'http://slashpurpose.org/' %>. In less words, this page answers the
+		question &ldquo;Why?&rdquo;.
+	</p>
+</section>
+
+<section class="body">
+	<h2>Killing The Internet Me</h2>
+	<p>
+		I've maintained a personal website hosting my &ldquo;identity&rdquo; for years. It's cyclically taken
+		form as a portfolio, a splash page, a résumé, a rebellious statement, and a cop-out. It was practically always
+		shallow, mostly serving as an introduction and leap-off point to the internet-version of myself, who
+		isn&rsquo;t exactly the same person as the IRL-version of me. That fragmentation of my identity started to cause
+		me some serious anxiety and frustration and it just needed to stop.
+	</p>
+	<p>
+		Internet me lived on websites like Twitter, Medium and Hacker News and tended to allow the constraints,
+		customs and attitudes of those &ldquo;places&rdquo; shape my identity. At best, maybe I looked internet-cool 
+		(the opposite of IRL-cool, for those keeping track). But generally I'd get caught up in worthless debates,
+		product cycle and speculation, and any other amount of opinionated online blathering that had 
+		nothing to do with real life and was just making me unhappy.
+	</p>
+	<p>
+		The primary objective of this website is to kill internet Aaron Grando. This website becomes the definitive
+		representation of me online and it becomes the center of my attention when I need to put words on screen.
+	</p>
+		
+	<h2>Homesteading</h2>
+	<p>
+		At the end of 2012, Anil Dash started an excellent discussion with his article <em><%= link_to "The Web We Lost",
+		'http://dashes.com/anil/2012/12/the-web-we-lost.html' %></em>. When I first read it, it hit me pretty hard. It 
+		wasn't the only trigger, but since it was posted, I've gone through some periods of extreme angst against
+		technology and the web wholly; I don't consider the &ldquo;social&rdquo; web something separate from the rest
+		of the web.
+	</p>
+	<p>
+		One specific paragraph calls out the dying personal website.
+	</p>
+	<blockquote>
+		In the early days of the social web, there was a broad expectation that regular people might own their own
+		identities by having their own websites, instead of being dependent on a few big sites to host their online identity.
+		In this vision, you would own your own domain name and have complete control over its contents, rather than having a
+		handle tacked on to the end of a huge company's site. This was a sensible reaction to the realization that big sites
+		rise and fall in popularity, but that regular people need an identity that persists longer than those sites do.
+	</blockquote>
+	<p>
+		With that, another objective of this website is to take back complete control of the content that I put online,
+		including my identity. As a developer and designer I have all the skills needed to fully control what I put on
+		the internet, so I should.
+	</p>
+	<p>
+		I'd like to call out my biggest influence for this website, <%= link_to 'Frank Chimero', 'http://frankchimero.com/' %>. 
+		His website is the best, and he wrote about homesteading, and his own site, 
+		<%= link_to 'here', 'http://frankchimero.com/blog/homesteading-2014/' %> and 
+		<%= link_to 'here', 'http://frankchimero.com/blog/make-it-homely/' %>. One of the main reasons I concluded that a 
+		non-stream, non-platform-based website is still viable in 2014 is because I found myself returning to his website
+		 often to just check for new <em>stuff</em>. Thanks, Frank.
+	</p>
+	<p>
+		Also, my absolute favorite website since who-knows-when has been <%= link_to 'Kottke.org', 'http://kottke.org/' %>. 
+		It wasn't an explicit design objective, but I'm not surprised that this site wound up looking pretty similar to Jason's. 
+		I've always admired the simplicity and focus on Kottke.org. 
+	</p>
+		
+	<h2>Writing</h2>
+	<p>
+		This website was designed for reading and writing. I wanted the best reading experience for the user
+		and the best writing experience for myself.
+	</p>
+	<p>
+		I think my biggest lesson was that the single-column, huge-text look that dominated my site's last iteration was actually 
+		pretty ugly and didn't fit a comfortable use case - the text was always a little ungainly; there wasn't a comparable 
+		natural reading experience&mdash;except maybe a billboard or an ad, which this site is not. Smaller text in roughly the size
+		and shape as a book you'd hold in your hands wound up feeling best.
+	</p>
+	<p>
+		I wanted the writing experience to be as simple as possible, while maintaining full control of everything. There's plenty of
+		tools and methods I wound up deciding against - no CMS, no Markdown, no RSS. The site is mostly static HTML rendered
+		in some really basic Rails layouts. I'm super used to Rails, and I can build stuff really quickly in it. I'm also super
+		used to writing HTML, so I stuck with that. I'm writing this post in Textmate just as I'd be coding, and it's going nicely.
+	</p>
+	<p>
+		The <em>only</em> thing that annoys me about this method is that the "smart quote" HTML entity codes aren't natural
+		to type. Find and Replace will have to work for now, but it's only 50% effective since left and right straight quotes are 
+		the same character. Maybe I'll clever something up to make this easier but I probably won't because doing so feels...anti-simple. 
+		We'll see.
+	</p>
+</section>
+
+
+<%= render partial: 'shared/blog_list' %>
