@@ -7,6 +7,7 @@ body, html {
 	font-size: 10px;
 	background: #ffffff;
 	color: #333;
+    -webkit-overflow-scrolling: touch;
 }	
 
 #container {
@@ -39,19 +40,38 @@ body, html {
 		top:0;
 		width: 100px;
 		height: 100px;
-		border-radius: 50px;
 		
-		&:before {
-			content: "";
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
+		&.blog {
 			border-radius: 50px;
-			z-index: 100;
-			box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.2);
-		} 
+		
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				border-radius: 50px;
+				z-index: 100;
+				box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.2);
+			} 
+		}
+	}
+	
+	img.name {
+		width: 125px;
+		position: absolute;
+		top: 25px;
+		left: -12px;
+
+		&.variable {
+			opacity: 0;
+			transition: opacity .5s;
+		}
+	}
+	
+	&:hover img.name.variable {
+		opacity: 1;
 	}
 	
 	img.blog {
@@ -63,21 +83,6 @@ body, html {
 		border-radius: 50px;
 	}
 	
-	img.self {
-		width: 125px;
-		position: absolute;
-		top: 25px;
-		left: -12px;
-		
-		&.variable {
-			opacity: 0;
-			transition: opacity .5s;
-		}
-	}
-	
-	&:hover img.self.variable {
-		opacity: 1;
-	}
 }
 
 article#main {
@@ -343,37 +348,36 @@ section.body, section.signoff {
 		td {
   			padding: 0;
 		}
+	}
 		
+	h3, span.date {
+		@include font('ff-meta-serif');
+		font-size: 1.8rem;
+		font-weight: 400;
+		line-height: 1;
+		margin: 1.25em 0 1em 0;
+	}
+	
+	h3 {
+		float: left;
 		
-		h3, span.date {
-			@include font('ff-meta-serif');
-			font-size: 1.8rem;
-			font-weight: 400;
-			line-height: 1;
-			margin: 1.25em 0 1em 0;
-		}
-		
-		h3 {
-			float: left;
+		a {
+			color: $header_color;
+			display: block;
+			text-decoration: none;
 			
-			a {
-				color: $header_color;
-				display: block;
-				text-decoration: none;
-				
-				&:hover {
-					background-image: linear-gradient(to bottom, rgba(0,0,0,0) 75%, $header_color 75%);
-					background-repeat: repeat-x;
-					background-size: 2px 2px;
-					background-position: 0 14px;
-				}
+			&:hover {
+				background-image: linear-gradient(to bottom, rgba(0,0,0,0) 75%, $header_color 75%);
+				background-repeat: repeat-x;
+				background-size: 2px 2px;
+				background-position: 0 14px;
 			}
 		}
-		
-		span.date {
-			float: right;
-			color: $secondary-text-color;
-		}
+	}
+	
+	span.date {
+		float: right;
+		color: $secondary-text-color;
 	}
 }
 
@@ -389,26 +393,61 @@ header, footer {
 	height: 1rem;
 }
 
-// 480px & Up
-@media only screen and (min-width: 480px) {
-
+// 992px & Under
+@media only screen and (max-width: 992px) {
+	#container {
+		max-width: 90%;
+	}
 }
 
-// 600px & Up
-@media only screen and (min-width: 600px) {
-
+// 800px & Under
+@media only screen and (max-width: 800px) {
+	body, html {
+		font-size: 9px;
+	}
+	
+	.blog-list {
+		
+		h3 {
+			margin-bottom: 0;
+		}
+		
+		span.date {
+			margin-top: .5rem;
+			clear: both;
+			float: left;
+			font-size: 1.6rem;
+		}
+	}
 }
 
-// 768px & Up
-@media only screen and (min-width: 768px) {
-
-}
-
-// 992px & Up
-@media only screen and (min-width: 992px) {
-
-}
-
-// 1382px & Up
-@media only screen and (min-width: 1382px) {
+// 600px & Under
+@media only screen and (max-width: 640px) {
+	body, html {
+		overflow-x: hidden;
+	}
+	
+	article#main {
+		width: 100%;
+	}
+	
+	section.purpose {
+		border-left: none;
+		border-right: none;
+		padding: 0 6%;
+		margin-left: -6%;
+	}
+ 
+	aside#sidebar {
+		float: left;
+		max-width: 400px;
+		width: 100%;
+		padding-top: 10rem;
+	}
+	
+	#logo {
+		img.name.variable {
+			opacity: 1;
+		}
+	}
 }

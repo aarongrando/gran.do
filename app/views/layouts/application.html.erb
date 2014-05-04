@@ -25,13 +25,15 @@
 		<div id="container">
 			<div id="logo">
 				<% if content_for?(:logo) %>
-					<a href="/">
+					<a href="/" class="blog">
 						<%= yield :logo %>
-						<%= image_tag 'signature_small_black.png', class: 'self variable' %>
+						<%= image_tag 'signature_small_black.png', class: 'name variable' %>
 					</a>
 				<% else %>
-					<div class="logo-shape"></div>
-					<%= image_tag 'signature_small.png', class: 'self' %>
+					<a href="/" class="self">
+						<div class="logo-shape"></div>
+						<%= image_tag 'signature_small.png', class: 'name' %>
+					</a>
 				<% end %>
 			</div>
 			<article id="main">
