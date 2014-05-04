@@ -1,6 +1,8 @@
 @mixin font($face) {
 	@if $face == "ff-meta-serif" {
-	    font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2",serif;
+	    font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", serif;
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
 	}
 	@if $face == "karla" {
 		font-family: 'Karla', sans-serif;
