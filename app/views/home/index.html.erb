@@ -1,20 +1,22 @@
-<h1>Hi. I’m <strong>Aaron Grando</strong>, a web developer and designer in Brooklyn.</h1>
-<p>
-	I live with my girlfriend, two cats, and about a dozen plants. The cats and I are natives of Philadelphia.
-	Everyone else came from New York, as best as I can tell. I miss hoagies.
-</p>
-<p>
-	I’m interested in technology as entertainment, the new aesthetic, and reducing the burden that over-anxious technology
-	has placed on our lives.
-</p>
-<p>
-	By day, I assume the role of Tech Lead at <%= link_to "RTO+P", "http://rtop.com" %>. That means I help strategize, build, and maintain the dev team, and
-	the apps built by the team.
-</p>
-<p>
-	In 2012, I created <%= link_to "What Say Co.", 'http://whatsay.co/' %> and a line of @Horse_ebooks-inspired tee-shirts. In 2014 I was quoted in the 
-	<%= link_to "<em>New Yorker</em>".html_safe, "http://www.newyorker.com/reporting/2014/02/10/140210fa_fact_orlean"%>
-	saying something about <%= link_to "long cons", "http://instagram.com/p/kACFsYB1bn/" %>.
-</p>
-
+<div itemscope itemtype="http://data-vocabulary.org/Person">
+	<h1>Hi. I’m <strong itemprop="name">Aaron Grando</strong>, a web developer and designer in <span itemprop="address" itemscope
+    itemtype="http://data-vocabulary.org/Address"><span itemprop="locality">Brooklyn</span>, <span itemprop="region">NY</span></span>.</h1>
+	<p>
+		I live with my girlfriend, two cats, and about a dozen plants. The cats and I are natives of Philadelphia.
+		Everyone else came from New York, as best as I can tell. I miss hoagies.
+	</p>
+	<p>
+		I’m interested in technology as entertainment, the new aesthetic, and reducing the burden that over-anxious technology
+		has placed on our lives.
+	</p>
+	<p>
+		By day, I assume the role of <span itemprop="title">Tech Lead</span> at <%= link_to '<span itemprop="affiliation">RTO+P</span>'.html_safe, "http://rtop.com" %>. That means I help strategize, build, and maintain the dev team, and
+		the apps built by the team.
+	</p>
+	<p>
+		In 2012, I created <%= link_to "What Say Co.", 'http://whatsay.co/' %> and a line of @Horse_ebooks-inspired tee-shirts. In 2014 I was quoted in the 
+		<%= link_to "<em>New Yorker</em>".html_safe, "http://www.newyorker.com/reporting/2014/02/10/140210fa_fact_orlean"%>
+		saying something about <%= link_to "long cons", "http://instagram.com/p/kACFsYB1bn/" %>.
+	</p>
+</div>
 <%= render partial: 'shared/blog_list' %>
