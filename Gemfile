@@ -7,6 +7,7 @@ gem 'unicorn'                       # A nice HTTP Server
 gem 'foreman'                       # Use unicorn locally
 gem 'actionview-encoded_mail_to'    # Use obfuscated email address
 gem 'sitemap_generator'
+gem 'rack-rewrite'
 
 group :assets do
   gem 'sass-rails'
