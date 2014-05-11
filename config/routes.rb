@@ -14,6 +14,7 @@ Grrrando::Application.routes.draw do
   get '/blog/intro-to-heroku-addons',                           to: 'blog#heroku',        as: :blog_heroku
   get '/blog/1-line-productivity-hack',                         to: 'blog#productivity',  as: :blog_productivity
   get '/blog/engineers-and-advertising',                        to: 'blog#engineers',     as: :blog_engineers
+  get '/blog/eating-your-own-final-boss',                       to: 'blog#final_boss',    as: :blog_final_boss
   get '/blog/complexity-equals-features-squared',               to: 'blog#complexity',    as: :blog_complexity
   get '/blog/what-ad-agencies-job-openings-are-really-saying',  to: 'blog#job_openings',  as: :blog_job_openings
 
