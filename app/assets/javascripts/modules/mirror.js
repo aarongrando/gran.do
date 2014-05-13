@@ -32,8 +32,16 @@ $(document).ready(function() {
 	}
 
 	function loop() {
-	    ctx.drawImage(video, -65, 0, 410, 150)
-	    requestAnimationFrame(loop)
+		try {
+	    	ctx.drawImage(video, -65, 0, 410, 150)
+	    } catch (e) {
+			if (e.name == "NS_ERROR_NOT_AVAILABLE") {
+				setTimeout(loop, 0);
+			} else {
+				throw e;
+			}
+		}
+		requestAnimationFrame(loop)
 	}
 	
 	var desaturate = function (ctx) {
