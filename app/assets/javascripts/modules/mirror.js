@@ -32,8 +32,16 @@ $.fn.MirrorVideo = function() {
 		}
 	}
 
+	function detect_format() {
+		if (!Modernizr.video.h264) {
+			return 'webm'
+		} else {
+			return 'mp4'
+		}
+	}
+
 	function setup_fallback() {
-		video.src = '/videos/mirror.mp4'
+		video.src = '/videos/mirror.' + detect_format()
 		video.loop = 'loop'
 		video.play()
 		loop()
