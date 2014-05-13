@@ -15,3 +15,4 @@
 //= require modernizr-2.6.2.min
 //= require plugins
 //= require_tree ./modules
+//= require home
