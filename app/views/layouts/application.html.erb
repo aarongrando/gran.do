@@ -65,9 +65,9 @@
 		  ga('create', 'UA-12672794-2', 'gran.do');
 		  ga('require', 'linkid', 'linkid.js');
 		  ga('require', 'displayfeatures');
-		  ga('send', 'pageview');
+		  ga('send', 'pageview', '<%= request.path %>');
 		</script>
 		
-		<%= render partial: 'shared/stache' %>
+		<%= render partial: 'shared/stache'%>
     </body>
 </html>
