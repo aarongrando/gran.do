@@ -1,0 +1,72 @@
+<% content_for :logo do %>
+	<%= image_tag 'blog/baba.jpg', class: 'blog' %>
+<% end %>
+<% content_for :title do %>
+	Last Week
+<% end %>
+
+<h1>Three from Last Week</h1>
+<span class="dateline">May 27, 2014</span>
+
+<section class="purpose">
+	<h2>Purpose</h2>
+	<p>
+		It’s been big week of traveling, thinking, relaxing, retreating, and now, reflecting. These are just a few things.
+	</p>
+</section>
+
+<section class="body">
+
+	<h2>Tips for Company Retreats</h2>
+	<p>
+		Bring Oreos. When it’s 3am and there’s no food to be found in the little town you’ve crashed into, Oreos are like cigarettes in
+		prison.
+	</p>
+	<p>
+		Know your range. This specifically refers to karaoke vocals. But feel free to extend to all physical, mental, emotional, and
+		professional challenges you may face.
+	</p>
+	<p>
+		You’re on parade, so don’t be a shithead – everyone’s watching. It is work, even if it feels like play. The same rules do apply.
+	</p>
+	
+	<h2>On Being Emotionally Invested in Client Work</h2>
+	<p>
+		The project is not <em>your</em> project no matter how hard you think it is. It’s the <em>client’s</em> project. Even if you spent 
+		several more three-month stretches of your whole-entire-life on it than they did, even if it was a great idea that you helped come
+		up with, even if it was successful, even if it was the best work you’ve ever done. It’s not yours. It never was. 
+	</p>
+	<p>
+		What <em>is</em> yours are the lessons you learned, and the good (and bad) times you had with the people you worked with. When the
+		project is over (done, killed, sunsetted, “ended”), you’ll still have the lessons and the people. Pour one out with them.
+	</p>
+	
+	<h2>How To Make Babaganoush</h2>
+	<p>
+		Take an eggplant or two – smaller ones work better than bigger ones because the seeds aren’t as big and there aren’t as many – and throw them 
+		over some fire. Could be a grill, your stovetop gas burner, or (the best choice) a campfire. Let them cook until they turn black on the outside;
+		the more charred they are the smokier the result.
+	</p>
+	<p>
+		Pull them off the fire and set them aside to cool for a few minutes. Crush a few cloves of garlic in some salt and lemon juice. Cut open
+		the eggplant and scoop out the insides with a fork or spoon. The inside should be very soft. Mix the eggplant pulp and the crushed
+		garlic with a wooden spoon in a rigid bowl so you can work out the tougher bits of eggplant fibers and crush the seeds. Add tahini 
+		and salt to taste.
+	</p>
+	<p>
+		Enjoy with friends. Tell them that the the Arabic word “babaganoush” translates to English as “pampered papa”.
+	</p>
+	
+</section>
+
+<section class="signoff">
+	<div class="divider"></div>
+	<dl class="headless">
+		<dt class="headless">DISCUSS THIS POST</dt>
+		<dd><a href="http://twitter.com/grrrando">On Twitter <span class="address">@grrrando</span></a></dd>
+		<dd><%= mail_to 'aaron.grando@gmail.com', 'Send a personal note', encode: :javascript %></a></dd>
+	</dl>
+</section>
+
+
+<%= render partial: 'shared/blog_list' %>

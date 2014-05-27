@@ -10,6 +10,7 @@ Grrrando::Application.routes.draw do
   ['thinks','says','b','blog'].each do |path|
     get "/#{path}/fall",                                              to: 'blog#fall',           as: :blog_fall
     get "/#{path}/finishing",                                         to: 'blog#finishing',      as: :blog_finishing
+    get "/#{path}/last-week",                                         to: 'blog#last_week',      as: :blog_last_week
     get "/#{path}/this-website",                                      to: 'blog#about',          as: :blog_about
     get "/#{path}/lets-hang-out",                                     to: 'blog#hang_out',       as: :blog_hang_out
     get "/#{path}/intro-to-heroku-addons",                            to: 'blog#heroku',         as: :blog_heroku

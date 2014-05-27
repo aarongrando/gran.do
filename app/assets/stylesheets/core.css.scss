@@ -293,6 +293,11 @@ section.body, section.signoff {
 			text-transform: uppercase;
 			letter-spacing: 0.2em;
 			margin-bottom: .75em;
+			
+
+			&.headless {
+				padding-top: 1em;
+			}
 		}
 		
 		dd {
