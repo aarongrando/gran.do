@@ -211,7 +211,7 @@ article {
 		color: $blockquote_text_color;
 		font-style: italic;
 		margin: 2.5rem 4rem 3rem 2.5rem;
-		quotes: "\201C""\201D""\2018""\2019";
+		quotes: "\201C""\201D";
 	}
 	
 	ul {
@@ -255,10 +255,23 @@ article {
 		h2 {
 			margin-top: 1.5em;
 			margin-bottom: .5em;
+			line-height: 1.5;
 		}
 		p {
 			margin-top: 0;
 			margin-bottom: 1.6rem;
+			
+			&.indent {
+				padding-left: 3rem;
+			}
+		}
+		
+		img {
+			width: 98%;
+			margin-bottom: 3rem;
+			margin-top: 1.2rem;
+			border-radius: 2px;
+			background: #000;
 		}
 	}
 }

@@ -12,6 +12,7 @@ Grrrando::Application.routes.draw do
     get "/#{path}/finishing",                                         to: 'blog#finishing',      as: :blog_finishing
     get "/#{path}/this-website",                                      to: 'blog#about',          as: :blog_about
     get "/#{path}/lets-hang-out",                                     to: 'blog#hang_out',       as: :blog_hang_out
+    get "/#{path}/questions-on-growth",                               to: 'blog#questions',      as: :blog_questions
     get "/#{path}/three-from-last-week",                              to: 'blog#last_week',      as: :blog_last_week
     get "/#{path}/intro-to-heroku-addons",                            to: 'blog#heroku',         as: :blog_heroku
     get "/#{path}/for-the-love-of-the-url",                           to: 'blog#url',            as: :blog_url
