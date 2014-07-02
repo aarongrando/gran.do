@@ -23,7 +23,6 @@ Grrrando::Application.routes.draw do
     get "/#{path}/eating-your-own-final-boss",                        to: 'blog#final_boss',     as: :blog_final_boss
     get "/#{path}/complexity-equals-features-squared",                to: 'blog#complexity',     as: :blog_complexity
     get "/#{path}/what-ad-agencies-job-openings-are-really-saying",   to: 'blog#job_openings',   as: :blog_job_openings
-    
   end
 
 end

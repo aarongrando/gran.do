@@ -8,6 +8,7 @@ gem 'foreman'                       # Use unicorn locally
 gem 'actionview-encoded_mail_to'    # Use obfuscated email address
 gem 'sitemap_generator'
 gem 'rack-rewrite'
+gem 'rails_12factor'
 
 group :assets do
   gem 'sass-rails'
