@@ -2,11 +2,11 @@
 
 <% if controller_action != "home#index" %>
 
-<h3>GREETINGS</h3>
-<p>
-	I’m Aaron Grando, a web developer and designer currently working as 
-	Tech Lead at RTO+P. Interested? <br /><%= link_to "Read&nbsp;more&nbsp;about&nbsp;me.".html_safe, root_path %>
-</p>
+	<h3>GREETINGS</h3>
+	<p>
+		I’m Aaron Grando, a web developer and designer currently working as 
+		Tech Lead at RTO+P. Interested? <br /><%= link_to "Read&nbsp;more&nbsp;about&nbsp;me.".html_safe, root_path %>
+	</p>
 
 <% end %>
 
@@ -18,32 +18,35 @@
 
 <% if params[:controller] == "blog" %>
 
-<h3>DISCUSS THIS POST</h3>
-<p>
-	<%= link_to "On Twitter", "http://twitter.com/grrrando" %>	<br />
-	<%= mail_to "aaron.grando@gmail.com", "Send a personal note", encode: :javascript %>
-</p>
+	<h3>DISCUSS THIS POST</h3>
+	<p>
+		<%= link_to "On Twitter", "http://twitter.com/grrrando" %>	<br />
+		<%= mail_to "aaron.grando@gmail.com", "Send a personal note", encode: :javascript %>
+	</p>
 
-<% else %>
+<% elsif controller_action !=  "home#cv" %>
 
+	<h3>ELSEWHERE</h3>
+	<p>
+		<%= link_to "Twitter", "http://twitter.com/grrrando" %>	<br />
+		<%= link_to "Instagram", "http://instagram.com/grrrando" %>
+	</p>
 
-<h3>ELSEWHERE</h3>
-<p>
-	<%= link_to "Twitter", "http://twitter.com/grrrando" %>	<br />
-	<%= link_to "Instagram", "http://instagram.com/grrrando" %>
-</p>
-
-<h3>WORK</h3>
-<p>
-	<%= link_to "RTO+P", "http://rtop.com/" %>	<br />
-	<%= link_to "What Say Co.", "http://whatsay.co/" %>	<br />
-	<%= link_to "Curriculum Vitae", cv_path %>
-</p>
+	<h3>WORK</h3>
+	<p>
+		<%= link_to "RTO+P", "http://rtop.com/" %>	<br />
+		<%= link_to "What Say Co.", "http://whatsay.co/" %>	<br />
+		<%= link_to "Curriculum Vitae", cv_path %>
+	</p>
 
 <% end %>
 
-<p>
-	&copy; <%= Time.now.year %> A.G. <br />
-	<%= link_to "See commit history", "https://github.com/aarongrando/grrrando.com/commits/master" %>	<br />
-	<%= link_to "Purpose", purpose_path %>
-</p>
+<% if controller_action !=  "home#cv" %>
+
+	<p>
+		&copy; <%= Time.now.year %> A.G. <br />
+		<%= link_to "See commit history", "https://github.com/aarongrando/grrrando.com/commits/master" %>	<br />
+		<%= link_to "Purpose", purpose_path %>
+	</p>
+	
+<% end %>
