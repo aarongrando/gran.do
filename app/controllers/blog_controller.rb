@@ -4,4 +4,8 @@ class BlogController < ApplicationController
     
   end
   
+  def draft
+    @draft_path = "blog/drafts/" + params[:file]
+  end
+  
 end
