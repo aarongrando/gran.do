@@ -421,16 +421,14 @@ header, footer {
 
 // 992px & Under
 @media only screen and (max-width: 992px) {
-	#container {
-		max-width: 90%;
-	}
 }
 
 // 800px & Under
-@media only screen and (max-width: 800px) {
-	body, html {
-		font-size: 9px;
+@media only screen and (max-width: 992px) {
+	#container {
+		max-width: 90%;
 	}
+	
 	
 	.blog-list {
 		
@@ -444,6 +442,12 @@ header, footer {
 			float: left;
 			font-size: 1.6rem;
 		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	html, body {
+		font-size: 9px;
 	}
 }
 
