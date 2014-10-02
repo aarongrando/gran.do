@@ -193,16 +193,11 @@ article {
 		}
 		
 		a {
-			text-decoration: none;
-			color: $body_text_color;
-			background-image: linear-gradient(to bottom, rgba(0,0,0,0) 75%, $body_text_color 75%);
-			background-repeat: repeat-x;
-			background-size: 2px 2px;
-			background-position: 0 19px;
+			text-decoration: underline;
+			color: $body_text_color;			
 		
 			&:hover {
 				color: $body_link_hover_color;
-				background-image: linear-gradient(to bottom, rgba(0,0,0,0) 75%, $body_link_hover_color 75%);
 			}
 		}
 	}	
@@ -401,10 +396,7 @@ section.body, section.signoff {
 			text-decoration: none;
 			
 			&:hover {
-				background-image: linear-gradient(to bottom, rgba(0,0,0,0) 75%, $header_color 75%);
-				background-repeat: repeat-x;
-				background-size: 2px 2px;
-				background-position: 0 14px;
+				text-decoration: underline;
 			}
 		}
 	}
