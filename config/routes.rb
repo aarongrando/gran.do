@@ -13,6 +13,7 @@ Grrrando::Application.routes.draw do
     get "/#{path}/anxiety-debt",                                      to: 'blog#anxiety_debt',   as: :blog_anxiety_debt
     get "/#{path}/this-website",                                      to: 'blog#about',          as: :blog_about
     get "/#{path}/lets-hang-out",                                     to: 'blog#hang_out',       as: :blog_hang_out
+    get "/#{path}/things-i-like",                                     to: 'blog#things_i_like',  as: :blog_things_i_like
     get "/#{path}/questions-on-growth",                               to: 'blog#questions',      as: :blog_questions
     get "/#{path}/three-from-last-week",                              to: 'blog#last_week',      as: :blog_last_week
     get "/#{path}/intro-to-heroku-addons",                            to: 'blog#heroku',         as: :blog_heroku

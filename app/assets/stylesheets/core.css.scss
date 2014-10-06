@@ -181,6 +181,19 @@ article {
 		font-weight: bold;
 	}
 	
+	h4 {
+		color: $header-color;
+		font-weight: bold;
+		font-size: 1.3rem;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		margin-bottom: .75em;
+
+		&.headless {
+			margin-top: 3em;
+		}
+	}
+	
 	p, blockquote, li {
 		@include font(ff-meta-serif);
 		font-size: 1.8rem;
@@ -251,6 +264,16 @@ article {
 			margin-top: 1.5em;
 			margin-bottom: .5em;
 			line-height: 1.5;
+
+			&.subheaded {
+				margin-top: 0;
+				padding-top: 0;
+			}
+			
+			small {
+				font-size: .75em;
+				color: #888;
+			}
 		}
 		p {
 			margin-top: 0;
@@ -267,6 +290,46 @@ article {
 			margin-top: 1.2rem;
 			border-radius: 2px;
 			background: #000;
+		}
+		
+		figure {
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			
+			img {
+				margin-bottom: .75em;
+			}
+			
+			figcaption {
+				@include font(ff-meta-serif);
+				font-size: 1.3em;
+				padding: 0;
+				margin: 0;
+				color: $blockquote_text_color;
+				font-style: italic;
+				margin-bottom: 2em;
+			}
+		}
+		
+		iframe {
+			width: 100%;
+		}
+		
+		.video-container {
+		    position: relative;
+		    padding-bottom: 51.1%;
+		    padding-top: 30px; height: 0; overflow: hidden;
+		}
+ 
+		.video-container iframe,
+		.video-container object,
+		.video-container embed {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
 		}
 	}
 }
