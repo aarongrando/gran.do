@@ -1,0 +1,44 @@
+<% content_for :logo do %>
+	<%= image_tag 'blog/slam-dunk.gif', class: 'blog' %>
+<% end %>
+<% content_for :title do %>
+	Respre
+<% end %>
+
+<h1 class="purposeless">Respre</h1>
+<span class="dateline">October 24, 2014</span>
+
+<section class="body">
+	<p>
+		This past weekend, I spent a few hours creating a little tool for responsive design. So little, in fact, that I think it can fit into most people’s responsive design workflows. It’s called <a href="http://github.com/aarongrando/respre">Respre</a> (short for <em>responsive preview</em>). <strong>Respre helps teams preview responsive web designs in-browser without writing any code.</strong>
+	</p>
+	<dl>
+		<dt>Get Respre</dt>
+		<dd><a href="https://github.com/aarongrando/Respre/archive/master.zip">Download Respre (.zip)<span class="address">github.com</span></a></dd>
+		<dd><a href="https://github.com/aarongrando/Respre/blob/master/README.md">Docs and “Getting Started” Guide<span class="address">github.com</span></a></dd>
+		<dd><a href="https://respre.herokuapp.com/">Example Respre Preview<span class="address">respre.herokuapp.com</span></a></dd>
+	</dl>
+	<h2>A Little Background</h2>
+	<p>
+		At RTO+P, when we get a new project, we tend to design a handful of pages <em>very</em> early in the process. These designs help get the client and the team excited about the project and give us immediate “artifacts” which can be distributed for internal and client critique and feedback. We do it like this because it’s a lot easier to get people to give open feedback when there’s something that feels finished and <em>ready</em> to judge. Compared to any other UX strategy like wireframes or user flows, creating early static comps gets us further, faster. Speed is always of the essence in advertising. 
+	</p>
+	<p>
+		As responsive design took hold, it got a bit harder to conveniently pass around comps for feedback. Instead of looking at a single page in a PDF, you might have to review three or more different pages for mobile, tablet, and desktop breakpoints. And you’d need to connect the dots between the design elements completely outside of the in-browser context that would eventually house the finished website – really tough for a lot of people who aren't fully up-to-speed on RWD. 
+	</p>
+	<p>
+		We had this problem for a long time. We’d found and used some apps that helped (<a href="http://invisionapp.com">Invision</a> is one notable example; it’s super polished and client-friendly). But we didn’t find anything that was free and simple enough to not be a drag to use. So I made Respre to scratch that itch.
+	</p>
+	<p>
+		<a href="http://github.com/aarongrando/respre">Respre</a> is a little open-source app that does, essentially, one thing: it reads image files from a folder and presents them as a responsive preview in your browser. Creating and organizing previews is a matter of creating folders and renaming image files within them. No code required. 
+	</p>
+	<p><a href="http://respre.herokuapp.com/">Here’s</a> an example of a Respre preview, stocked with some boilerplate images.</p>
+	<p>
+		Respre runs on most PHP-friendly servers (including Heroku) and doesn’t require any installation other than dragging-and-dropping the files wherever you want them to live. Run it locally to preview your own work, or put it up online to share the previews with your teammates.
+	</p>
+	<p>
+		I hope that you and your team find Respre useful. If you have the time and an idea on how to improve it, please feel free to contribute!
+	</p>
+</section>
+
+
+<%= render partial: 'shared/blog_list' %>

@@ -13,6 +13,12 @@
 	<table class="blog-list">
 		<tr>
 			<td itemscope itemtype="http://schema.org/Article">
+				<h3><%= link_to "Respre", blog_respre_path, itemprop: 'name' %></h3>
+				<span class="date" itemprop="datePublished" content="2014-10-24">October 24, 2014</span>
+			</td>
+		</tr>
+		<tr>
+			<td itemscope itemtype="http://schema.org/Article">
 				<h3><%= link_to "Things I Like", blog_things_i_like_path, itemprop: 'name' %></h3>
 				<span class="date" itemprop="datePublished" content="2014-10-06">October 6, 2014</span>
 			</td>

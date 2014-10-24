@@ -9,6 +9,7 @@ Grrrando::Application.routes.draw do
   
   ['thinks','says','b','blog'].each do |path|
     get "/#{path}/fall",                                              to: 'blog#fall',           as: :blog_fall
+    get "/#{path}/respre",                                            to: 'blog#respre',         as: :blog_respre
     get "/#{path}/finishing",                                         to: 'blog#finishing',      as: :blog_finishing
     get "/#{path}/anxiety-debt",                                      to: 'blog#anxiety_debt',   as: :blog_anxiety_debt
     get "/#{path}/this-website",                                      to: 'blog#about',          as: :blog_about

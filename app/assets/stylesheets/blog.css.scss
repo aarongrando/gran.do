@@ -4,7 +4,7 @@
 	}
 	
 	span.dateline {
-		@include font(ff-meta-serif);
+		@include font(body);
 		margin: 0 0 2.5rem 0;
 		display: block;
 		color: $header_color;

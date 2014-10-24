@@ -79,7 +79,7 @@ a {
 		opacity: 1;
 	}
 	
-	img, canvas {		
+	img, canvas, .video-logo {		
 		&.blog {
 			width: 100px;
 			height: 100px;
@@ -87,6 +87,7 @@ a {
 			top: 0px;
 			left: 0;
 			border-radius: 50px;
+			overflow: hidden;
 		}
 	}
 	
@@ -170,6 +171,10 @@ article {
 	
 	h1 {
 		font-size: 3.2rem;
+
+		&.purposeless {
+			margin-top: 1.11em;
+		}
 	}
 	
 	h2 {
@@ -195,9 +200,9 @@ article {
 	}
 	
 	p, blockquote, li {
-		@include font(ff-meta-serif);
+		@include font(body);
 		font-size: 1.8rem;
-		line-height: 1.82;
+		line-height: 1.8;
 		color: $body_text_color;
 		margin: 1.7rem 0;
 		
@@ -302,7 +307,7 @@ article {
 			}
 			
 			figcaption {
-				@include font(ff-meta-serif);
+				@include font(body);
 				font-size: 1.3em;
 				padding: 0;
 				margin: 0;
@@ -372,7 +377,7 @@ section.body, section.signoff {
 		}
 		
 		dd {
-			@include font(ff-meta-serif); 
+			@include font(body); 
 			text-indent: -1em;
 			transition: padding 0.5s;
 			margin: .5em 1em;
@@ -443,7 +448,7 @@ section.body, section.signoff {
 	}
 		
 	h3, span.date {
-		@include font('ff-meta-serif');
+		@include font('body');
 		font-size: 1.8rem;
 		font-weight: 400;
 		line-height: 1;
@@ -472,7 +477,7 @@ section.body, section.signoff {
 
 header, footer {
 	clear: both;
-	font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
+	font-family: "body-web-pro-1","body-web-pro-2";
 	background: rgb(59, 0, 71);
 	background: -moz-linear-gradient(20deg, rgb(59, 0, 71) 30%, rgb(112, 201, 233) 100%);
 	background: -webkit-linear-gradient(20deg, rgb(59, 0, 71) 30%, rgb(112, 201, 233) 100%);
