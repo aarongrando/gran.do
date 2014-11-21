@@ -1,5 +1,9 @@
 class BlogController < ApplicationController
   
+  def index
+  	
+  end
+
   def whoa 
     
   end

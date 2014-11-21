@@ -1,19 +1,9 @@
-<div class="divider"></div>
-
 <div class="blog-list-container">
-	<p>
-		<% if controller_action == "home#index" %>
-			I’m keeping a blog on this website. Please enjoy reading the entries and feel free to get in touch if you have
-			any questions, criticisms, or corrections.
-		<% else %>
-			I hope you enjoyed this blog post. It’s not the only one! Please enjoy reading another from the list below.
-		<% end %>
-	</p>
 	
 	<table class="blog-list">
 		<tr>
 			<td itemscope itemtype="http://schema.org/Article">
-				<h3><%= link_to "Respre", blog_respre_path, itemprop: 'name' %></h3>
+				<h3><%= link_to raw("Respre"), blog_respre_path, itemprop: 'name' %></h3>
 				<span class="date" itemprop="datePublished" content="2014-10-24">October 24, 2014</span>
 			</td>
 		</tr>

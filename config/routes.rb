@@ -1,3 +1,4 @@
+
 Grrrando::Application.routes.draw do
   # The priority is based upon order of creation:
   # earlier in this file -> higher priority.
@@ -6,6 +7,7 @@ Grrrando::Application.routes.draw do
 
   get '/cv',      to: 'home#cv',    as: :cv
   get '/purpose', to: 'blog#about', as: :purpose
+  get '/blog',    to: 'blog#index',  as: :blog_index
   
   ['thinks','says','b','blog'].each do |path|
     get "/#{path}/fall",                                              to: 'blog#fall',           as: :blog_fall
