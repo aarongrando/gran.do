@@ -121,7 +121,7 @@ aside#sidebar {
 	}
 	
 	h3 {
-		@include font(karla);
+		@include font(headline);
 		font-weight: 700;
 		font-size: 1.3rem;
 		line-height: 2.15;
@@ -129,11 +129,13 @@ aside#sidebar {
 	}
 	
 	p {
-		@include font(karla);
+		@include font(body);
 		font-size: 1.5rem;
 		line-height: 1.86;
 		color: $sidebar_text_color;
 		margin-bottom: 3.5rem;
+
+
 		
 		a {
 			color: $sidebar_link_color;
@@ -144,6 +146,7 @@ aside#sidebar {
 			background-size: 2px 2px;
 			background-position: 0 19px;
 			white-space: pre;
+			transition: color .1s;
 			
 			&:hover {
 				color: $highlight_text_color;
@@ -158,16 +161,17 @@ aside#sidebar {
 }
 
 article {
+	strong {
+		font-weight: 700;
+	}
+
 	h1, h2, h3 {
-		@include font(karla);
+		@include font(headline);
 		font-weight: 400;
 		line-height: 1.21;
 		color: $header_color;
-		
-		strong {
-			font-weight: 700;
-		}
 	}
+
 	
 	h1 {
 		font-size: 3.2rem;
@@ -178,11 +182,11 @@ article {
 	}
 	
 	h2 {
-		font-size: 2rem;
+		font-size: 2.2rem;
 	}
 	
 	h3 {
-		font-size: 1.3rem;
+		font-size: 1.5rem;
 		font-weight: bold;
 	}
 	
@@ -201,7 +205,7 @@ article {
 	
 	p, blockquote, li {
 		@include font(body);
-		font-size: 1.8rem;
+		font-size: 1.7rem;
 		line-height: 1.8;
 		color: $body_text_color;
 		margin: 1.7rem 0;
@@ -211,11 +215,13 @@ article {
 		}
 		
 		a {
-			text-decoration: underline;
-			color: $body_text_color;			
+			text-decoration: none;
+			color: #5e8dbb;	
+			transition: color 0.1s;		
 		
 			&:hover {
 				color: $body_link_hover_color;
+				text-decoration: underline;
 			}
 		}
 	}	
@@ -362,7 +368,7 @@ section.body, section.signoff {
 		margin: 2em 0 3em 0;
 		
 		dt {
-			@include font(karla);
+			@include font(headline);
 			color: $header-color;
 			font-weight: bold;
 			font-size: 1.3rem;
@@ -444,18 +450,20 @@ section.body, section.signoff {
 		
 		td {
   			padding: 0;
+			position: relative;	
 		}
 	}
 		
 	h3, span.date {
 		@include font('body');
-		font-size: 1.8rem;
+		font-size: 1.7rem;
 		font-weight: 400;
 		line-height: 1;
-		margin: 1.25em 0 1em 0;
 	}
 	
 	h3 {
+		font-weight: 500;
+		margin: 1.25em 0 0 0;
 		float: left;
 		
 		a {
@@ -468,9 +476,20 @@ section.body, section.signoff {
 			}
 		}
 	}
+
+	p {
+		float: left;
+		clear: both;
+		margin: .2em 0 1em 0;
+		font-size: 1.5rem;
+		color: darken($secondary-text-color, 20%);
+	}
 	
 	span.date {
-		float: right;
+		position: absolute;
+		font-size: 1.5rem;
+		bottom: 1.3em;
+		right: 0;
 		color: $secondary-text-color;
 	}
 }
@@ -501,11 +520,18 @@ header, footer {
 	.blog-list {
 		
 		h3 {
-			margin-bottom: 0;
+			margin-bottom: .2em;
 		}
 		
+		p {
+			margin-bottom: .2em;
+			line-height: 1.4;
+		}
+
 		span.date {
 			margin-top: .5rem;
+			margin-bottom: 1em;
+			position: static;
 			clear: both;
 			float: left;
 			font-size: 1.6rem;
