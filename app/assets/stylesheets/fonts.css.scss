@@ -1,13 +1,10 @@
 @mixin font($face) {
 	@if $face == "body" {
-	    font-family: "franklin-gothic-urw-1","franklin-gothic-urw-2";
+	    font-family: "franklin-gothic-urw-1","franklin-gothic-urw-2", 'Helvetica Neue', Arial, sans-serif;
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;
 	}
-	@if $face == "fancy-headline" {
-	    font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", "athelas-1","athelas-2", "freight-text-pro-1","freight-text-pro-2", serif;
-	}
 	@if $face == "headline" {
-		font-family: 'Karla', sans-serif;
+		font-family: "Karla", 'Helvetica Neue', Arial, sans-serif;
 	}
 }

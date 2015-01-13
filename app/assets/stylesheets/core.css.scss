@@ -5,8 +5,7 @@
 body, html {
 	height: 100%;
 	font-size: 10px;
-	background: #ffffff;
-	color: #333;
+	background: $body_background_color;
 	z-index: 0;
     -webkit-overflow-scrolling: touch;
 }	
@@ -216,7 +215,7 @@ article {
 		
 		a {
 			text-decoration: none;
-			color: #5e8dbb;	
+			color: $body_link_color;	
 			transition: color 0.1s;		
 		
 			&:hover {
@@ -245,12 +244,12 @@ article {
 	
 	pre {
 		font-family: Consolas, monospace;
-		background: #222;
+		background: $pre_background_color;
 		padding: 1em 3%;
 		line-height: 1.6;
 		width: 100%;
 		margin-left: -3%;
-		color: #f4e8e7;
+		color: $pre_text_color;
 		font-size: 1.8rem;
 		display: block;
 		width: auto;
@@ -262,7 +261,7 @@ article {
 	}
 	
 	blockquote:before {
-	  color: #ccc;
+	  color: $blockquote_icon_color;
 	  content: open-quote;
 	  font-size: 3em;
 	  line-height: 0.1em;
@@ -283,7 +282,7 @@ article {
 			
 			small {
 				font-size: .75em;
-				color: #888;
+				color: $small_header_text_color;
 			}
 		}
 		p {
@@ -364,7 +363,6 @@ section.purpose {
 section.body, section.signoff {
 	dl {
 		font-size: 1.4rem;
-		color: #666;
 		margin: 2em 0 3em 0;
 		
 		dt {
@@ -376,7 +374,6 @@ section.body, section.signoff {
 			letter-spacing: 0.2em;
 			margin-bottom: .75em;
 			
-
 			&.headless {
 				padding-top: 1em;
 			}
@@ -401,11 +398,11 @@ section.body, section.signoff {
 		
 		a {
 			text-decoration: none;
-			color: #666;
+			color: $key_link_color;
 			margin-top: .5rem;
 			
 			&:hover {
-				color: #999;
+				color: $key_link_hover_color;
 			}
 			
 			span {
@@ -418,7 +415,7 @@ section.body, section.signoff {
 }
 
 .divider {
-	background: #E8E8E8;
+	background: $divider_color;
 	height: 3px;
 	width: 43px;
 	margin: 3rem 0;
@@ -446,7 +443,7 @@ section.body, section.signoff {
 	tr {
 		@extend .clearfix;
 		clear: both;
-		border-bottom: 1px solid #F5F5F5;
+		border-bottom: 1px solid $blog_list_border_color;
 		
 		td {
   			padding: 0;
