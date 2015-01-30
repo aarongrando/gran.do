@@ -223,6 +223,13 @@ article {
 				text-decoration: underline;
 			}
 		}
+
+		span.favorite {
+			color: $favorite_color;
+			font-size: 1.25em;
+			line-height: 1em;
+			font-weight: bold;
+		}
 	}	
 	
 	blockquote {
@@ -444,7 +451,7 @@ section.body, section.signoff {
 		@extend .clearfix;
 		clear: both;
 		border-bottom: 1px solid $blog_list_border_color;
-		
+
 		td {
   			padding: 0;
 			position: relative;	
@@ -462,7 +469,16 @@ section.body, section.signoff {
 		font-weight: 500;
 		margin: 1.25em 0 0 0;
 		float: left;
-		
+		position: relative;
+
+		span {
+			position: absolute;
+			left: -1.5em;
+			color: $favorite_color;
+			font-size: 1.2em;
+			top: -0.15em;
+		}
+
 		a {
 			color: $header_color;
 			display: block;
@@ -570,5 +586,10 @@ header, footer {
 		img.name.variable {
 			opacity: 1;
 		}
+	}
+
+	.blog-list h3 span {
+		left: auto;
+		right: -1.5em;
 	}
 }

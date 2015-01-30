@@ -10,7 +10,7 @@ module ApplicationHelper
     if Rails.env == 'production'
       return false # Always return false in production
     else
-      return true # Manual toggle for local dev; true = offline mode
+      return false # Manual toggle for local dev; true = offline mode
     end
   end
   

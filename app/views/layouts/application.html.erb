@@ -43,6 +43,10 @@
 					</a>
 				<% end %>
 			</div>
+
+			<% if content_for?(:blog_header) %>
+				<div class="blog-header"><%= yield :blog_header %></div>
+			<% end %>
 			<article id="main">
 	        	<%= yield %>
 	        </article>
