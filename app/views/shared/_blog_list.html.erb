@@ -1,6 +1,13 @@
 <div class="blog-list-container">
 	
 	<table class="blog-list">
+		<tr>
+			<td itemscope itemtype="http://schema.org/Article">
+				<h3 class="favorite"><span>&#9786;</span><%= link_to "How much does it cost to sell stuff online?", :blog_sell_stuff_online, itemprop: 'name' %></h3>
+				<p>Looking at the current state of consumer ecomm fees.</p>
+				<span class="date" itemprop="datePublished" content="2014-10-24">November 11, 2015</span>
+			</td>
+		</tr>
 		<tr >
 			<td itemscope itemtype="http://schema.org/Article">
 				<h3 class="favorite"><span>&#9786;</span><%= link_to raw("Respre"), blog_respre_path, itemprop: 'name' %></h3>

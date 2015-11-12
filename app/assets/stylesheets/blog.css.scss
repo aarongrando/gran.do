@@ -23,3 +23,26 @@
 	transform: scale(-1, 1);
 	filter: FlipH;
 }
+
+.blog-header {
+	margin-top: 140px;
+
+	img {
+		width: 100%;
+	}
+
+	figure {
+		margin: 0 0 1.5rem 0;
+		text-align: right;
+		color: $secondary_text_color;
+		@include font(body);
+	}
+
+	figcaption {
+		font-size: 1.2em;
+
+		a {
+			color: $secondary_text_link_color;
+		}
+	}
+}
