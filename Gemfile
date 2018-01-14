@@ -12,8 +12,8 @@ gem 'rack-rewrite'
 gem 'rails_12factor'
 
 group :assets do
-  gem 'sass-rails'
   gem 'uglifier'
+gem 'sass-rails'
 end
 
 group :development do
