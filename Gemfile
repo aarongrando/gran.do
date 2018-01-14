@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.4.0'
 
-gem 'rails', '~>4.2.7.1'               # Ruby on Rails framework
-gem 'pg'                            # PostgreSQL
+gem 'rails', '~>5.1.3'              # Ruby on Rails framework
+gem 'pg', '~> 0.18.4'               # PostgreSQL
 gem 'jquery-rails'                  # jQuery...Rails...
 gem 'unicorn'                       # A nice HTTP Server
 gem 'foreman'                       # Use unicorn locally
