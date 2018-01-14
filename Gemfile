@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.1.5'
+ruby '2.4.0'
 
-gem 'rails', '~>3.2'                # Ruby on Rails framework
+gem 'rails', '~>4.1.11'               # Ruby on Rails framework
 gem 'pg'                            # PostgreSQL
 gem 'jquery-rails'                  # jQuery...Rails...
 gem 'unicorn'                       # A nice HTTP Server
