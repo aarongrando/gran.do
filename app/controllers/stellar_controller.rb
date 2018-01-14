@@ -25,6 +25,14 @@ class StellarController < ApplicationController
     render json: response, status: status
   end
   
+  def stellar
+    headers['Access-Control-Allow-Origin'] = '*'
+    
+    respond_to do |format| 
+      format.toml
+    end
+  end
+  
   def addresses
     [{
       stellar_address: 'aaron*gran.do',

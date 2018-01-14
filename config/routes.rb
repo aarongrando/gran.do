@@ -5,7 +5,9 @@ Grrrando::Application.routes.draw do
 
   root to: 'home#index'
 
-  get '/federation',  to: 'stellar#federation'
+  get '/federation',            to: 'stellar#federation'
+  get '/.well-known/stellar',   to: 'stellar#stellar'
+  
   get '/cv',          to: 'home#cv',     as: :cv
   get '/purpose',     to: 'blog#about',  as: :purpose
   get '/blog',        to: 'blog#index',  as: :blog_index
