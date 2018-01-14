@@ -1,6 +1,8 @@
 class StellarController < ApplicationController
   
   def federation
+    headers['Access-Control-Allow-Origin'] = '*'
+    
     if params[:q].present? && params[:type].present?
       if params[:type] != 'name'
         response = {detail: 'type not allowed'}.to_json
