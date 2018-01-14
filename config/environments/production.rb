@@ -70,7 +70,7 @@ Grrrando::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   
   # Ensure that new traffic hits new URL
-  config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+  config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
     r301 %r{.*}, 'http://gran.do$&', :if => Proc.new {|rack_env|
       rack_env['SERVER_NAME'] != 'gran.do'
     }
