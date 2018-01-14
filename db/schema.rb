@@ -13,10 +13,4 @@
 
 ActiveRecord::Schema.define(:version => 20130603142705) do
 
-  create_table "rss_stores", :force => true do |t|
-    t.text     "xml"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
 end
