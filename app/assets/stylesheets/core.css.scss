@@ -4,7 +4,7 @@
 
 body, html {
 	height: 100%;
-	font-size: 10px;
+	font-size: 9px;
 	background: $body_background_color;
 	z-index: 0;
     -webkit-overflow-scrolling: touch;
@@ -173,26 +173,26 @@ article {
 
 	
 	h1 {
-		font-size: 3.2rem;
+		font-size: 3.6rem;
 
 		&.purposeless {
-			margin-top: 1.11em;
+			margin-top: 1.13em;
 		}
 	}
 	
 	h2 {
-		font-size: 2.2rem;
+		font-size: 2.4rem;
 	}
 	
 	h3 {
-		font-size: 1.5rem;
+		font-size: 1.65rem;
 		font-weight: bold;
 	}
 	
 	h4 {
 		color: $header-color;
 		font-weight: bold;
-		font-size: 1.3rem;
+		font-size: 1.425rem;
 		text-transform: uppercase;
 		letter-spacing: 0.2em;
 		margin-bottom: .75em;

@@ -1,6 +1,6 @@
 @mixin font($face) {
 	@if $face == "body" {
-	    font-family: "franklin-gothic-urw-1","franklin-gothic-urw-2", 'Helvetica Neue', Arial, sans-serif;
+	    font-family: "Libre Franklin", 'Helvetica Neue', Arial, sans-serif;
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;
 	}
