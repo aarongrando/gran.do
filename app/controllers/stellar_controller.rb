@@ -39,7 +39,7 @@ class StellarController < ApplicationController
       account_id: 'GASDAFBKX2F7BL7TE3R4BLCKZZRWKGPKIXFNCIQVJRF7QOJHPDXV4WR6'
     }, {
       stellar_address: 'test*gran.do',
-      account_id: 'GCG3XCQJE4CYVUBG5GW652PF53HL3NKSKVIG2SN6GUHIX4FR254YJ2MI'
+      account_id: 'GDCAIP4WBYM4X4MI3MYGSXW2WXBFAUDTQ2OTB5OZAOFC467Y6Z7LU6GT'
     }]
   end
   
