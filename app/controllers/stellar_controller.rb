@@ -36,7 +36,7 @@ class StellarController < ApplicationController
   def addresses
     [{
       stellar_address: 'aaron*gran.do',
-      account_id: 'GASDAFBKX2F7BL7TE3R4BLCKZZRWKGPKIXFNCIQVJRF7QOJHPDXV4WR6'
+      account_id: 'GB4JYYQVE6G27IRGG4YQKQTQWSQZ5ZCLYK5TEGOS6ACHNISDJ3BBYSHV'
     }, {
       stellar_address: 'test*gran.do',
       account_id: 'GDCAIP4WBYM4X4MI3MYGSXW2WXBFAUDTQ2OTB5OZAOFC467Y6Z7LU6GT'
