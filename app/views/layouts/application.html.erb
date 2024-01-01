@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/tailwindcss@3.3.6/src/css/preflight.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="<%= image_url 'shield.svg' %>">
+
+        <style type="text/css">
+            body {
+                background: #0F0D16;
+                color: #CACACA;
+                font-family: 'Libre Franklin', sans-serif;
+                font-size: 18px;
+                font-weight: 300;
+            }
+
+
+            a {
+                cursor:pointer;
+            }
+
+            h1 {
+                font-size: 1.2em;
+                font-weight: 600;
+            }
+
+            h2 {
+                font-weight: 500;
+
+            }
+
+            h3 {
+                font-size: 1.2em;
+                font-weight: 600;
+            }
+
+            h1, h3 {
+                padding-top: 1.5em;
+                margin: 2em 0 0.333em 0 ;
+            }
+
+            p {
+                margin: 1em 0;
+                line-height: 1.6;
+            }
+
+            p a {
+                color: #ed5aa0;
+                text-decoration: none;
+            }
+
+            p a:hover {
+                text-decoration: underline;
+            }
+
+            #container {
+                max-width: 980px;
+                margin: 100px 7.77%;
+            }
+
+            section#bio {
+                max-width: 768px;
+            }
+
+            section#clients h3 {
+                max-width: 155px;
+                border-top: 1px solid #F2C94C;
+            }
+
+            section#clients p {
+                color: #6A8CB5;
+            }
+
+            section#vibrations h3 {
+                max-width: 155px;
+                border-top: 1px solid #27AE60;
+            }
+
+            ul {
+                line-height: 1.78;
+            }
+
+            li {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                color: #999999;
+                padding: .1em 1em;
+                margin-left: -1em;
+            }
+
+            li strong {
+                font-weight: 500;
+            }
+
+            section#clients, section#vibrations {
+                margin-top: 4em;
+            }
+
+            section#clients .right-aligned {
+                text-align: right;
+                flex-grow: 1;
+                opacity: 0.05;
+            }
+
+            section#clients .service, section#clients .description {
+                display: inline;
+                margin-left: .777em;
+                font-size: .9em;
+            }
+
+
+            section#clients .service {
+                color: #A3A3A3;
+            }
+
+            section#clients .description {
+                color: #FFF;
+            }
+
+            section#clients li:hover {
+                background-color: #1D1B24;
+                color: #fff;
+            }
+
+            section#clients li:hover .right-aligned {
+                opacity: 1;
+            }
+
+            section#clients li:hover .service {
+                color: #828282;   
+            }
+
+            section#clients li:hover .description {
+                color: #c3c3c3;
+            }
+
+            section#vibrations a {
+                color: #ed5aa0;
+                text-decoration: none;
+                font-weight: 500;
+            }
+            
+            section#vibrations a span {
+                color: #828282;   
+            }
+            section#vibrations span.year {
+                display: inline;
+                margin-left: .777em;
+                color: #c3c3c3;
+            }
+
+            @media only screen and (max-device-width: 900px) {
+                li {
+                    margin-top: 1.5em;
+                    margin-bottom: 1.5em;
+                }
+
+                section#clients li:hover {
+                    background-color: transparent;
+                }
+                
+                section#clients li {
+                    background-color: inherit;
+                    color: #eee;
+                }
+
+                section#clients .right-aligned {
+                    flex-basis: 100%;
+                    flex-wrap: wrap;
+                    text-align: left;
+                    opacity: 0.80;
+                }
+
+                section#clients strong {
+                    flex-basis: 100%;
+                }
+                section#clients .service {
+                    display: flex;
+                    flex-basis: 100%;
+                }
+                section#clients .description {
+                    display: flex;
+                    flex-basis: 100%;
+                }
+
+                section#clients .service, section#clients .description {
+                    margin-left: 0;
+                    line-height: 1.5;
+                }
+            }
+
+        </style>
+
+        <title>
+            <% if !content_for?(:title) %>
+                Aaron Grando
+            <% else %>
+                <%= yield :title %> &mdash; Aaron Grando
+            <% end %>
+        </title>
+    </head>
+    <body id="<%= params[:controller] %>" class="<%= params[:action] %>">
+        <%= yield %>
+    </body>
+    <%= render partial: 'shared/stache'%>
+</html>
