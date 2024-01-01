@@ -156,7 +156,7 @@
                 color: #c3c3c3;
             }
 
-            @media only screen and (max-device-width: 900px) {
+            @media only screen and (max-width: 900px) {
                 li {
                     margin-top: 1.5em;
                     margin-bottom: 1.5em;
@@ -181,16 +181,36 @@
                 section#clients strong {
                     flex-basis: 100%;
                 }
+
                 section#clients .service {
                     display: flex;
                     flex-basis: 100%;
                 }
+
                 section#clients .description {
                     display: flex;
                     flex-basis: 100%;
                 }
 
                 section#clients .service, section#clients .description {
+                    margin-left: 0;
+                    line-height: 1.5;
+                }
+
+                section#vibrations .description, section#vibrations span.year {
+                    display: inline-block;
+                    margin-left: 0;
+                    line-height: 1.5;
+                }                
+                
+                section#vibrations .description {
+                    font-size: 0.9em;
+                    width: 100%;
+                }            
+                
+                section#vibrations span.year {
+                    display: inline-block;
+                    width: 100%;
                     margin-left: 0;
                     line-height: 1.5;
                 }
