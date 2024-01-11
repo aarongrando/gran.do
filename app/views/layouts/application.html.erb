@@ -53,6 +53,7 @@
             p a {
                 color: #ed5aa0;
                 text-decoration: none;
+                font-weight: 500;
             }
 
             p a:hover {
@@ -77,6 +78,10 @@
                 color: #6A8CB5;
             }
 
+            section#clients ul {
+                cursor: crosshair;
+            }
+
             section#vibrations h3 {
                 max-width: 155px;
                 border-top: 1px solid #27AE60;
@@ -91,8 +96,11 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 color: #999999;
-                padding: .1em 1em;
-                margin-left: -1em;
+                padding: .2em 1.5em;
+                margin-top: -.1em;
+                margin-left: -1.5em;
+                border-radius: 1em;
+                transition: background-color linear 200ms; 
             }
 
             li strong {
@@ -147,6 +155,10 @@
                 font-weight: 500;
                 margin-right: 0.777em;
             }
+
+            section#vibrations a:hover {
+                text-decoration: underline;
+            }
             
             section#vibrations a span {
                 color: #828282;
@@ -160,6 +172,11 @@
             }
 
             @media only screen and (max-width: 900px) {
+                #container {
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                }
+
                 li {
                     margin-top: 1.5em;
                     margin-bottom: 1.5em;
