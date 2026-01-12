@@ -1,0 +1,64 @@
+<% content_for :title do %>Tweet Brainstorm<% end %>
+
+<div class="tweet-brainstorm">
+  <h1>Daily Tweet Brainstorm</h1>
+  <p class="intro">A private space for drafting thoughts. Nothing is saved.</p>
+
+  <div class="tweet-composer">
+    <textarea id="tweet-draft" placeholder="What's on your mind?" maxlength="280"></textarea>
+    <div class="tweet-meta">
+      <span class="char-count"><span id="char-count">0</span>/280</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="idea-bank">
+    <h2>Idea Bank</h2>
+    <p class="hint">Use this space to jot down tweet ideas, threads, or themes to explore.</p>
+    <textarea id="idea-bank" placeholder="- Thread idea: ...
+- Quick thought: ...
+- Question to ask: ...
+- Hot take: ..."></textarea>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="prompts">
+    <h2>Prompts</h2>
+    <ul>
+      <li>What did you learn today?</li>
+      <li>What's a contrarian opinion you hold?</li>
+      <li>What advice would you give your past self?</li>
+      <li>What's something underrated in your field?</li>
+      <li>What question are you wrestling with?</li>
+      <li>What's a small win worth celebrating?</li>
+      <li>What book/article changed your thinking recently?</li>
+      <li>What's a common mistake you see people make?</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var tweetDraft = document.getElementById('tweet-draft');
+    var charCount = document.getElementById('char-count');
+
+    tweetDraft.addEventListener('input', function() {
+      var count = this.value.length;
+      charCount.textContent = count;
+
+      if (count > 260) {
+        charCount.parentElement.classList.add('warning');
+      } else {
+        charCount.parentElement.classList.remove('warning');
+      }
+
+      if (count >= 280) {
+        charCount.parentElement.classList.add('limit');
+      } else {
+        charCount.parentElement.classList.remove('limit');
+      }
+    });
+  });
+</script>

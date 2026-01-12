@@ -9,6 +9,7 @@ Grrrando::Application.routes.draw do
   get '/.well-known/stellar',   to: 'stellar#stellar'
   
   get '/cv',          to: 'home#cv',     as: :cv
+  get '/t/brainstorm', to: 'home#tweets', as: :tweets
   get '/purpose',     to: 'blog#about',  as: :purpose
   get '/blog',        to: 'blog#index',  as: :blog_index
   

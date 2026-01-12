@@ -563,25 +563,25 @@ header, footer {
 	body, html {
 		overflow-x: hidden;
 	}
-	
+
 	article#main {
 		width: 100%;
 	}
-	
+
 	section.purpose {
 		border-left: none;
 		border-right: none;
 		padding: 0 6%;
 		margin-left: -6%;
 	}
- 
+
 	aside#sidebar {
 		float: left;
 		max-width: 400px;
 		width: 100%;
 		padding-top: 10rem;
 	}
-	
+
 	#logo {
 		img.name.variable {
 			opacity: 1;
@@ -591,5 +591,153 @@ header, footer {
 	.blog-list h3 span {
 		left: auto;
 		right: -1.5em;
+	}
+}
+
+// Tweet Brainstorm Page
+.tweet-brainstorm {
+	h1 {
+		@include font(headline);
+		font-size: 3rem;
+		font-weight: 400;
+		color: $header_color;
+		margin-bottom: 0.5rem;
+	}
+
+	h2 {
+		@include font(headline);
+		font-size: 2rem;
+		font-weight: 400;
+		color: $header_color;
+		margin-bottom: 1rem;
+	}
+
+	p.intro {
+		@include font(body);
+		font-size: 1.4rem;
+		color: $secondary_text_color;
+		margin-bottom: 2.5rem;
+	}
+
+	p.hint {
+		@include font(body);
+		font-size: 1.3rem;
+		color: $sidebar_text_color;
+		margin-bottom: 1rem;
+	}
+
+	.tweet-composer {
+		margin-bottom: 2rem;
+
+		textarea {
+			@include font(body);
+			width: 100%;
+			min-height: 120px;
+			padding: 1.5rem;
+			font-size: 1.6rem;
+			line-height: 1.6;
+			border: 2px solid $divider_color;
+			border-radius: 8px;
+			resize: vertical;
+			transition: border-color 0.2s;
+
+			&:focus {
+				outline: none;
+				border-color: $body_link_color;
+			}
+
+			&::placeholder {
+				color: $secondary_text_color;
+			}
+		}
+	}
+
+	.tweet-meta {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 0.75rem;
+
+		.char-count {
+			@include font(body);
+			font-size: 1.3rem;
+			color: $secondary_text_color;
+			transition: color 0.2s;
+
+			&.warning {
+				color: #e6a700;
+			}
+
+			&.limit {
+				color: #d93025;
+				font-weight: 500;
+			}
+		}
+	}
+
+	.idea-bank {
+		margin-bottom: 2rem;
+
+		textarea {
+			@include font(body);
+			width: 100%;
+			min-height: 200px;
+			padding: 1.5rem;
+			font-size: 1.4rem;
+			line-height: 1.8;
+			border: 1px solid $divider_color;
+			border-radius: 8px;
+			resize: vertical;
+			background: $purpose_background;
+
+			&:focus {
+				outline: none;
+				border-color: $sidebar_link_color;
+			}
+
+			&::placeholder {
+				color: $secondary_text_color;
+			}
+		}
+	}
+
+	.prompts {
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li {
+				@include font(body);
+				font-size: 1.5rem;
+				line-height: 1.8;
+				color: $body_text_color;
+				padding: 0.75rem 0;
+				padding-left: 1.5rem;
+				position: relative;
+				border-bottom: 1px solid $blog_list_border_color;
+				cursor: pointer;
+				transition: background-color 0.15s, padding-left 0.15s;
+
+				&:before {
+					content: "\2192";
+					position: absolute;
+					left: 0;
+					color: $secondary_text_color;
+				}
+
+				&:hover {
+					background-color: $purpose_background;
+					padding-left: 2rem;
+				}
+
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
+	}
+
+	.divider {
+		margin: 3rem 0;
 	}
 }
