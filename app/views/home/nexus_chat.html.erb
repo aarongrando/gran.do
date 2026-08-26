@@ -1,0 +1,57 @@
+<% content_for :title, "Nexus Chat & Brand Agents Case Study" %>
+<div id="container" class="case">
+    <p class="crumb"><a href="/nexus">&larr; Back to Nexus platform</a></p>
+    <section id="cs-top">
+        <h1>Nexus Chat &amp; Brand Agents</h1>
+        <h2>The harness that wires models, tools, context, and agents into one conversation, and the governed knowledge that makes the answers worth trusting.</h2>
+    </section>
+
+    <section id="cs-problem">
+        <h3>The situation</h3>
+        <p>In early 2025 the practical question at every agency was the same one: people wanted to use frontier models, and the work they wanted to use them on was client-confidential. The two facts don't reconcile through policy. Either you give people a sanctioned way to do it or they find their own.</p>
+        <p>The second problem showed up right behind the first. A general model is a generalist. Ask it to write in a brand's voice and it produces something plausible and wrong: close enough to look finished, off enough that anyone who knows the brand can tell. Prompting harder doesn't fix it. The model isn't lacking instructions. It's lacking the brand.</p>
+    </section>
+
+    <section id="cs-role">
+        <h3>What I owned</h3>
+        <p>I set product direction across the conversational surface and the agent layer: what Mod Chat needed to be to get used at all, how it should evolve into the Nexus chat harness, what a Brand Agent was, and how knowledge layers had to be structured for any of it to stay trustworthy. I worked alongside engineering on the retrieval and context architecture and drove the calls about what got grounded, how, and at what point in a conversation.</p>
+    </section>
+
+    <section id="cs-insight">
+        <h3>The insight</h3>
+        <p>The interesting engineering problem in enterprise AI isn't the prompt and it isn't the model. It's deciding what the system should know at the moment it answers: enough to be right, scoped so it can't reach what it shouldn't, and specific enough that the output sounds like the brand instead of a language model doing an impression.</p>
+        <p><strong>Context is the product. The model is a commodity you rent.</strong></p>
+    </section>
+
+    <section id="cs-system">
+        <h3>How it worked</h3>
+        <p><strong>Mod Chat, March 2025.</strong> A secure internal assistant, launched on GPT-4o and later opened to multiple models. Deliberately unremarkable to look at, because the goal was adoption: a familiar chat interface that happened to run inside the company's own boundary.</p>
+        <p><strong>Nexus Chat.</strong> Rebuilt on the platform, and better understood as a harness than an app. Chat was the surface. Underneath, it wired four things together at request time: whichever model was appropriate, the tools available to it (web search, image generation, document creation, code execution), the governed knowledge it should be grounded in, and whichever org-scoped agent you needed. Agent linking carried context between them, and workflows handled what people did repeatedly. Swap the model and nothing else has to move.</p>
+        <p><strong>Brand Agents.</strong> Persistent, brand-aware assistants grounded in a specific company, client, brand, or project. An agent standing on governed knowledge, not a system prompt with a personality, used both internally and in client-facing experiences. More than 200 were deployed, alongside hundreds of other assistants built by teams and individuals across the agency.</p>
+        <p><strong>Knowledge layers.</strong> The reusable substrate underneath all of it: governed context, scoped by organization, retrieved just in time, never stuffed into every request. This is the piece I'd point at first. It's the difference between an assistant that sounds confident and one that's actually grounded, and the reason hallucination, brand integrity, and context poisoning were design constraints from the start.</p>
+    </section>
+
+    <section id="cs-adoption">
+        <h3>Adoption</h3>
+        <p class="metrics">As of July 2026, <strong>80%</strong> of the agency had used it and more than <strong>60%</strong> were active monthly, across <strong>27,000+ conversations</strong>. Retention started near <strong>40%</strong> after onboarding and rose with tenure to over <strong>90%</strong> monthly among the longest-term cohorts. Internal modeling put value created since the March 2025 launch at about <strong>$5.4M</strong> against an estimated <strong>48,000 human-hours</strong>. That is modeled labor-value equivalence, not booked revenue.</p>
+        <p>It became the default place people went, which is the only adoption metric that really counts. A secure tool nobody chooses is just a policy.</p>
+    </section>
+
+    <section id="cs-commercial">
+        <h3>Commercial consequence</h3>
+        <p>Running the harness on our own platform averted more than <strong>$2M</strong> in per-seat AI subscription costs. That is the build-versus-buy case Digiday covered in August 2026, writing up Orion and roughly $3M in avoided licensing overall. Brand Agents then crossed over from internal utility to client-facing capability: the same architecture that helped an internal team work in a brand's voice could sit inside a client's own experience. Mod Op's public material quoted me on brand context as a core building block for AI that serves brands, which is the version of this I'd defend in any room: the differentiated asset is the brand's context, and whoever structures it well owns something the model vendors don't.</p>
+    </section>
+
+    <section id="cs-changed">
+        <h3>What changed</h3>
+        <p>The internal conversation moved on from whether to use AI to what it should be grounded in. Teams started treating brand and client knowledge as an asset to be structured and maintained, not a folder to be searched. And the quality bar rose, because once agents were genuinely grounded, the obviously-generic output stopped being acceptable.</p>
+    </section>
+
+    <section id="cs-learned">
+        <h3>What I learned</h3>
+        <p>Security and usefulness aren't a trade-off you negotiate once. They're the same design problem. People don't paste confidential material into consumer tools because they misunderstand the risk. They do it because the sanctioned option is worse. Make the safe path the good path and the policy enforces itself.</p>
+        <p>I talked through most of this publicly on Mod Op's Leader Generation podcast, across episodes on Brand Agents and on context engineering.</p>
+    </section>
+
+    <p class="crumb"><a href="/nexus">&larr; Back to Nexus platform</a></p>
+</div>

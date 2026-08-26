@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Local dev launcher: pins the Homebrew ruby@3.2 + libpq toolchain for this app.
+set -e
+cd "$(dirname "$0")/.."
+export PATH="/opt/homebrew/opt/ruby@3.2/bin:/opt/homebrew/opt/libpq/bin:$PWD/.gems/bin:$PATH"
+export GEM_HOME="$PWD/.gems"
+export GEM_PATH="$PWD/.gems"
+exec bundle exec rails server -p "${PORT:-3000}" -b 127.0.0.1

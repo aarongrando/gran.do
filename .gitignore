@@ -36,3 +36,8 @@
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
+
+# Local dev toolchain (Homebrew ruby@3.2 + vendored gems)
+/.gems/
+/vendor/bundle/
+/.bundle/

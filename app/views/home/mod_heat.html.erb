@@ -1,0 +1,48 @@
+<% content_for :title, "Mod Heat Case Study" %>
+<div id="container" class="case">
+    <p class="crumb"><a href="/nexus">&larr; Back to Nexus platform</a></p>
+    <section id="cs-top">
+        <h1>Mod Heat</h1>
+        <h2>A realtime trend tracker that scores what's happening against a specific brand's tolerance for it. From a February concept to a shipped product, and into the platform underneath.</h2>
+    </section>
+
+    <section id="cs-problem">
+        <h3>The situation</h3>
+        <p>Cultural relevance is the thing agencies sell and the thing they're worst at operationalizing. Someone reads the news, notices a moment, and brings it to a meeting. By the time it's been socialized, scoped, and approved, the moment has passed. Meanwhile the moments that would have been genuinely good for a particular brand go by unnoticed, because nobody was looking on that brand's behalf.</p>
+        <p>A listening dashboard is the obvious fix, and it doesn't work. Information was never the scarce thing. Judgment was. A feed of everything happening is the same problem in a nicer interface.</p>
+    </section>
+
+    <section id="cs-role">
+        <h3>What I owned</h3>
+        <p>This one started with me. In February 2024 I developed the concept, then called Innkeeper, for tracking and surfacing what was happening around a brand and its audience. In April I pitched it to Mod Op's executive team as Moments. It shipped in Q4 2024 as Mod Heat, built with the group.</p>
+        <p>I originated the idea, made the case for it, defined the product, and stayed on it through delivery. The parts I'd claim are the concept, the scoring model, and the decision to wire it into the agent layer so it never became a standalone dashboard.</p>
+    </section>
+
+    <section id="cs-insight">
+        <h3>The insight</h3>
+        <p>Relevance isn't a property of an event. It's a relationship between an event and a particular brand: its audience, its positioning, its appetite for risk, and how fast it can actually move. The same news story is an opportunity for one client, a non-event for another, and a liability for a third.</p>
+        <p><strong>Rank what's happening for this brand specifically, and be explicit about why.</strong></p>
+    </section>
+
+    <section id="cs-system">
+        <h3>How it worked</h3>
+        <p><strong>Listening and aggregation.</strong> News and conversation gathered continuously and clustered into discernible trends, not a raw feed.</p>
+        <p><strong>Scoring.</strong> Each moment scored against brand relevance, audience resonance, magnitude, timing, and safety. Timing and safety are the two that make it usable in an agency: a moment that's cresting is worth less than one that's building, and one that's off-limits for a brand needs to be visibly off-limits, not quietly absent.</p>
+        <p><strong>Ideas and risk together.</strong> Generated directions for acting on a moment, presented alongside the risk of doing so, because in practice those two get evaluated in the same conversation.</p>
+        <p><strong>Handoff into agents.</strong> One click from a scored moment into a Brand Agent conversation, carrying the context with it. That's the piece that made it a product instead of a report: the distance between noticing something and doing something about it collapsed to a single step.</p>
+        <p>The original pitch included a multi-agent design: differentiated expert agents collaborating on trends, context, and decisions, where one model would otherwise do everything. Not all of that shipped in the first release, but the decision and context logic behind it went on to inform how knowledge layers and the platform were built.</p>
+    </section>
+
+    <section id="cs-changed">
+        <h3>What changed</h3>
+        <p>Two things, one expected and one not. The expected one: brand teams got a standing, brand-specific view of what was worth reacting to. The unexpected one mattered more. Working out how to score a moment against a brand's context forced us to get precise about what "a brand's context" actually consists of, and that thinking fed directly into the knowledge-layer architecture that later sat underneath the whole platform.</p>
+    </section>
+
+    <section id="cs-learned">
+        <h3>What I learned</h3>
+        <p>A product concept is worth more when it's a wedge into something structural. Mod Heat was a useful tool on its own terms, but its real return was the reasoning it forced about context, scoring, and decision-making. That turned out to be the reusable part.</p>
+        <p>Also: pitching an idea and delivering it are different jobs, and the second one is where concepts die. The gap between an approved pitch in April and a shipped product in Q4 is mostly a long sequence of unglamorous decisions about scope.</p>
+    </section>
+
+    <p class="crumb"><a href="/nexus">&larr; Back to Nexus platform</a></p>
+</div>

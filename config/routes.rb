@@ -7,5 +7,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root to: 'home#index'
-  
+
+  get "launchpad", to: "home#launchpad"
+  get "nexus", to: "home#nexus"
+  get "nexus-chat", to: "home#nexus_chat", as: :nexus_chat
+  get "mod-heat", to: "home#mod_heat", as: :mod_heat
+  get "resume", to: "home#resume"
+
 end
