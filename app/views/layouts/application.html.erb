@@ -134,6 +134,24 @@
             section#contact { --accent: #b59fc7; }
             section#translate { --accent: #F2994A; }
 
+            .company-tenure {
+                border-bottom: 1px dotted var(--accent, #F2C94C);
+                border-radius: 2px;
+                color: #CACACA;
+                font-weight: 600;
+                padding: 0.05em 0.16em;
+                -webkit-box-decoration-break: clone;
+                box-decoration-break: clone;
+            }
+
+            section#work .company-tenure {
+                background: rgba(237, 90, 160, 0.12);
+            }
+
+            section#clients .company-tenure {
+                background: rgba(242, 201, 76, 0.12);
+            }
+
             section[id] h3 {
                 border-top: none;
                 padding-top: 0;
