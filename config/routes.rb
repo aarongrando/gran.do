@@ -10,8 +10,9 @@ Rails.application.routes.draw do
 
   get "launchpad", to: "home#launchpad"
   get "nexus", to: "home#nexus"
-  get "nexus-chat", to: "home#nexus_chat", as: :nexus_chat
+  get "nexus-chat", to: redirect("/nexus#cs-adoption"), as: :nexus_chat
   get "mod-heat", to: "home#mod_heat", as: :mod_heat
+  get "geo", to: "home#geo"
   get "resume", to: "home#resume"
 
 end

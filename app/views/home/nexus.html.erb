@@ -5,7 +5,7 @@
     <section id="cs-top">
         <h1>Nexus</h1>
         <h2>How a set of agency AI experiments became shared infrastructure used across the company.</h2>
-        <p class="lede">I led product direction for the system underneath Mod Op's AI work. Nexus handled identity and permissions, along with the agents and organizational knowledge they governed. Nexus Chat put those capabilities in people's hands. Orion gave the platform a clear internal and client-facing story.</p>
+        <p class="lede">I owned product and technical direction for the system underneath Mod Op's AI work. Nexus handled identity and permissions, along with the agents and organizational knowledge they governed. Nexus Chat put those capabilities in people's hands. Orion gave the platform a clear internal and client-facing story.</p>
     </section>
 
     <nav class="case-nav" aria-label="Nexus case study chapters">
@@ -23,8 +23,7 @@
 
     <section id="cs-role">
         <h3>What I owned</h3>
-        <p>I set product and technical direction for Nexus. That meant deciding what the platform needed to do and what should stay in the applications above it. I also defined how organizations and permissions controlled access to knowledge and agents. I worked directly with engineering on the architecture and decided which capabilities should become shared services.</p>
-        <p>The Innovation team brought product and engineering together with UX, data science, and transformation. I was accountable for the product's shape and the order in which we built it.</p>
+        <p>I owned product and technical direction for Nexus within the five-person product and engineering group I led. I defined the platform boundary, the access model for knowledge and agents, and the capabilities that became shared services. I directed the build sequence and worked across UX, data science, and transformation to move the architecture into adopted products.</p>
     </section>
 
     <section id="cs-foundation">
@@ -36,39 +35,27 @@
 
     <section id="cs-adoption">
         <h3>02 &middot; Adoption: Mod Chat to Nexus Chat</h3>
-        <p>Nexus Chat was where most people met the platform. It grew out of Mod Chat and became a model-agnostic application that combined model access with tools. It also brought org-scoped agents and governed knowledge into each conversation. Teams got something useful right away while we continued building the shared system underneath it.</p>
+        <p>Nexus Chat was where most people met the platform. It grew out of Mod Chat and became a model-agnostic harness. At request time it connected the selected model with available tools, governed knowledge, and an org-scoped agent. Workflows and agent linking handled repeated or multi-step tasks, while the model itself could change without forcing the rest of the system to move.</p>
         <p class="metrics">As of July 2026, <strong>80%</strong> of the agency had used it and more than <strong>60%</strong> were active in a given month. Users and agents had moved through <strong>27,000+ conversations</strong>. Retention started around <strong>40%</strong> immediately after onboarding and climbed with cohort tenure to more than <strong>90% monthly retention</strong> among the longest-term users.</p>
         <p>The retention curve mattered more to me than the launch number. A mandate and a training session can produce a busy first month. Here, established cohorts used the product more consistently over time, evidence that it had become part of how they worked.</p>
     </section>
 
     <section id="cs-context">
         <h3>03 &middot; Context: Knowledge Layers + Brand Agents</h3>
-        <p>Knowledge Layers stored approved material for companies and clients, down to a specific brand or project. An agent retrieved that material when it needed it, so teams no longer had to paste the same brief into every prompt. More than <strong>200 Brand Agents</strong> were deployed across agency and client work.</p>
+        <p>Knowledge Layers stored approved material for companies and clients, down to a specific brand or project. Brand Agents were persistent assistants grounded in that governed context, not personalities wrapped around a system prompt. More than <strong>200 Brand Agents</strong> were deployed across agency and client work.</p>
         <p>By April 2026, an MCP server exposed six Nexus tools. They covered organization discovery and activity, along with the core knowledge-layer operations. MCP-compatible environments such as Claude Code and Cursor could use authorized context from <strong>255+ organizations</strong> and <strong>393+ knowledge layers</strong> inside the tools where people already worked.</p>
-        <p><a href="/nexus-chat">Read the Nexus Chat + Brand Agents deep dive &rarr;</a></p>
     </section>
 
     <section id="cs-productization">
         <h3>04 &middot; Packaging: Orion</h3>
-        <p>Once the underlying system was real, it needed a name and a shape that people outside the product team could understand. Orion grouped the internal platform and client offers into one connected-intelligence ecosystem. I helped define that story and owned six products within it: Nexus, Brand Agents, Mod Heat, Audience Lab, GEO by Mod Op, and Launchpad.</p>
-        <p>Each product used the same foundation differently. Launchpad moved a four-hour prototype toward a governed deployment. Audience Lab became a new strategy and measurement offer. GEO went further &mdash; the first product on the platform designed to be sold directly, with its own paid system. It runs at <a href="https://geo.modop.ai" target="_blank">geo.modop.ai</a> and is actively selling, not just justified by internal productivity. Mod Heat, the first product we released, showed early on that brand-specific context could make an AI workflow genuinely useful.</p>
-        <p class="metrics">Internal modeling estimated roughly <strong>$5.4M</strong> in value since the March 2025 launch, based on about <strong>48,000 human-hours</strong> of work produced by users and agents. Those figures were modeled labor-value equivalents, not booked revenue. Building the chat application on our own platform also averted more than <strong>$2M</strong> in per-seat AI subscription costs. <a href="https://digiday.com/marketing/build-or-buy-inside-indie-agency-mod-ops-ai-infrastructure/" target="_blank">Digiday covered the build-versus-buy decision</a> in August 2026 and cited roughly $3M in avoided licensing costs across Orion.</p>
+        <p>Once the underlying system was real, it needed a name and a shape that people outside the product team could understand. Orion grouped the internal platform and client offers into one connected-intelligence ecosystem. I owned the six-product portfolio it organized and helped define the story used internally and with clients: Nexus, Brand Agents, Mod Heat, Audience Lab, GEO by Mod Op, and Launchpad.</p>
+        <p>Each product used the same foundation differently. Launchpad moved a four-hour prototype toward a governed deployment. Audience Lab became a new strategy and measurement offer. <a href="/geo">GEO</a> was the first product designed as a direct offer, connecting a free audit to a paid program. Mod Heat, the first product we released, showed early on that brand-specific context could make an AI workflow useful.</p>
+        <p class="metrics">Internal modeling estimated roughly <strong>$5.4M</strong> in value since the March 2025 launch, based on about <strong>48,000 human-hours</strong> of work produced by users and agents. Those figures were modeled labor-value equivalents, not booked revenue. <a href="https://digiday.com/marketing/build-or-buy-inside-indie-agency-mod-ops-ai-infrastructure/" target="_blank">Digiday covered the build-versus-buy decision</a> in August 2026 and cited roughly $3M in avoided licensing costs across Orion.</p>
     </section>
 
     <section id="cs-changed">
         <h3>What changed</h3>
-        <p>New products stopped rebuilding the basics. They inherited identity and permissions from Nexus and could reach approved context. Launchpad prototypes authenticated against the platform on day one. Brand Agents drew from approved knowledge layers. Client work could use real organizational context without someone copying it from system to system, and new AI products could get started much faster.</p>
-        <p>Product and engineering now ran alongside adoption and commercial planning. Shipping visible products gave executives a reason to keep funding the less visible platform work.</p>
-    </section>
-
-    <section id="cs-proof">
-        <h3>Supporting proof</h3>
-        <p>For the pieces in detail, <a href="/nexus-chat">Nexus Chat + Brand Agents</a> covers adoption and context. <a href="/launchpad">Launchpad</a> shows the path from prototype to production. <a href="/mod-heat">Mod Heat</a> follows a concept pitched in February through its release as the Innovation team's first product.</p>
-    </section>
-
-    <section id="cs-learned">
-        <h3>What I learned</h3>
-        <p>Platform architecture rarely wins a budget on its own. People need to see useful things running on top of it. We kept the foundation moving by pairing infrastructure work with products teams could use and sales could demonstrate to clients.</p>
+        <p>New products inherited identity, permissions, and approved context from day one. Product and engineering planning now ran alongside adoption and commercial planning. Visible products made continued investment in the platform easier to justify.</p>
     </section>
 
     <p class="crumb"><a href="/">&larr; Back to gran.do</a></p>

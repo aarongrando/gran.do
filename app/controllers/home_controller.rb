@@ -9,10 +9,10 @@ class HomeController < ApplicationController
   def nexus
   end
 
-  def nexus_chat
+  def mod_heat
   end
 
-  def mod_heat
+  def geo
   end
 
   def resume
