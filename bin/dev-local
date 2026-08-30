@@ -2,7 +2,18 @@
 # Local dev launcher: pins the Homebrew ruby@3.2 + libpq toolchain for this app.
 set -e
 cd "$(dirname "$0")/.."
-export PATH="/opt/homebrew/opt/ruby@3.2/bin:/opt/homebrew/opt/libpq/bin:$PWD/.gems/bin:$PATH"
+
+# Homebrew lives under /opt/homebrew on Apple Silicon and /usr/local on Intel.
+# Resolve both keg-only dependencies so this launcher works on either machine.
+if command -v brew >/dev/null 2>&1; then
+  RUBY_PREFIX="$(brew --prefix ruby@3.2)"
+  LIBPQ_PREFIX="$(brew --prefix libpq)"
+else
+  RUBY_PREFIX="/opt/homebrew/opt/ruby@3.2"
+  LIBPQ_PREFIX="/opt/homebrew/opt/libpq"
+fi
+
+export PATH="$RUBY_PREFIX/bin:$LIBPQ_PREFIX/bin:$PWD/.gems/bin:$PATH"
 export GEM_HOME="$PWD/.gems"
 export GEM_PATH="$PWD/.gems"
 exec bundle exec rails server -p "${PORT:-3000}" -b 127.0.0.1
