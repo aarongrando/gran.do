@@ -2,45 +2,48 @@
             <section id="shield"><%= image_tag "shield.svg", width: 77, height: 97, alt: "Shield Emblem" %></section>
             <section id="bio">
                 <h1>Aaron Grando</h1>
-                <h2>I build things: products, platforms, prototypes.</h2>
+                <h2>I build things: prototypes, products, platforms.</h2>
                 <p>
-                    Hey, I'm Aaron. I build enterprise AI products and the platforms they run on, and I lead the product decisions that get them adopted across an organization.
+                    Hey, I’m Aaron. I turn AI ideas into useful products, build the platforms behind them, and lead the work that gets teams using them.
                     <br />
                     <br />
-                    I've taken generative AI from scattered experiments to infrastructure: a governed platform, agents, retrieval, a chat harness 80% of the agency has used, and a prototyping system that made four hours the unit of decision-making. Then I turned that capability into client business.
+                    I've helped turn generative AI from scattered experiments into something an organization can actually use: a governed internal AI platform of agents, retrieval, chat, code and processes for testing ideas before investing in them. Those capabilities found their way into to client work along the way, too – I've been translating new technology into a language clients can understand for more than 15 years.
                     <br />
                     <br />
-                    My range spans product strategy and platform architecture, including the executive and commercial work required to turn technical capability into organizational value.
+                    Today, I'm most at home where product strategy and platform architecture overlap: talking with people, figuring out what's worth building and helping make it real.
                 </p>
                 <p id="availability">
-                    <span class="looking">I'm currently looking for my next full-time role. I want real scope and a problem worth committing to.</span>
-                    <strong>Open to:</strong> VP / Head of Product &nbsp;·&nbsp; AI Product &amp; Platform &nbsp;·&nbsp; Innovation &amp; Transformation &nbsp;·&nbsp; Creative Technology.
+                    <span class="looking">I'm currently looking for my next full-time role. I'm seeking a worthwhile challenge in applied AI product leadership.</span>
+                    <strong>Open to: </strong><br />VP / Head of Product &nbsp;·&nbsp; AI Product &amp; Platform &nbsp;·&nbsp; Innovation&nbsp;&amp;&nbsp;Transformation &nbsp;·&nbsp; Creative&nbsp;Technology &nbsp;·&nbsp; Internal Founder-Builder&nbsp; &nbsp;·&nbsp; Agency Partner&nbsp;
                 </p>
             </section>
             <section id="work" class="entries">
                 <h3>Recent Work</h3>
-                <p class="section-intro">Mod Op Innovation, 2024&ndash;2026. I was a founding member of the agency's innovation team and led its five-person product and engineering group. I owned the shared AI platform and six-product portfolio from strategy through delivery.</p>
+                <% if Rails.env.development? %>
+                    <p class="permission-key"><span class="permission-swatch" aria-hidden="true"></span><strong>Permission review:</strong> highlighted text is backed primarily by internal Mod Op material, describes proprietary implementation details, or makes a strong personal-ownership claim worth clearing before publication. Existing public product descriptions and cited reporting are left unmarked.</p>
+                <% end %>
+                <p class="section-intro">Mod Op Innovation, 2024&ndash;2026. I was a founding member of the agency's innovation team and <span class="permission-review">led its five-person product and engineering group. I owned the shared AI platform and six-product portfolio from strategy through delivery.</span></p>
 
                 <p class="platform-feature">
                     <span class="feature-label">PLATFORM CASE STUDY</span>
                     <strong><a href="/nexus">Nexus: the AI operating layer</a></strong>
-                    I led product direction for the shared system behind Mod Op's AI work. Nexus handled identity and permissions, along with the agents and organizational knowledge they governed. Nexus Chat put those capabilities in people's hands. Orion gave the platform a clear internal and client-facing story.
+                    <span class="permission-review">I led product direction for the shared system behind Mod Op's AI work. Nexus handled identity and permissions, along with the agents and organizational knowledge they governed. Nexus Chat put those capabilities in people's hands. Orion gave the platform a clear internal and client-facing story.</span>
                     <br />
-                    <span class="fun-fact"><strong>80% of the agency used it · 60%+ monthly active · 27,000+ conversations · 200+ Brand Agents.</strong> <a href="https://digiday.com/marketing/build-or-buy-inside-indie-agency-mod-ops-ai-infrastructure/" target="_blank">Digiday put Orion's avoided licensing costs at roughly $3M</a>, August 2026.</span>
+                    <span class="fun-fact"><span class="permission-review"><strong>80% of the agency used it · 60%+ monthly active · 27,000+ conversations · 200+ Brand Agents.</strong></span> <a href="https://digiday.com/marketing/build-or-buy-inside-indie-agency-mod-ops-ai-infrastructure/" target="_blank">Digiday put Orion's avoided licensing costs at roughly $3M</a>, August 2026.</span>
                 </p>
                 <p>
-                    <strong><a href="/geo">GEO by Mod Op</a></strong> Brand visibility monitoring across major AI platforms. I directed the product's design and build, working with subject-matter experts to connect it to Mod Op's AI platform. I shaped the funnel from free audit to paid program and supported go-to-market. It's live at <a href="https://geo.modop.ai" target="_blank">geo.modop.ai</a>.
+                    <strong><a href="/geo">GEO by Mod Op</a></strong> Brand visibility monitoring across major AI platforms. <span class="permission-review">I directed the product's design and build, working with subject-matter experts to connect it to Mod Op's AI platform. I shaped the funnel from free audit to paid program and supported go-to-market.</span> It's live at <a href="https://geo.modop.ai" target="_blank">geo.modop.ai</a>.
                 </p>
                 <p>
-                    <strong><a href="/launchpad">Launchpad</a></strong> A self-serve framework for teams to deploy prototype tools and agents, with governance and evaluation built in and a real path to production.
+                    <strong><a href="/launchpad">Launchpad</a></strong> <span class="permission-review">A self-serve framework for teams to deploy prototype tools and agents, with governance and evaluation built in and a real path to production.</span>
                     <br />
-                    <span class="fun-fact">Sixty-plus working prototypes out of the Q1 2026 hackathons, each demonstrated in under a minute.</span>
+                    <span class="fun-fact permission-review">Sixty-plus working prototypes out of the Q1 2026 hackathons, each demonstrated in under a minute.</span>
                 </p>
                 <p>
-                    <strong><a href="/mod-heat">Mod Heat</a></strong> Brand-aware news and trend tracking, ranked by relevance, risk, and reach. I originated the concept, pitched it to the executive team, and shipped it with the group. Innovation's first product release.
+                    <strong><a href="/mod-heat">Mod Heat</a></strong> Brand-aware news and trend tracking, ranked by relevance, risk, and reach. <span class="permission-review">I originated the concept, pitched it to the executive team, and shipped it with the group. Innovation's first product release.</span>
                 </p>
                 <p>
-                    <strong>Audience Lab</strong> Digital-twin audience simulation for creative pretesting and strategy, grounded in real human data and extended toward campaign simulation.
+                    <strong>Audience Lab</strong> Digital-twin audience simulation for creative pretesting and strategy, <span class="permission-review">grounded in real human data and extended toward campaign simulation.</span>
                 </p>
             </section>
             <section id="clients" class="entries">

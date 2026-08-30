@@ -79,6 +79,46 @@
                 text-decoration: underline;
             }
 
+            <% if Rails.env.development? %>
+            .permission-key {
+                margin: 1.25em 0 2em;
+                color: #c8b778;
+                font-size: 0.82em;
+                line-height: 1.55;
+            }
+
+            .permission-key strong {
+                color: #eadb9d;
+                font-weight: 500;
+            }
+
+            .permission-swatch {
+                display: inline-block;
+                width: 0.9em;
+                height: 0.9em;
+                margin-right: 0.45em;
+                border-bottom: 1px dashed #F2C94C;
+                border-radius: 2px;
+                background: rgba(242, 201, 76, 0.18);
+                vertical-align: -0.05em;
+            }
+
+            .permission-review {
+                border-bottom: 1px dashed #F2C94C;
+                border-radius: 2px;
+                background: rgba(242, 201, 76, 0.18);
+                color: inherit;
+                padding: 0.05em 0.14em;
+                -webkit-box-decoration-break: clone;
+                box-decoration-break: clone;
+            }
+
+            .permission-review a {
+                color: inherit;
+                text-decoration-color: #F2C94C;
+            }
+            <% end %>
+
             #container {
                 max-width: 800px;
                 margin: 100px 7.77%;
