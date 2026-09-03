@@ -1,61 +1,483 @@
 <% content_for :title, "GEO by Mod Op" %>
-<div id="container" class="case">
-    <p class="crumb"><a href="/nexus">&larr; Back to Nexus platform</a></p>
+<div id="container" class="case case--geo">
+    <%= render "home/case_header" %>
+    <p class="crumb case-wayfinding">
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Case study</span>
+    </p>
+
     <section id="cs-top">
         <h1>GEO by Mod Op</h1>
-        <h2>Brand visibility across AI answer engines, delivered through a free audit and a paid optimization program. It runs today at <a href="https://geo.modop.ai" target="_blank">geo.modop.ai</a>.</h2>
+        <h2>A live product that shows brands how they appear in AI answers, with a free audit that leads into an ongoing optimization program. It went live in June 2026, Mod Op launched it publicly in August 2026, and it runs at <a href="https://geo.modop.ai" target="_blank">geo.modop.ai</a>.</h2>
+        <figure class="story-illustration case-header-visual">
+            <%= image_tag "geo-header-scan.jpg", alt: "Hand-drawn person scanning a landscape of changing signals with a magnifying glass" %>
+        </figure>
     </section>
 
     <section id="cs-situation">
-        <h3>The situation</h3>
-        <p>Buyers no longer start only at search results. They ask ChatGPT, Claude, and Perplexity directly, and those engines return a synthesized answer. A brand can rank first in Google and still be invisible in that answer, with no equivalent of a rank tracker to explain why. Agencies were selling SEO retainers into a channel that had already partly moved.</p>
-        <p>Inside Orion, GEO/AEO surfaced from the Launchpad prototype pipeline as one of the first priority concepts. It was the first portfolio product that needed to stand on its own as something a client would pay for.</p>
+        <h3>The gap</h3>
+        <p>People were asking ChatGPT, Claude, and Perplexity for recommendations and explanations alongside their Google searches. A brand could perform well in search and have little presence in those answers. Search rankings gave one view of a brand. AI answers gave another. The first question for GEO was simple: how could a brand see its position from a buyer's point of view? The second was practical: a website is a structured source that AI systems read and cite, so an agent could audit one against the criteria that matter.</p>
+        <p>Our search and strategy experts already had a useful manual audit, but it took weeks to assemble and was usually a one-off. GEO came out of Launchpad as one of the first concepts we chose to develop further. The job was to turn that audit into a repeatable product that someone outside the agency could understand quickly and choose to continue.</p>
     </section>
 
     <section id="cs-role">
         <h3>What I owned</h3>
-        <p>I directed GEO's product design and build. Working with subject-matter experts, I defined the audit and scoring framework, then designed how GEO integrated with and fed data into Mod Op's AI platform. I aligned stakeholders through the build and supported go-to-market, including the funnel from free audit to paid program.</p>
+        <p>I took GEO from the Launchpad pipeline into a product. I directed the design and build, worked with Mod Op's search and strategy experts to turn their manual audit into a repeatable experience, defined the reporting and scoring framework with them, and connected the free audit to the paid program. I stayed involved through stakeholder alignment, go-to-market, and the June 2026 launch.</p>
     </section>
 
     <section id="cs-audit">
-        <h3>The audit</h3>
-        <p>The free tool runs a substantive audit. It combines brand research with prompt testing across ChatGPT, Claude, and Perplexity. The report scores GEO readiness, compares branded and unbranded visibility, measures citation share, and ranks the brand against named competitors.</p>
-        <figure class="report-figure">
-            <%= image_tag "geo-audit-glance.png", alt: "GEO audit summary card for Apple: score 65 of 100, competitive and gaining ground, 100% branded visibility, 81% unbranded visibility, 38% unbranded citation share, #1 brand vs. competitors" %>
-            <figcaption>A live audit run against Apple, a neutral example, not a client engagement.</figcaption>
+        <h3>The product decision</h3>
+        <figure class="geo-walkthrough">
+            <button type="button" class="geo-pip-trigger" data-geo-pip-trigger data-video-src="/geo-homepage-walkthrough.mp4" data-video-poster="<%= image_path("geo-homepage-first-frame.jpg") %>" data-video-title="GEO Landing Page" aria-controls="geo-pip" aria-label="Play the GEO Landing Page video">
+                <%= image_tag "geo-homepage-first-frame.jpg", alt: "" %>
+                <span class="geo-pip-trigger__play" aria-hidden="true">▶</span>
+            </button>
         </figure>
-        <p>The report doesn't stop at a score. It shows the specific prompts a brand shows up for and the ones it's missing from, which competitors are winning the questions buyers actually ask, and where each engine currently stands on citing the brand at all.</p>
-        <figure class="report-figure">
-            <%= image_tag "geo-audit-shareofvoice.png", alt: "Share of AI voice ranking showing Apple first at 81%, ahead of Samsung Galaxy S26, Google Pixel 10, and six other named competitors" %>
-            <figcaption>Competitor ranking by share of AI voice, pulled directly from the answer engines.</figcaption>
-        </figure>
+        <p>The free audit begins with brand and category research, then tests the questions buyers are likely to ask across ChatGPT, Claude, and Perplexity. The report shows where the brand appears, how often it is cited, and how it compares with named competitors.</p>
+        <p>The score is a starting point. The useful part is the evidence behind it: the prompts a brand appears for, the questions it is missing, the competitors winning attention, and the citations each engine returns. That gives a team something concrete to discuss and a clearer view of where the brand can improve.</p>
     </section>
 
     <section id="cs-framework">
-        <h3>The GEO Periodic Table</h3>
-        <p>Underneath the score is a proprietary framework of 25 ranking factors. They cover content quality, structured data, brand and entity signals, trustworthiness, performance, and engagement. Every factor maps to something a site owner can fix, turning the diagnostic into a prioritized plan.</p>
-        <figure class="report-figure">
-            <%= image_tag "geo-periodic-table.png", alt: "The GEO Periodic Table: 25 ranking factors grouped into six categories, each scored and mapped to a specific improvement" %>
-            <figcaption>The scoring framework the audit is built on, shown here at 5 of 12 on AEO readiness.</figcaption>
+        <h3>The framework</h3>
+        <figure class="geo-results-walkthrough">
+            <button type="button" class="geo-pip-trigger geo-pip-trigger--results" data-geo-pip-trigger data-geo-pip-audit-trigger data-video-src="/geo-audit-results-walkthrough-table-dwells-1s-longer.mp4" data-video-poster="<%= image_path("geo-audit-results-first-frame.jpg") %>" data-video-title="Free GEO Audit Results" aria-controls="geo-pip" aria-label="Play the Free GEO Audit Results video">
+                <%= image_tag "geo-audit-results-first-frame.jpg", alt: "" %>
+                <span class="geo-pip-trigger__play" aria-hidden="true">▶</span>
+            </button>
         </figure>
-        <p>The report closes with an executive summary of current visibility and competitive standing, followed by the most important fixes.</p>
-        <figure class="report-figure">
-            <%= image_tag "geo-audit-execsummary.png", alt: "Executive summary of the GEO audit: where you're visible, how you compare, where you're missing, and what to do first" %>
-        </figure>
+        <p>The GEO Periodic Table organizes 25 factors into a practical review of content quality, structured data, brand and entity signals, trustworthiness, performance, and engagement. Each factor points to work a team can take on.</p>
+        <p>The audit works through those factors in an agentic sequence of research, prompt testing, comparison, and synthesis. The results page makes that depth legible: a team can see how each factor was assessed, understand where the brand stands, and see which changes are likely to matter first.</p>
+        <p>The report becomes a clear handoff from diagnosis to a conversation about what to do next.</p>
     </section>
 
     <section id="cs-funnel">
-        <h3>The funnel</h3>
-        <p>The free audit is the top of the funnel. It has to be useful enough for someone to finish and share internally. The full engagement adds a deeper baseline, a cross-channel activation plan, and ongoing scoring across all 25 Periodic Table factors.</p>
-        <figure class="report-figure">
-            <%= image_tag "geo-program-cta.png", alt: "GEO Program upsell: Audit & Baseline, Cross-Channel Activation Plan, and Periodic Table Scoring, offered at the end of the free report" %>
+        <h3>From audit to program</h3>
+        <p>We designed the free audit to be useful on its own. From there, the paid program offers a deeper baseline, a cross-channel plan, and ongoing measurement for teams that want help improving the result. The handoff had to feel like the next useful step in the same conversation.</p>
+        <p>The audit went live on June 18, 2026. Eight weeks later, Mod Op launched it publicly and used it to publish the GEO 50, a ranking of 50 major brands across eight categories. I had left by then and was not part of the benchmark. The company kept shipping on the system we built.</p>
+        <figure class="story-illustration">
+            <%= image_tag "geo-cultivated-signal.jpg", alt: "Hand-drawn person tending a growing tree of signals and ideas" %>
         </figure>
     </section>
 
     <section id="cs-learned">
         <h3>What I learned</h3>
-        <p>A free diagnostic only works as a funnel when it gives a useful answer. Withholding the real value erodes the trust needed for a paid next step. Designing GEO meant deciding what the audit should resolve immediately and what required an ongoing program.</p>
+        <p>We spent a lot of time deciding how much the audit should give away. The answer turned out more generous than I first expected. If someone could leave with a clear understanding of their position, they had a reason to trust the paid program. The audit became the first step in the relationship, and the paid program had a clear job: help the team act on what it had learned.</p>
     </section>
 
-    <p class="crumb"><a href="/nexus">&larr; Back to Nexus platform</a></p>
+    <section id="cs-sources">
+        <h3>Public record</h3>
+        <ul class="source-list">
+            <li>
+                <a href="https://geo.modop.ai" target="_blank">GEO</a>
+                <span class="source-list__detail">geo.modop.ai · live service and free audit application.</span>
+            </li>
+            <li>
+                <a href="https://www.modop.com/press/mod-op-launches-free-ai-search-visibility-tool-and-unveils-the-geo-50/" target="_blank">Mod Op Launches Free AI Search Visibility Tool and Unveils the GEO 50</a>
+                <span class="source-list__detail">Mod Op press release · August 2026 launch announcement.</span>
+            </li>
+            <li>
+                <a href="https://digiday.com/marketing/build-or-buy-inside-indie-agency-mod-ops-ai-infrastructure/" target="_blank">Build or Buy? Inside Indie Agency Mod Op’s AI Infrastructure</a>
+                <span class="source-list__detail">Digiday · August 2026 coverage of the broader AI platform.</span>
+            </li>
+        </ul>
+    </section>
+
+    <p class="crumb case-back-home"><a href="/">&larr; Back home</a></p>
+    <%= render "home/case_footer" %>
 </div>
+
+<div id="geo-pip-backdrop" class="geo-pip-backdrop" data-geo-pip-backdrop hidden aria-hidden="true"></div>
+
+<div id="geo-pip" class="geo-pip" data-geo-pip data-corner="bottom-right" data-size="small" aria-label="GEO video player, small size">
+    <div class="geo-pip__bar" data-geo-pip-drag-handle title="Drag to move the video">
+        <span class="geo-pip__title" data-geo-pip-title>GEO Landing Page</span>
+        <div class="geo-pip__controls" aria-label="Video size controls">
+            <button type="button" class="geo-pip__size geo-pip__minus" data-geo-pip-minus aria-label="Make video smaller" title="Make video smaller">−</button>
+            <button type="button" class="geo-pip__size geo-pip__plus" data-geo-pip-plus aria-label="Make video larger" title="Make video larger">+</button>
+        </div>
+    </div>
+    <div class="geo-pip__stage">
+        <video id="geo-pip-video" class="geo-pip__player" autoplay loop muted playsinline preload="auto" tabindex="0" src="/geo-homepage-walkthrough.mp4" poster="<%= image_path("geo-homepage-first-frame.jpg") %>" aria-label="GEO Landing Page. Click to pause or resume."></video>
+        <span class="geo-pip__feedback" data-geo-pip-feedback aria-hidden="true"></span>
+    </div>
+</div>
+
+<script>
+    (() => {
+        const pip = document.querySelector("[data-geo-pip]");
+        const backdrop = document.querySelector("[data-geo-pip-backdrop]");
+        const video = document.querySelector("#geo-pip-video");
+        const title = pip && pip.querySelector("[data-geo-pip-title]");
+        const triggers = document.querySelectorAll("[data-geo-pip-trigger]");
+        const auditTrigger = document.querySelector("[data-geo-pip-audit-trigger]");
+        const plus = pip && pip.querySelector("[data-geo-pip-plus]");
+        const minus = pip && pip.querySelector("[data-geo-pip-minus]");
+        const dragHandle = pip && pip.querySelector("[data-geo-pip-drag-handle]");
+        const feedback = pip && pip.querySelector("[data-geo-pip-feedback]");
+
+        if (!pip || !backdrop || !video || !title || !plus || !minus || !dragHandle || !feedback) return;
+
+        let activeCorner = pip.dataset.corner || "bottom-right";
+        let sizeStage = 1;
+        let dragState = null;
+        let backdropTimer = null;
+        let backdropFrame = null;
+        let auditTransitionPending = false;
+        let auditTransitioned = false;
+        let feedbackAnimation = null;
+
+        const clearSnapAnimation = () => {
+            pip.classList.remove("geo-pip--snap-start", "geo-pip--snap-end");
+            pip.style.removeProperty("--pip-snap-x");
+            pip.style.removeProperty("--pip-snap-y");
+            pip.style.removeProperty("transform");
+        };
+
+        const clearPositionStyles = () => {
+            pip.style.removeProperty("left");
+            pip.style.removeProperty("top");
+            pip.style.removeProperty("right");
+            pip.style.removeProperty("bottom");
+        };
+
+        const setCorner = (corner) => {
+            activeCorner = corner;
+            pip.dataset.corner = corner;
+        };
+
+        const container = document.querySelector(".case--geo");
+        const reserveSpace = () => {
+            if (!container) return;
+            const reserve = (pip.hidden || sizeStage === 3) ? 0 : pip.offsetHeight + 24;
+            container.style.setProperty("--geo-pip-reserve", `${reserve}px`);
+        };
+
+        const updateSizeControls = () => {
+            const size = ["minimal", "small", "medium", "big"][sizeStage];
+            const minusLabels = [
+                ["Video is at minimum size", "Video is at minimum size"],
+                ["Minimize video", "Minimize video"],
+                ["Make video smaller", "Make video smaller"],
+                ["Make video medium", "Make video medium"]
+            ];
+            const plusLabels = [
+                ["Show video", "Show video"],
+                ["Make video medium", "Make video medium"],
+                ["Make video big", "Make video big"],
+                ["Video is at maximum size", "Video is at maximum size"]
+            ];
+            const [minusLabel, minusTitle] = minusLabels[sizeStage];
+            const [plusLabel, plusTitle] = plusLabels[sizeStage];
+
+            pip.dataset.size = size;
+            pip.classList.toggle("geo-pip--minimal", sizeStage === 0);
+            pip.classList.toggle("geo-pip--medium", sizeStage === 2);
+            pip.classList.toggle("geo-pip--big", sizeStage === 3);
+
+            minus.disabled = sizeStage === 0;
+            plus.disabled = sizeStage === 3;
+            minus.setAttribute("aria-label", minusLabel);
+            minus.title = minusTitle;
+            plus.setAttribute("aria-label", plusLabel);
+            plus.title = plusTitle;
+            pip.setAttribute("aria-label", `GEO video player, ${size} size`);
+            reserveSpace();
+            window.setTimeout(reserveSpace, 320);
+        };
+
+        const snapToCorner = (corner, animate = true) => {
+            const fromRect = pip.getBoundingClientRect();
+            clearSnapAnimation();
+            clearPositionStyles();
+            setCorner(corner);
+
+            if (!animate || !fromRect.width) return;
+
+            const toRect = pip.getBoundingClientRect();
+            const offsetX = fromRect.left - toRect.left;
+            const offsetY = fromRect.top - toRect.top;
+            if (Math.abs(offsetX) < 1 && Math.abs(offsetY) < 1) return;
+
+            pip.style.setProperty("--pip-snap-x", `${offsetX}px`);
+            pip.style.setProperty("--pip-snap-y", `${offsetY}px`);
+            pip.classList.add("geo-pip--snap-start");
+            pip.offsetWidth;
+            requestAnimationFrame(() => pip.classList.add("geo-pip--snap-end"));
+
+            window.setTimeout(clearSnapAnimation, 320);
+        };
+
+        const nearestCorner = (rect) => {
+            const margin = window.innerWidth <= 900 ? 12 : 16;
+            const maxLeft = Math.max(margin, window.innerWidth - rect.width - margin);
+            const maxTop = Math.max(margin, window.innerHeight - rect.height - margin);
+            const points = {
+                "top-left": { left: margin, top: margin },
+                "top-right": { left: maxLeft, top: margin },
+                "bottom-left": { left: margin, top: maxTop },
+                "bottom-right": { left: maxLeft, top: maxTop }
+            };
+
+            return Object.entries(points).reduce((closest, [corner, point]) => {
+                const distance = Math.hypot(rect.left - point.left, rect.top - point.top);
+                return distance < closest.distance ? { corner, distance } : closest;
+            }, { corner: activeCorner, distance: Infinity }).corner;
+        };
+
+        const playVideo = () => {
+            video.muted = true;
+            const playback = video.play();
+            if (playback && typeof playback.catch === "function") playback.catch(() => {});
+        };
+
+        const selectVideo = (trigger, shouldPlay = true) => {
+            const src = trigger.dataset.videoSrc;
+            if (!src) return;
+
+            const sourceChanged = video.dataset.source !== src;
+            title.textContent = trigger.dataset.videoTitle || "GEO Landing Page";
+            video.setAttribute("aria-label", `${trigger.dataset.videoTitle || "GEO Landing Page"}. Click to pause or resume.`);
+            pip.hidden = false;
+            if (auditTrigger && src === auditTrigger.dataset.videoSrc) auditTransitioned = true;
+
+            if (sourceChanged) {
+                video.pause();
+                video.src = src;
+                video.dataset.source = src;
+                if (trigger.dataset.videoPoster) {
+                    video.poster = trigger.dataset.videoPoster;
+                } else {
+                    video.removeAttribute("poster");
+                }
+                video.load();
+            }
+
+            if (video.ended) video.currentTime = 0;
+            if (sizeStage !== 0 && shouldPlay) playVideo();
+        };
+
+        const showBackdrop = () => {
+            window.clearTimeout(backdropTimer);
+            window.cancelAnimationFrame(backdropFrame);
+            backdrop.hidden = false;
+            backdropFrame = window.requestAnimationFrame(() => backdrop.classList.add("geo-pip-backdrop--visible"));
+        };
+
+        const hideBackdrop = () => {
+            window.cancelAnimationFrame(backdropFrame);
+            backdrop.classList.remove("geo-pip-backdrop--visible");
+            window.clearTimeout(backdropTimer);
+            backdropTimer = window.setTimeout(() => {
+                backdrop.hidden = true;
+            }, 240);
+        };
+
+        const setSize = (nextStage) => {
+            if (nextStage < 0 || nextStage > 3 || nextStage === sizeStage) return;
+            const wasPlaying = !video.paused;
+            const wasMinimal = sizeStage === 0;
+
+            if (nextStage === 3) {
+                clearSnapAnimation();
+                const rect = pip.getBoundingClientRect();
+                pip.style.left = `${rect.left + rect.width / 2}px`;
+                pip.style.top = `${rect.top + rect.height / 2}px`;
+                pip.style.right = "auto";
+                pip.style.bottom = "auto";
+                sizeStage = nextStage;
+                updateSizeControls();
+                document.body.classList.add("geo-pip-focus-lock");
+                showBackdrop();
+                window.requestAnimationFrame(() => {
+                    pip.style.left = "50%";
+                    pip.style.top = "50%";
+                });
+            } else if (sizeStage === 3) {
+                const rect = pip.getBoundingClientRect();
+                clearSnapAnimation();
+                pip.style.left = `${rect.left}px`;
+                pip.style.top = `${rect.top}px`;
+                pip.style.right = "auto";
+                pip.style.bottom = "auto";
+                sizeStage = nextStage;
+                updateSizeControls();
+                document.body.classList.remove("geo-pip-focus-lock");
+                hideBackdrop();
+                window.requestAnimationFrame(() => snapToCorner(activeCorner));
+            } else {
+                clearSnapAnimation();
+                sizeStage = nextStage;
+                updateSizeControls();
+            }
+
+            if (sizeStage === 0) {
+                video.pause();
+            } else if (wasPlaying || wasMinimal) {
+                playVideo();
+            }
+        };
+
+        const transitionToAuditVideo = async () => {
+            if (!auditTrigger || auditTransitionPending || auditTransitioned) return;
+
+            const auditSrc = auditTrigger.dataset.videoSrc;
+            if (!auditSrc || video.dataset.source === auditSrc) {
+                auditTransitioned = true;
+                return;
+            }
+
+            auditTransitionPending = true;
+            auditTransitioned = true;
+            const shouldPlay = !video.paused;
+            clearSnapAnimation();
+
+            const rect = pip.getBoundingClientRect();
+            const isLeft = activeCorner === "top-left" || activeCorner === "bottom-left" ||
+                (activeCorner !== "top-right" && activeCorner !== "bottom-right" && rect.left + rect.width / 2 < window.innerWidth / 2);
+            const distance = isLeft ? -(rect.right + 48) : window.innerWidth - rect.left + 48;
+
+            pip.style.setProperty("--pip-transition-x", `${distance}px`);
+            pip.classList.add("geo-pip--transitioning-out");
+
+            await new Promise((resolve) => window.setTimeout(resolve, 400));
+            selectVideo(auditTrigger, shouldPlay);
+            pip.classList.remove("geo-pip--transitioning-out");
+            pip.style.removeProperty("--pip-transition-x");
+            auditTransitionPending = false;
+        };
+
+        triggers.forEach((trigger) => {
+            trigger.addEventListener("click", () => selectVideo(trigger));
+        });
+
+        plus.addEventListener("click", () => {
+            if (sizeStage < 3) setSize(sizeStage + 1);
+        });
+
+        minus.addEventListener("click", () => {
+            if (sizeStage > 0) setSize(sizeStage - 1);
+        });
+
+        backdrop.addEventListener("click", () => setSize(2));
+
+        const handleScroll = () => {
+            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+            if (scrollableHeight > 0 && window.scrollY >= scrollableHeight * 0.5) {
+                transitionToAuditVideo();
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        dragHandle.addEventListener("pointerdown", (event) => {
+            const target = event.target;
+            if ((target instanceof Element && target.closest("button")) || event.button === 2 || sizeStage === 3) return;
+
+            const rect = pip.getBoundingClientRect();
+            dragState = {
+                pointerId: event.pointerId,
+                startX: event.clientX,
+                startY: event.clientY,
+                left: rect.left,
+                top: rect.top,
+                width: rect.width,
+                height: rect.height
+            };
+            clearSnapAnimation();
+            pip.classList.add("geo-pip--dragging");
+            pip.dataset.corner = "dragging";
+            pip.style.left = `${rect.left}px`;
+            pip.style.top = `${rect.top}px`;
+            pip.style.right = "auto";
+            pip.style.bottom = "auto";
+            if (dragHandle.setPointerCapture) dragHandle.setPointerCapture(event.pointerId);
+            event.preventDefault();
+        });
+
+        dragHandle.addEventListener("pointermove", (event) => {
+            if (!dragState || event.pointerId !== dragState.pointerId) return;
+
+            const margin = window.innerWidth <= 900 ? 12 : 16;
+            const maxLeft = Math.max(margin, window.innerWidth - dragState.width - margin);
+            const maxTop = Math.max(margin, window.innerHeight - dragState.height - margin);
+            const left = Math.min(maxLeft, Math.max(margin, dragState.left + event.clientX - dragState.startX));
+            const top = Math.min(maxTop, Math.max(margin, dragState.top + event.clientY - dragState.startY));
+            pip.style.left = `${left}px`;
+            pip.style.top = `${top}px`;
+        });
+
+        const finishDrag = (event) => {
+            if (!dragState || event.pointerId !== dragState.pointerId) return;
+            if (dragHandle.hasPointerCapture && dragHandle.hasPointerCapture(event.pointerId)) dragHandle.releasePointerCapture(event.pointerId);
+            dragState = null;
+            pip.classList.remove("geo-pip--dragging");
+            snapToCorner(nearestCorner(pip.getBoundingClientRect()));
+        };
+
+        dragHandle.addEventListener("pointerup", finishDrag);
+        dragHandle.addEventListener("pointercancel", finishDrag);
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key !== "Escape" || pip.hidden) return;
+            if (sizeStage === 3) setSize(2);
+            else if (sizeStage > 0) setSize(0);
+        });
+
+        window.addEventListener("resize", reserveSpace);
+        video.addEventListener("loadedmetadata", reserveSpace);
+        setCorner(activeCorner);
+        updateSizeControls();
+        video.dataset.source = video.currentSrc || video.src;
+        playVideo();
+        window.requestAnimationFrame(handleScroll);
+
+        const showPlaybackFeedback = (icon) => {
+            feedback.textContent = icon;
+            feedback.dataset.icon = icon === "▶" ? "play" : "pause";
+            if (feedbackAnimation) feedbackAnimation.cancel();
+            feedbackAnimation = feedback.animate([
+                {
+                    opacity: 0.9,
+                    transform: "translate3d(-50%, -50%, 0) scale(1)"
+                },
+                {
+                    offset: 0.36,
+                    opacity: 0.84,
+                    transform: "translate3d(-50%, -50%, 0) scale(1.1)"
+                },
+                {
+                    offset: 0.68,
+                    opacity: 0.52,
+                    transform: "translate3d(-50%, -50%, 0) scale(1.3)"
+                },
+                {
+                    opacity: 0,
+                    transform: "translate3d(-50%, -50%, 0) scale(1.58)"
+                }
+            ], {
+                duration: 480,
+                easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+                fill: "both"
+            });
+            feedbackAnimation.onfinish = () => {
+                feedbackAnimation = null;
+            };
+        };
+
+        const togglePlayback = () => {
+            const isPaused = video.paused;
+            if (isPaused) playVideo();
+            else video.pause();
+
+            showPlaybackFeedback(isPaused ? "▶" : "⏸");
+        };
+
+        video.addEventListener("click", togglePlayback);
+        video.addEventListener("keydown", (event) => {
+            if (event.key !== " " && event.key !== "Enter") return;
+            event.preventDefault();
+            togglePlayback();
+        });
+    })();
+</script>

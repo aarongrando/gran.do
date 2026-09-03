@@ -1,45 +1,77 @@
 <% content_for :title, "Mod Heat Case Study" %>
-<div id="container" class="case">
-    <p class="crumb"><a href="/nexus">&larr; Back to Nexus platform</a></p>
+<div id="container" class="case case--mod-heat">
+    <%= render "home/case_header" %>
+    <p class="crumb case-wayfinding">
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Case study</span>
+    </p>
+
     <section id="cs-top">
         <h1>Mod Heat</h1>
-        <h2>A realtime trend tracker that scores cultural moments against a specific brand's tolerance. It went from a February concept to a Q4 release and helped shape the platform underneath.</h2>
+        <h2>A brand-aware trend product I took from an early 2024 concept through executive approval and a Q4 release.</h2>
+        <figure class="story-illustration case-header-visual">
+            <%= image_tag "mod-heat-focal-point.jpg", alt: "Hand-drawn hand reaching toward a focused signal held in a shared bowl" %>
+        </figure>
     </section>
 
     <section id="cs-problem">
-        <h3>The situation</h3>
-        <p>Cultural relevance is the thing agencies sell and the thing they're worst at operationalizing. Someone reads the news, notices a moment, and brings it to a meeting. By the time it's been socialized, scoped, and approved, the moment has passed. Meanwhile the moments that would have been genuinely good for a particular brand go by unnoticed, because nobody was looking on that brand's behalf.</p>
-        <p>A listening dashboard creates more information, but the bottleneck was judgment. A feed of everything happening leaves the same problem in a nicer interface.</p>
+        <h3>The tension</h3>
+        <p>At agencies, a trend response often starts with one person noticing something in the news and bringing it to a meeting. The team then weighs brand fit, timing, and risk. That takes time, and the moment can pass while the discussion is still going.</p>
+        <p>The agency already had listening tools. Mod Heat's job was to support the judgment that followed and connect it to a possible action.</p>
     </section>
 
     <section id="cs-role">
         <h3>What I owned</h3>
-        <p>I originated Mod Heat in February 2024 and secured executive approval in April. I defined the product and scoring model, then directed it through its Q4 release with the team. I also made the decision to connect it to the agent layer, which kept it from becoming a standalone dashboard and informed the later Nexus architecture.</p>
+        <p>I came up with Mod Heat in February 2024 and pitched it to the executive team that spring. I defined the product and scoring model, then directed the work through its Q4 release. I also connected it to our emerging agent work, which later influenced how we thought about Nexus.</p>
     </section>
 
     <section id="cs-insight">
         <h3>The insight</h3>
-        <p>Relevance isn't a property of an event. It's a relationship between an event and a particular brand: its audience, its positioning, its appetite for risk, and how fast it can actually move. The same news story is an opportunity for one client, a non-event for another, and a liability for a third.</p>
+        <p>I started with the way brand teams already talk. The same news story can be useful for one client, irrelevant to another, and uncomfortable for a third. Audience, positioning, risk tolerance, and timing all change the answer.</p>
     </section>
 
     <section id="cs-system">
-        <h3>How it worked</h3>
-        <p><strong>Listening and aggregation.</strong> News and conversation gathered continuously and clustered into discernible trends, not a raw feed.</p>
-        <p><strong>Scoring.</strong> Each moment scored against brand relevance, audience resonance, magnitude, timing, and safety. Timing and safety are the two that make it usable in an agency: a moment that's cresting is worth less than one that's building, and one that's off-limits for a brand needs to be visibly off-limits, not quietly absent.</p>
-        <p><strong>Ideas and risk together.</strong> Generated directions for acting on a moment, presented alongside the risk of doing so, because in practice those two get evaluated in the same conversation.</p>
-        <p><strong>Handoff into agents.</strong> One click carried a scored moment and its context into a Brand Agent conversation. That handoff made it a product: one step from noticing a moment to acting on it.</p>
-        <p>The original pitch included a multi-agent design: differentiated expert agents collaborating on trends, context, and decisions, where one model would otherwise do everything. Not all of that shipped in the first release, but the decision and context logic behind it went on to inform how knowledge layers and the platform were built.</p>
+        <h3>The agent-assisted turn</h3>
+        <figure class="mod-heat-visual">
+            <%= image_tag "mod-heat-case-study.gif", alt: "Mod Heat interface showing brand-aware trend signals" %>
+        </figure>
+        <p>Mod Heat scans news, curated industry sources, and social conversation every day and clusters what it finds into recognizable trends. It then scores each trend against a specific brand with a framework we called F.I.T.S.: familiarity, impact, timing, and safety. The output is a ranked view of moments by relevance, risk, and potential reach.</p>
+        <p>A promising signal could flow straight into a Brand Agent workflow. The agent, which carries the client's voice, standards, audience nuances, and risk guardrails, could summarize the moment, weigh it against the brand context, and draft activation concepts and first tactics, while the team made the final call.</p>
     </section>
 
     <section id="cs-changed">
-        <h3>What changed</h3>
-        <p>Brand teams gained a standing view of the moments worth acting on for each client. More consequentially, defining how to score a moment against brand context produced the knowledge model that later informed the platform's architecture.</p>
+        <h3>The outcome</h3>
+        <p>The first release shipped internally in Q4 2024, and Mod Op <a href="https://www.modop.com/press/mod-op-expands-ai-suite-with-launch-of-mod-heat-ai-coach-and-ecommerce-agent/" target="_blank">launched Mod Heat publicly</a> in October 2025 as part of its AI suite. It is now <a href="https://www.modop.com/orion-ai/mod-heat/" target="_blank">part of Orion</a>. The product shortened the path from signal to action. Brand teams had a standing view of the moments worth discussing for each client, and an important one could move straight into an agent-assisted workflow. The context and decision logic we built here also gave our team an early model for applying brand context inside an AI product, which became useful as Nexus took shape.</p>
     </section>
 
     <section id="cs-learned">
+        <figure class="story-illustration">
+            <%= image_tag "mod-heat-signal-field.jpg", alt: "Hand-drawn streams of cultural signals narrowing toward one clear point" %>
+        </figure>
         <h3>What I learned</h3>
-        <p>Pitching an idea and delivering it are different jobs. The gap between executive approval in April and a shipped product in Q4 was a long sequence of decisions about scope.</p>
+        <p>Executive approval came in April, and the first release shipped in Q4. Most of my work between those points was deciding what belonged in the first version, what could wait, and how to keep the original idea intact as the scope changed.</p>
+        <p>It was also the first product we built with Cursor. We picked it up in mid-2024, and I built in a framework I had never used, learning it as the product took shape.</p>
     </section>
 
-    <p class="crumb"><a href="/nexus">&larr; Back to Nexus platform</a></p>
+    <section id="cs-sources">
+        <h3>Public record</h3>
+        <ul class="source-list">
+            <li>
+                <a href="https://www.modop.com/orion-ai/mod-heat/" target="_blank">Mod Heat</a>
+                <span class="source-list__detail">Mod Op product page · public overview of the signal and brand-context workflow.</span>
+            </li>
+            <li>
+                <a href="https://www.modop.com/press/mod-op-expands-ai-suite-with-launch-of-mod-heat-ai-coach-and-ecommerce-agent/" target="_blank">Mod Op Expands AI Suite with Launch of Mod Heat, AI Coach and Ecommerce Agent</a>
+                <span class="source-list__detail">Mod Op press release · October 2025 public launch announcement.</span>
+            </li>
+            <li>
+                <a href="https://www.modop.com/podcasts/vibe-coding-the-future-of-ai-assisted-development-teams/" target="_blank">Vibe Coding: The Future of AI-Assisted Development Teams</a>
+                <span class="source-list__detail">Leader Generation podcast · the product-building workflow behind Mod Heat.</span>
+            </li>
+        </ul>
+    </section>
+
+    <p class="crumb case-back-home"><a href="/">&larr; Back home</a></p>
+    <%= render "home/case_footer" %>
 </div>

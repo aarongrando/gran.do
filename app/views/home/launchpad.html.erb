@@ -1,49 +1,80 @@
 <% content_for :title, "Launchpad Case Study" %>
-<div id="container" class="case">
-    <p class="crumb"><a href="/nexus">&larr; Back to Nexus platform</a></p>
+<div id="container" class="case case--launchpad">
+    <%= render "home/case_header" %>
+    <p class="crumb case-wayfinding">
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Case study</span>
+    </p>
+
     <section id="cs-top">
         <h1>Launchpad</h1>
-        <h2>A self-serve framework for deploying prototype tools and agents, with governance and a path to production built in, plus the rapid-prototyping practice that fed it.</h2>
+        <h2>How we made AI ideas tangible early, learned from them quickly, and gave the strongest ones a path to production.</h2>
+        <figure class="story-illustration case-header-visual">
+            <%= image_tag "launchpad-foundation-shelf.jpg", alt: "Hand-drawn shelf supporting different ideas and forms on a shared foundation" %>
+        </figure>
     </section>
 
     <section id="cs-problem">
-        <h3>The situation</h3>
-        <p>By late 2025, Mod Op had hundreds of people experimenting with generative AI. Good ideas were everywhere: in decks, docs, side projects, and demos that impressed a room and then evaporated. The agency's AI investment risked becoming a collection of disconnected experiments: lots of energy, no portfolio, no way to compare an agent idea against a tool idea against a client-offering idea.</p>
-        <p>Ideas were plentiful. Evaluating them was expensive. A business case takes weeks, a deck cannot prove demand, and a full build costs too much to discard when the signal comes back weak.</p>
+        <h3>The cost of uncertainty</h3>
+        <p>By late 2025, people across Mod Op were experimenting with generative AI. Ideas showed up in decks, side projects, and demos. We needed a shared way to compare them and decide what deserved more investment.</p>
+        <p>A full business case took too long for an early idea, and a polished deck left the important questions open. We needed a cheaper way to learn, one that could work across a roughly 500-person organization and give the strongest ideas a path forward. We had a word for the rough working version cheap enough to build before anyone commits: a pretotype. Launchpad made it the default.</p>
     </section>
 
     <section id="cs-role">
         <h3>What I owned</h3>
-        <p>I originated and directed the prototyping program across the Q1 2026 hackathons, then led the product and engineering work that turned it into Launchpad. I owned the evaluation model and advancement criteria, including how prototype evidence informed product investment and go-to-market decisions. I designed the platform concept and directed the architecture with engineering.</p>
+        <p>I started the prototyping program during our Q1 2026 hackathons, then led the product and engineering work that became Launchpad. I owned the evaluation model and the criteria for moving an idea forward. I also designed the platform concept and directed the architecture with engineering.</p>
     </section>
 
     <section id="cs-insight">
         <h3>The insight</h3>
-        <p>The cheapest way to evaluate an AI idea was a rough working version and a one-minute demo. Showing it to colleagues and clients produced useful reactions before larger investment.</p>
+        <p>I kept seeing the same pattern: once people could try a rough version, the conversation became much more specific. They reacted to the workflow, asked better questions, and showed us whether the idea had any pull.</p>
     </section>
 
     <section id="cs-system">
-        <h3>How it worked</h3>
-        <p><strong>The operating model:</strong> prototype &rarr; scope document &rarr; engineering design &rarr; MVP &rarr; production. Nothing moved forward until a prototype produced strong user or client signal, or an explicit commitment.</p>
-        <p><strong>The platform:</strong> a Next.js 15 monorepo hosting 66+ deployable prototype applications at launch. Nexus OAuth 2.0 let them use real single sign-on and inherit the platform's permissions from the start. PostgreSQL tracked engagement, and each prototype included a one-minute demo and structured feedback. A bounty system let anyone in the agency propose an idea and see it picked up.</p>
-        <p>The Q1 2026 hackathons produced 60+ working prototypes across infrastructure, subscriptions, delivery, services, and white-label products.</p>
+        <h3>The process</h3>
+        <p>Our sequence was simple: prototype, scope, engineering design, MVP, production. Each stage had to earn the next. The early prototype gave us enough evidence to decide how much time and attention an idea deserved.</p>
+        <p>Launchpad gave each prototype a shared home, secure sign-in, a short demo, and a way to collect feedback. Anyone at the agency could suggest an idea, and the product team could see what people were actually using.</p>
+        <p>The Q1 hackathons produced dozens of working prototypes across internal tools, client services, subscriptions, and white-label products.</p>
     </section>
 
     <section id="cs-adoption">
-        <h3>Adoption</h3>
-        <p>Launchpad became how the agency evaluated AI opportunities. Growth teams used its engagement metrics to decide what to take to clients. The roadmap process shifted from opinion-driven to signal-driven: roughly 100 backlog items were triaged into a ranked portfolio with explicit advancement criteria. GEO/AEO (generative-engine optimization) and Digital Twins emerged from the pipeline as the first priority MVPs.</p>
+        <h3>How it entered planning</h3>
+        <p>Launchpad became part of roadmap planning. Growth teams could see which ideas were getting attention, and the product team could compare that signal with client interest and strategic fit. GEO and Digital Twins were among the first concepts we moved into MVP work.</p>
     </section>
 
     <section id="cs-commercial">
-        <h3>Commercial consequence</h3>
-        <p>By August 2026, more than 70 client accounts were in active conversations about Launchpad-derived concepts: GEO, digital twins, competitive intelligence, content and research tools. These were pipeline conversations; no booked revenue was attributed.</p>
-        <p>The sharpest proof came from Sparkling Ice and Talking Rain: prototypes built on the client's own brand data, demoed live in the room with product and engineering at the table. Working software beat the capability deck. The session converted into an AI-readiness scoping engagement and became the playbook for how the agency runs major client AI meetings.</p>
+        <h3>Client consequence</h3>
+        <p>The same prototypes changed client conversations. A working version built around the client's brand gave us something concrete to bring into the room and talk through together.</p>
+        <p>One session with a beverage client, built on their own brand data and run with product and engineering in the room, led to a scoping engagement and became the model for later client meetings. By August 2026, dozens of client accounts were in active pipeline conversations about concepts that had come through Launchpad.</p>
     </section>
 
     <section id="cs-learned">
+        <figure class="story-illustration">
+            <%= image_tag "launchpad-observation-team.jpg", alt: "Hand-drawn team looking across a landscape of ideas and pointing toward a shared direction" %>
+        </figure>
         <h3>What I learned</h3>
-        <p>Demos created shared truth quickly. Building prototypes was easier than enforcing the advancement criteria and killing ideas that failed to earn investment, including some I liked.</p>
+        <p>I enjoyed making the prototypes. The leadership work came after the demo: deciding what had earned another stage and what had run its course. The program only worked once every idea faced the same criteria, including the ones we liked.</p>
     </section>
 
-    <p class="crumb"><a href="/nexus">&larr; Back to Nexus platform</a></p>
+    <section id="cs-sources">
+        <h3>Public record</h3>
+        <ul class="source-list">
+            <li>
+                <a href="https://www.modop.com/orion-ai/" target="_blank">Orion AI ecosystem</a>
+                <span class="source-list__detail">Mod Op platform page · the public portfolio context for Launchpad.</span>
+            </li>
+            <li>
+                <a href="https://www.modop.com/blog/micro-tools-could-turn-everyone-into-a-builder/" target="_blank">Micro-tools Could Turn Everyone into a Builder</a>
+                <span class="source-list__detail">Mod Op article · rapid prototypes, internal tools, and distributed building.</span>
+            </li>
+            <li>
+                <a href="https://www.modop.com/podcasts/vibe-coding-the-future-of-ai-assisted-development-teams/" target="_blank">Vibe Coding: The Future of AI-Assisted Development Teams</a>
+                <span class="source-list__detail">Leader Generation podcast · the development workflow behind the program.</span>
+            </li>
+        </ul>
+    </section>
+
+    <p class="crumb case-back-home"><a href="/">&larr; Back home</a></p>
+    <%= render "home/case_footer" %>
 </div>
