@@ -766,14 +766,25 @@
                 margin: 0.3em 1.7em 1.45em calc(var(--visual-overhang) * -1);
             }
 
-            .nexus-chat-visual,
-            .mod-heat-visual {
+            .nexus-chat-visual {
                 float: right;
                 width: min(300px, 43%);
                 margin: 0.3em calc(var(--visual-overhang) * -1) 1.45em 1.7em;
                 overflow: hidden;
                 border: 1px solid #34303d;
                 border-radius: 14px;
+                background: #f5f5f5;
+                box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
+            }
+
+            .mod-heat-visual {
+                float: none;
+                clear: both;
+                width: calc(100% + (var(--visual-overhang) * 2));
+                margin: 2.1em calc(var(--visual-overhang) * -1) 2.4em;
+                overflow: hidden;
+                border: 1px solid #34303d;
+                border-radius: 16px;
                 background: #f5f5f5;
                 box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
             }
@@ -1480,11 +1491,16 @@
                 .geo-walkthrough,
                 .geo-results-walkthrough,
                 .nexus-chat-visual,
-                .mod-heat-visual,
                 .nexus-orion-visual {
                     float: none;
                     width: min(100%, 420px);
                     margin: 1.5em auto 1.8em;
+                }
+
+                .mod-heat-visual {
+                    width: 100%;
+                    margin: 1.7em 0 2em;
+                    border-radius: 13px;
                 }
 
                 .nexus-chat-visual {

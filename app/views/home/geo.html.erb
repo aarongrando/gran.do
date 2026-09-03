@@ -29,7 +29,7 @@
     <section id="cs-audit">
         <h3>The product decision</h3>
         <figure class="geo-walkthrough">
-            <button type="button" class="geo-pip-trigger" data-geo-pip-trigger data-video-src="/geo-homepage-walkthrough.mp4" data-video-poster="<%= image_path("geo-homepage-first-frame.jpg") %>" data-video-title="GEO Landing Page" aria-controls="geo-pip" aria-label="Play the GEO Landing Page video">
+            <button type="button" class="geo-pip-trigger" data-geo-pip-trigger data-video-src="/geo-homepage-walkthrough.mp4" data-video-poster="<%= image_path("geo-homepage-first-frame.jpg") %>" data-video-title="GEO Landing Page Demo" aria-controls="geo-pip" aria-label="Play the GEO Landing Page Demo video">
                 <%= image_tag "geo-homepage-first-frame.jpg", alt: "" %>
                 <span class="geo-pip-trigger__play" aria-hidden="true">▶</span>
             </button>
@@ -41,7 +41,7 @@
     <section id="cs-framework">
         <h3>The framework</h3>
         <figure class="geo-results-walkthrough">
-            <button type="button" class="geo-pip-trigger geo-pip-trigger--results" data-geo-pip-trigger data-geo-pip-audit-trigger data-video-src="/geo-audit-results-walkthrough-table-dwells-1s-longer.mp4" data-video-poster="<%= image_path("geo-audit-results-first-frame.jpg") %>" data-video-title="Free GEO Audit Results" aria-controls="geo-pip" aria-label="Play the Free GEO Audit Results video">
+            <button type="button" class="geo-pip-trigger geo-pip-trigger--results" data-geo-pip-trigger data-geo-pip-audit-trigger data-video-src="/geo-audit-results-walkthrough-table-dwells-1s-longer.mp4" data-video-poster="<%= image_path("geo-audit-results-first-frame.jpg") %>" data-video-title="Free GEO Audit Results Demo" aria-controls="geo-pip" aria-label="Play the Free GEO Audit Results Demo video">
                 <%= image_tag "geo-audit-results-first-frame.jpg", alt: "" %>
                 <span class="geo-pip-trigger__play" aria-hidden="true">▶</span>
             </button>
@@ -66,7 +66,7 @@
     </section>
 
     <section id="cs-sources">
-        <h3>Public record</h3>
+        <h3>Links</h3>
         <ul class="source-list">
             <li>
                 <a href="https://geo.modop.ai" target="_blank">GEO</a>
@@ -91,14 +91,14 @@
 
 <div id="geo-pip" class="geo-pip" data-geo-pip data-corner="bottom-right" data-size="small" aria-label="GEO video player, small size">
     <div class="geo-pip__bar" data-geo-pip-drag-handle title="Drag to move the video">
-        <span class="geo-pip__title" data-geo-pip-title>GEO Landing Page</span>
+        <span class="geo-pip__title" data-geo-pip-title>GEO Landing Page Demo</span>
         <div class="geo-pip__controls" aria-label="Video size controls">
             <button type="button" class="geo-pip__size geo-pip__minus" data-geo-pip-minus aria-label="Make video smaller" title="Make video smaller">−</button>
             <button type="button" class="geo-pip__size geo-pip__plus" data-geo-pip-plus aria-label="Make video larger" title="Make video larger">+</button>
         </div>
     </div>
     <div class="geo-pip__stage">
-        <video id="geo-pip-video" class="geo-pip__player" autoplay loop muted playsinline preload="auto" tabindex="0" src="/geo-homepage-walkthrough.mp4" poster="<%= image_path("geo-homepage-first-frame.jpg") %>" aria-label="GEO Landing Page. Click to pause or resume."></video>
+        <video id="geo-pip-video" class="geo-pip__player" autoplay loop muted playsinline preload="auto" tabindex="0" src="/geo-homepage-walkthrough.mp4" poster="<%= image_path("geo-homepage-first-frame.jpg") %>" aria-label="GEO Landing Page Demo. Click to pause or resume."></video>
         <span class="geo-pip__feedback" data-geo-pip-feedback aria-hidden="true"></span>
     </div>
 </div>
@@ -236,8 +236,8 @@
             if (!src) return;
 
             const sourceChanged = video.dataset.source !== src;
-            title.textContent = trigger.dataset.videoTitle || "GEO Landing Page";
-            video.setAttribute("aria-label", `${trigger.dataset.videoTitle || "GEO Landing Page"}. Click to pause or resume.`);
+            title.textContent = trigger.dataset.videoTitle || "GEO Landing Page Demo";
+            video.setAttribute("aria-label", `${trigger.dataset.videoTitle || "GEO Landing Page Demo"}. Click to pause or resume.`);
             pip.hidden = false;
             if (auditTrigger && src === auditTrigger.dataset.videoSrc) auditTransitioned = true;
 
@@ -348,7 +348,11 @@
         };
 
         triggers.forEach((trigger) => {
-            trigger.addEventListener("click", () => selectVideo(trigger));
+            trigger.addEventListener("click", () => {
+                const wasMinimized = sizeStage === 0;
+                selectVideo(trigger, !wasMinimized);
+                if (wasMinimized) setSize(1);
+            });
         });
 
         plus.addEventListener("click", () => {
