@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <% page_title = content_for?(:title) ? "#{content_for(:title)} — Aaron Grando" : "Aaron Grando — AI Product, Platform & Innovation Leader" %>
-        <% page_description = "Aaron Grando is a product, enterprise AI, and creative technology leader in Philadelphia. Most recently VP, Creative Innovation, and looking for his next full-time role." %>
+        <% page_description = content_for?(:description) ? content_for(:description) : "Aaron Grando is a product, enterprise AI, and creative technology leader in Philadelphia. Most recently VP, Creative Innovation, and looking for his next full-time role." %>
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -543,7 +543,8 @@
                 color: #e1dfe5;
             }
 
-            .case > section > .story-illustration {
+            .case > section > .story-illustration,
+            .case > .story-illustration {
                 width: calc(100% + (var(--visual-overhang) * 2));
                 margin-left: calc(var(--visual-overhang) * -1);
                 margin-right: calc(var(--visual-overhang) * -1);
@@ -647,6 +648,10 @@
                 color: #b6b4bd;
                 font-size: 1.05em;
                 line-height: 1.7;
+            }
+            .case .lede--note {
+                color: #7d7a86;
+                font-size: 0.95em;
             }
             .case .case-nav {
                 display: flex;
@@ -1473,7 +1478,8 @@
                     width: 100%;
                 }
 
-                .case > section > .story-illustration {
+                .case > section > .story-illustration,
+                .case > .story-illustration {
                     width: 100%;
                     margin-left: 0;
                     margin-right: 0;

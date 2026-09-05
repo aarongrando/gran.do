@@ -1,4 +1,5 @@
-<% content_for :title, "Launchpad Case Study" %>
+<% content_for :title, "Launchpad" %>
+<% content_for :description, "How I built a shared prototype directory, organized Mod Op's 2026 hackathons, and used feedback from colleagues and clients to guide product decisions." %>
 <div id="container" class="case case--launchpad">
     <%= render "home/case_header" %>
     <p class="crumb case-wayfinding">
@@ -9,7 +10,7 @@
 
     <section id="cs-top">
         <h1>Launchpad</h1>
-        <h2>How we made AI ideas tangible early, learned from them quickly, and gave the strongest ones a path to production.</h2>
+        <h2>A place to share prototypes, and a way to decide which ones to keep building.</h2>
         <figure class="story-illustration case-header-visual">
             <%= image_tag "launchpad-foundation-shelf.jpg", alt: "Hand-drawn shelf supporting different ideas and forms on a shared foundation" %>
         </figure>
@@ -17,73 +18,55 @@
 
     <section id="cs-problem">
         <h3>The gap</h3>
-        <p>By mid-2025, coding agents had changed what a prototype cost. People across Mod Op were building working apps with Claude Code, and the hard part shifted from making them to sharing them. Every prototype that needed a URL needed a hands-on deploy into sensitive infrastructure. Only technical people could show their work, and only with help.</p>
-        <p>At the same time, I led an agency-wide listening tour, asking every team where AI could help them and their clients. We gave the most weight to ideas that would serve clients directly rather than only make us more efficient. Those conversations became dozens of ideas, and the ideas became a curated roadmap for 2026.</p>
-        <p>That left a problem. Plenty of viable ideas were still just ideas, and ideas are too theoretical for most people to react to. A full business case took too long for an early idea, and a polished deck left the important questions open. We needed a cheaper way to learn, and the feedback had to come from the teams that would eventually use the thing. We had a word for the rough working version cheap enough to build before anyone commits: a pretotype. Launchpad made it the default.</p>
-    </section>
-
-    <section id="cs-role">
-        <h3>What I owned</h3>
-        <p>I designed the hackathon that started the prototyping program, built the first version of Launchpad myself, and then led the product and engineering work that turned it into a platform. I owned the evaluation model and the criteria for moving an idea forward, and I ran the prioritization that followed. Innovation engineers Joseph DiGiovanna and Javier Lopez took the platform over for its second version.</p>
-    </section>
-
-    <section id="cs-insight">
-        <h3>The bet</h3>
-        <p>I kept seeing the same pattern: once people could try a rough version, the conversation became much more specific. They reacted to the workflow, asked better questions, and showed us whether the idea had any pull.</p>
-        <p>So instead of debating the roadmap, we staged a two-week hackathon in February 2026 with the Innovation team and Mod Op's technology group, designed from the start around what coding agents could now do. Each morning we put a set of ideas on the board. Each engineer picked one and built it as fully as they could in about four hours. Then we recorded a live demo and did it again.</p>
-        <p>That pace only works if nothing stands between a finished prototype and a URL. I set three requirements for the platform:</p>
-        <p><strong>Shareable.</strong> A prototype that only runs on a laptop can't do its job as an alignment tool.</p>
-        <p><strong>One codebase.</strong> Concepts should cross between prototypes and build on each other.</p>
-        <p><strong>Deploys anyone can do.</strong> Six prototypes a day can't wait on DevOps, and engineers shouldn't lose build time to infrastructure.</p>
+        <p>By late 2025, people across Mod Op were using coding agents to build working apps. Sharing them was the hard part. Getting a prototype onto a URL still meant a hands-on deploy into infrastructure most people could not touch, so only technical colleagues could show their work, and only with help.</p>
+        <p>At the same time, I was leading an agency-wide listening tour, asking every team where AI could help them and their clients and where current processes were hurting. We listened most closely for ideas that would serve clients directly. Those conversations produced dozens of ideas for Innovation's 2026 roadmap, more than we could prioritize on paper. Getting stakeholders behind our choices needed evidence, and ideas alone were too theoretical for most people to react to. We needed a cheap way for the teams who would use a thing to try a rough working version of it first.</p>
+        <p>I built Launchpad to host those prototypes and organized the hackathons that first filled it.</p>
     </section>
 
     <section id="cs-system">
         <h3>What I built</h3>
-        <p>The first version of Launchpad shipped to the team on the first morning of the hackathon. It was a single repository anyone could commit to. Merging to main deployed to an internal staging environment behind <a href="/nexus">Nexus</a> sign-in, the same identity layer as the rest of our platform. Each app bundle carried its code and a short block of metadata, and the metadata populated a browsable directory of every hosted prototype and its status, automatically. Nobody had to file a ticket to put their work in front of the agency.</p>
-    </section>
-
-    <section id="cs-sprint">
+        <p>The first version took me a couple of nights leading up to our February 2026 hackathon, and I shipped it to the team when we kicked off. I wanted the shortest route from finishing a prototype to letting someone else use it, which meant three requirements:</p>
+        <p><strong>Shareable.</strong> A prototype needed a link colleagues in other offices could open. One that only runs on a laptop can't do its job as an alignment tool.</p>
+        <p><strong>One codebase.</strong> Prototypes needed to live together so engineers could reuse work and connect apps that depended on one another.</p>
+        <p><strong>Self-serve deploys.</strong> Six prototypes a day can't wait on an infrastructure request, and engineers shouldn't lose build time to it. Launching an app had to be a commit and a push.</p>
+        <p>Launchpad was a single repository anyone could commit to. Merging to main triggered an automated deployment to an internal environment behind <a href="/nexus">Nexus</a> sign-in, the same account employees already used for the agency's other AI tools. Each app carried a short block of metadata that added it to a browsable directory with its current status. An engineer could push a change and send a colleague the link.</p>
         <figure class="story-illustration">
             <%= image_tag "launchpad-architecture-diagram.png", alt: "Launchpad repository deploying prototype bundles to the Launchpad intranet website, with GEO, Audience Lab, the Mod Op brand skill, Nexus MCP, and more prototypes branching from the prioritized roadmap" %>
         </figure>
-        <h3>Two weeks</h3>
-        <p>The team delivered more than 40 prototypes, each with a recorded demo. We shared the directory with all staff and invited feedback directly in the interface. Taking that feedback and our product strategy together, we prioritized Innovation's product roadmap.</p>
-        <p>Two things happened that we hadn't planned for. Early in the first week I put together a Mod Op brand style guide and shared it as an agent skill in the repo, so a group of non-design engineers working with Claude produced prototypes that looked like they came from one company. That skill went on to become the Mod Op brand skill served to every user on the agency's Claude Team plan, and it was folded into Mod Op's own Brand Agent inside Nexus. And for several teammates, this was their first chance to go all-in with a coding agent. They took what they learned back to their teams, and adoption of Claude Code in the wider technology group accelerated with them.</p>
+    </section>
+
+    <section id="cs-sprint">
+        <h3>The first sprint</h3>
+        <p>We brought engineers from Innovation and Mod Op's technology group together for two weeks in February. Each morning I put a set of ideas on the board. Each engineer chose one, spent about four hours building it, deployed it, and recorded a demo to share at the end of the day. Then we did it again.</p>
+        <p>The team delivered more than 40 prototypes during that sprint. We opened the directory to the whole agency and invited feedback there, so colleagues could react to something they had tried rather than a description of it. That gave us far more specific input for prioritizing the roadmap.</p>
+        <p>One addition was unplanned. Early in the first week I wrote a Mod Op brand style guide as an agent skill in the repo, so engineers working with Claude could produce prototypes with a consistent look. After a few updates it became the brand skill shared with everyone on the agency's Claude Team plan, and it was folded into Mod Op's own Brand Agent in Nexus.</p>
+        <p>For several teammates, these two weeks were also their first chance to use a coding agent this extensively. They took the experience back to their teams and helped expand Claude Code use across the technology group.</p>
     </section>
 
     <section id="cs-iteration">
-        <h3>Round two</h3>
-        <p>Building this fast also showed where our process wasn't built for it, design collaboration most of all. In March we ran a second sprint with the changes that suggested: engineers paired with designers, one week instead of two, and a Launchpad upgrade by Joseph and Javier that streamlined CI and deployments for the scale the system had reached. A set of Claude slash commands let designers and developers work on the same app in Launchpad directly. That week produced nearly two dozen more prototypes, and Javier's work in it became Nexus MCP, the integration that later carried platform context into Claude Code and Cursor.</p>
+        <h3>What we changed in March</h3>
+        <p>Two weeks was too long to sustain that pace, and design suffered when designers were not part of the build. For the second sprint, I shortened the schedule to one week and paired engineers with designers.</p>
+        <p>Joseph DiGiovanna and Javier Lopez upgraded Launchpad's deployment pipeline to handle the growing collection of apps, and we added a set of Claude slash commands to manage Launchpad apps so designers and developers could work on the same prototype using a shared vocabulary. The March sprint produced more than a dozen additional prototypes, including Nexus MCP, and the design work was noticeably stronger.</p>
     </section>
 
     <section id="cs-process">
-        <h3>The process</h3>
-        <p>Our sequence was simple: prototype, scope, engineering design, MVP, production. Each stage had to earn the next. The early prototype gave us enough evidence to decide how much time and attention an idea deserved.</p>
-    </section>
-
-    <section id="cs-adoption">
-        <h3>How it entered planning</h3>
-        <p>Launchpad became part of roadmap planning. Growth teams could see which ideas were getting attention, and the product team could compare that signal with client interest and strategic fit. <a href="/geo">GEO</a> and Digital Twins were among the first concepts we moved into MVP work.</p>
+        <h3>Using the work to make decisions</h3>
+        <p>After the hackathons, Launchpad became the place where the agency could follow Innovation's roadmap. Anyone could see a prototype's status and leave feedback. Growth teams used it to find concepts worth raising with clients, and we weighed those conversations alongside internal demand and strategic fit.</p>
+        <p>When we decided to continue with a concept, we scoped its requirements, worked with the delivery team on engineering specifications, and then built an MVP through a joint design and engineering process. <a href="/geo">GEO</a> and Audience Lab's digital-twin creative pretesting were among the first concepts to go through that work in 2026.</p>
     </section>
 
     <section id="cs-commercial">
-        <h3>Client consequence</h3>
-        <p>The same prototypes changed client conversations. A working version built around the client's brand gave us something concrete to bring into the room and talk through together.</p>
-        <p>One session with a beverage client, built on their own brand data and run with product and engineering in the room, led to a scoping engagement and became the model for later client meetings. By August 2026, dozens of client accounts were in active pipeline conversations about concepts that had come through Launchpad.</p>
+        <h3>Client conversations</h3>
+        <p>The week after the first sprint, we brought a prototype built around a client's brand into a meeting with them. It gave us something to use and discuss together instead of a deck, and showed our team's agility - the concept we demoed was based on an idea the client shared with us a few days before the hackathon. The reaction was extremely positive.</p>
+        <p>In a separate session with a CPG client, we demonstrated the GEO and digital-twin prototypes on that client's own brand data. The session led to a scoped engagement and requests for GEO support and creative development informed by Audience Lab. By August 2026, dozens of client accounts were in active pipeline conversations about concepts that had come through Launchpad.</p>
     </section>
 
     <section id="cs-became">
-        <h3>What it became</h3>
-        <p>Since the hackathons, Launchpad has hosted many more prototypes from the Innovation and Technology teams and turned into both a place and a process. Anyone at the agency building a prototype has somewhere to put it, and everyone can watch Mod Op's AI roadmap take shape. Transparency built trust, and it was also practical. When every prototype is visible and open to build on, ideas don't stay siloed in one team, and we duplicate less work.</p>
-    </section>
-
-    <section id="cs-learned">
         <figure class="story-illustration">
             <%= image_tag "launchpad-observation-team.jpg", alt: "Hand-drawn team looking across a landscape of ideas and pointing toward a shared direction" %>
         </figure>
-        <h3>What I learned</h3>
-        <p>I enjoyed making the prototypes, and building the platform under them. The leadership work came after the demo: deciding what had earned another stage and what had run its course. The program only worked once every idea faced the same criteria, including the ones we liked.</p>
-        <p>The second lesson was about speed. Coding agents removed the cost of building faster than they removed the cost of deciding. The process around the tools has to be redesigned with them, not just accelerated.</p>
+        <h3>After the hackathons</h3>
+        <p>Launchpad kept receiving work from the Innovation and Technology teams, and by August 2026 it hosted more than 70 prototypes. Everyone at Mod Op had access to the directory. Someone with a new build had a place to share it, colleagues could see what was being explored before it became a product, and other builders had somewhere to look for a starting point.</p>
     </section>
 
     <section id="cs-sources">

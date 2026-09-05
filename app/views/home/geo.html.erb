@@ -1,4 +1,5 @@
 <% content_for :title, "GEO by Mod Op" %>
+<% content_for :description, "How I helped turn Mod Op's manual AI search audit into a free product and an ongoing paid service, from a February prototype to a June 2026 release." %>
 <div id="container" class="case case--geo">
     <%= render "home/case_header" %>
     <p class="crumb case-wayfinding">
@@ -9,34 +10,39 @@
 
     <section id="cs-top">
         <h1>GEO by Mod Op</h1>
-        <h2>A live product that shows brands how they appear in AI answers, with a free audit that leads into an ongoing optimization program. It went live in June 2026, Mod Op launched it publicly in August 2026, and it runs at <a href="https://geo.modop.ai" target="_blank">geo.modop.ai</a>.</h2>
+        <h2>Turning a manual AI search audit into a product clients could try for themselves.</h2>
         <figure class="story-illustration case-header-visual">
             <%= image_tag "geo-header-scan.jpg", alt: "Hand-drawn person scanning a landscape of changing signals with a magnifying glass" %>
         </figure>
     </section>
 
     <section id="cs-situation">
-        <h3>The gap</h3>
-        <p>People were asking ChatGPT, Claude, and Perplexity for recommendations and explanations alongside their Google searches. A brand could perform well in search and have little presence in those answers. Search rankings gave one view of a brand. AI answers gave another. The first question for GEO was simple: how could a brand see its position from a buyer's point of view? The second was practical: a website is a structured source that AI systems read and cite, so an agent could audit one against the criteria that matter.</p>
-        <p>Our search and strategy experts already had a useful manual audit, but it took weeks to assemble and was usually a one-off. The first GEO prototype was built in about four hours during the February 2026 <a href="/launchpad">Launchpad</a> hackathon. It drew strong feedback from staff in the prototype directory, and it was one of three working prototypes we put in front of a beverage client that spring. Between that internal signal and what we were hearing from clients about the problems they wanted help with, we promoted GEO and wrote its MVP spec. Audience Lab was the first Launchpad concept to reach a live MVP. GEO followed a few weeks later. The job was to turn that audit into a repeatable product that someone outside the agency could understand quickly and choose to continue.</p>
+        <h3>The client question</h3>
+        <p>In early 2026, Mod Op's clients were asking how their brands appeared when someone asked an AI assistant for a recommendation. They wanted to know whether they were mentioned, which competitors appeared alongside them, and what they could do about it.</p>
+        <p>Our search and strategy teams had a manual audit for those questions. It took weeks to assemble, and covering more clients or more buyer perspectives would have meant more staff time. I worked with them to turn it into GEO by Mod Op: a free automated audit, with a paid program for clients who want deeper analysis and help acting on it.</p>
     </section>
 
     <section id="cs-role">
         <h3>What I owned</h3>
-        <p>I took GEO from a hackathon prototype through scope, engineering design, and MVP into a live product in about four months. I directed the design and build, worked with Mod Op's search and strategy experts to turn their manual audit into a repeatable experience, defined the reporting and scoring framework with them, and connected the free audit to the paid program. I stayed involved through stakeholder alignment, go-to-market, and the June 2026 launch.</p>
+        <p>I led the product from a February 2026 hackathon prototype to a live release on June 18, 2026. I wrote the MVP specification, directed design and engineering, and developed the reporting framework and the commercial offer with our search and strategy experts, who supplied the domain expertise behind the audit.</p>
+    </section>
+
+    <section id="cs-hack">
+        <h3>Starting with the manual audit</h3>
+        <p>The first prototype took about four hours during an internal hackathon in February 2026, one of a series of prototyping sprints I ran that spring. (The <a href="/launchpad">Launchpad case study</a> covers the program.) Colleagues responded well to it in the prototype directory, and it was one of three working prototypes we showed a beverage client. Some clients saw AI visibility as a question none of their existing vendors had taken responsibility for. Those conversations moved GEO to the front of the roadmap.</p>
+        <p>We then had to decide what an automated audit should cover. A single prompt could not stand in for every buyer's experience, so the audit would test a set of likely buyer questions. We also wanted to examine the brand's website, since it is the material AI systems read and cite when they describe a brand. The MVP combined the two.</p>
     </section>
 
     <section id="cs-audit">
-        <h3>The product decision</h3>
+        <h3>What the report shows</h3>
         <figure class="geo-walkthrough">
             <button type="button" class="geo-pip-trigger" data-geo-pip-trigger data-video-src="/geo-homepage-walkthrough.mp4" data-video-poster="<%= image_path("geo-homepage-first-frame.jpg") %>" data-video-title="GEO Landing Page Demo" aria-controls="geo-pip" aria-label="Play the GEO Landing Page Demo video">
                 <%= image_tag "geo-homepage-first-frame.jpg", alt: "" %>
                 <span class="geo-pip-trigger__play" aria-hidden="true">▶</span>
             </button>
         </figure>
-        <p>The free audit begins with brand and category research, then tests the questions buyers are likely to ask across ChatGPT, Claude, and Perplexity. The report shows where the brand appears, how often it is cited, and how it compares with named competitors.</p>
-        <p>The interface was designed in Claude Design with the Mod Op brand skill enabled, the same style guide I had written as an agent skill during the hackathon, so the product looked like Mod Op from its first screen.</p>
-        <p>The score is a starting point. The useful part is the evidence behind it: the prompts a brand appears for, the questions it is missing, the competitors winning attention, and the citations each engine returns. That gives a team something concrete to discuss and a clearer view of where the brand can improve.</p>
+        <p>The audit starts with research into the brand and its category, then tests likely buyer questions across ChatGPT, Claude, and Perplexity. The report shows where the brand appears in those responses, how often it is cited, and which competitors are named.</p>
+        <p>We included the prompts, answers, and citations behind the score so a team could examine the findings themselves. A missing mention or an unexpected source gives someone a specific thing to investigate. The report describes the responses the audit sampled, not every answer a buyer might receive.</p>
     </section>
 
     <section id="cs-framework">
@@ -47,15 +53,14 @@
                 <span class="geo-pip-trigger__play" aria-hidden="true">▶</span>
             </button>
         </figure>
-        <p>The GEO Periodic Table organizes 25 factors into a practical review of content quality, structured data, brand and entity signals, trustworthiness, performance, and engagement. Each factor points to work a team can take on.</p>
-        <p>The audit works through those factors in an agentic sequence of research, prompt testing, comparison, and synthesis. The results page makes that depth legible: a team can see how each factor was assessed, understand where the brand stands, and see which changes are likely to matter first.</p>
-        <p>The report becomes a clear handoff from diagnosis to a conversation about what to do next.</p>
+        <p>We organized the website assessment into the GEO Periodic Table, a framework of 25 factors covering content quality, structured data, brand and entity signals, trustworthiness, performance, and engagement. The system gathers evidence for each factor and assesses the site against it.</p>
+        <p>The results page explains how each factor was assessed and identifies potential improvements for the team to investigate. The framework gives our search experts and clients a common way to review the findings. It does not promise that changing a factor will produce a particular answer from an AI engine.</p>
     </section>
 
     <section id="cs-funnel">
-        <h3>From audit to program</h3>
-        <p>We designed the free audit to be useful on its own. From there, the paid program offers a deeper baseline, a cross-channel plan, and ongoing measurement for teams that want help improving the result. The handoff had to feel like the next useful step in the same conversation.</p>
-        <p>The audit went live on June 18, 2026. Eight weeks later, Mod Op launched it publicly and used it to publish the GEO 50, a ranking of 50 major brands across eight categories. I had left by then and was not part of the benchmark. The company kept shipping on the system we built.</p>
+        <h3>Deciding what to give away</h3>
+        <p>We spent a lot of time on the boundary between the free audit and the paid program. The free report had to be useful on its own: an assessment someone could take to their team even if they never hired us. The paid program adds a deeper baseline, a cross-channel plan, and ongoing measurement with the agency's search experts, so its job is to help a client investigate the findings and make changes over time.</p>
+        <p>The audit went live on June 18, 2026.</p>
         <figure class="story-illustration">
             <%= image_tag "geo-cultivated-signal.jpg", alt: "Hand-drawn person tending a growing tree of signals and ideas" %>
         </figure>
@@ -63,14 +68,15 @@
 
     <section id="cs-learned">
         <h3>What I learned</h3>
-        <p>We spent a lot of time deciding how much the audit should give away. The answer turned out more generous than I first expected. If someone could leave with a clear understanding of their position, they had a reason to trust the paid program. The audit became the first step in the relationship, and the paid program had a clear job: help the team act on what it had learned.</p>
+        <p>I ended up favoring a more generous free report than I first expected. My reasoning was that a clear read on their position would give a team a reason to trust the people who produced it, and that the paid program would be easier to explain once the free audit had done its work. Whether that holds up is a question for the numbers Mod Op collects from here. It was the right call for the product we could ship in June.</p>
+        <p>Translating a manual process into an automation also showed me how much of the original practice was doing quiet work. The weeks our experts spent on an audit included moments to align with the client, ask a question, and apply judgment, and an automated pipeline skips those affordances unless you design them back in. The balance between agent-driven and human-driven steps is still a product decision, and getting it right is what lets you optimize for quality and speed at the same time.</p>
     </section>
 
     <section id="cs-sources">
         <h3>Links</h3>
         <ul class="source-list">
             <li>
-                <a href="https://geo.modop.ai" target="_blank">GEO</a>
+                <a href="https://geo.modop.ai" target="_blank">GEO by Mod Op</a>
                 <span class="source-list__detail">geo.modop.ai · live service and free audit application.</span>
             </li>
             <li>

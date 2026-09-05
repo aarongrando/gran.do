@@ -9,7 +9,7 @@
 
     <section id="cs-top">
         <h1>Mod Heat</h1>
-        <h2>A brand-aware trend product I took from an early 2024 concept through executive approval and a Q4 release.</h2>
+        <h2>A daily, brand-aware read on what is happening in the world, with ideas for how each client could respond.</h2>
         <figure class="story-illustration case-header-visual">
             <%= image_tag "mod-heat-focal-point.jpg", alt: "Hand-drawn hand reaching toward a focused signal held in a shared bowl" %>
         </figure>
@@ -17,32 +17,58 @@
 
     <section id="cs-problem">
         <h3>The tension</h3>
-        <p>At agencies, a trend response often starts with one person noticing something in the news and bringing it to a meeting. The team then weighs brand fit, timing, and risk. That takes time, and the moment can pass while the discussion is still going.</p>
-        <p>The agency already had listening tools. Mod Heat's job was to support the judgment that followed and connect it to a possible action.</p>
+        <p>Spend enough time in a creative agency and you get used to a particular kind of conversation: someone brings in a news story, a trend, or something a competitor just did, and asks whether a client should respond. The team works through the same questions. Does our audience care? Does the brand have a reason to participate? Is there still time? What could go wrong?</p>
+        <p>The agency already had listening tools. What interested me was the work after a story surfaced: interpreting it for a particular client and deciding whether it deserved creative attention. The same moment could be an opportunity for one brand, irrelevant to another, and a liability for a third. A useful product would need to understand both the moment and the brand.</p>
     </section>
 
     <section id="cs-role">
         <h3>What I owned</h3>
-        <p>I came up with Mod Heat in February 2024 and pitched it to the executive team that spring. I defined the product and scoring model, then directed the work through its Q4 release. I also connected it to our emerging agent work, which later influenced how we thought about Nexus.</p>
+        <p>I originated the concept in February 2024 and pitched it to Mod Op's executive team that April. With approval, I defined the product, the scoring model, and the concept-generation approach, contributed to the build, and directed the work through its first internal release in November 2024. It was Mod Op Innovation's first product launch.</p>
+        <p>The original pitch imagined several specialized agents working through different parts of the problem: what was happening, why it mattered to a particular audience, and what a brand might do about it. My job was to turn that idea into a product a team could use and decide what belonged in the first release.</p>
     </section>
 
     <section id="cs-insight">
-        <h3>The insight</h3>
-        <p>I started with the way brand teams already talk. The same news story can be useful for one client, irrelevant to another, and uncomfortable for a third. Audience, positioning, risk tolerance, and timing all change the answer.</p>
+        <h3>The scoring model</h3>
+        <p>Mod Heat scans news, industry sources, and social conversation each day, groups related signals into moments, and evaluates each one for a specific client. I built the scoring around four questions agency teams were already asking, and the framework took its name from them: Familiarity, Impact, Timing, and Safety. Moments are ranked by relevance, risk, and potential reach.</p>
+        <p>Brand knowledge had to be part of that evaluation from the beginning. Mod Heat's early Brand Agents supplied the client's strategy, voice, audience, and other approved context, so a signal was judged against something more useful than a brand name.</p>
+        <p>That was the central product decision: make the brand part of how the system judges a moment. By the time something reached a team's attention, it had already been considered in relation to the client they were working on.</p>
     </section>
 
     <section id="cs-system">
-        <h3>The agent-assisted turn</h3>
-        <p>Mod Heat scans news, curated industry sources, and social conversation every day and clusters what it finds into recognizable trends. It then scores each trend against a specific brand with a framework we called F.I.T.S.: familiarity, impact, timing, and safety. The output is a ranked view of moments by relevance, risk, and potential reach.</p>
+        <h3>Room to surprise us</h3>
+        <p>Every time Mod Heat qualified a moment for a client, it asked the Brand Agent for concepts on how the brand could respond. The agent carried the client's needs, products, strategy, voice, and audience, so the ideas were grounded in the brand from the start. Moments were re-evaluated daily, and the ideas were regenerated with them. Someone opening the feed found both a relevant story and possible ways into it.</p>
         <figure class="mod-heat-visual">
             <%= image_tag "mod-heat-case-study.gif", alt: "Mod Heat interface showing brand-aware trend signals" %>
         </figure>
-        <p>A promising signal could flow straight into a Brand Agent workflow. The agent, which carries the client's voice, standards, audience nuances, and risk guardrails, could summarize the moment, weigh it against the brand context, and draft activation concepts and first tactics, while the team made the final call.</p>
+        <p>I designed that process to introduce noise into idea generation, with an element of shuffling to keep the system exploring. A language model will happily produce a plausible answer that feels familiar. For creative work, I wanted the less obvious ideas to get a chance.</p>
+        <p>An AI judge then evaluated the candidates, and only the strongest were surfaced. The randomness broadened what the system considered. The judge decided what was worth putting in front of people. We wanted variety in the candidates and quality in the recommendations, and those turned out to be separate jobs.</p>
+        <p>Teams could take a moment into a Brand Agent conversation to develop it further. People still made the call about whether and how to respond, including when to hold back.</p>
+    </section>
+
+    <section id="cs-users">
+        <h3>Where it found its users</h3>
+        <%# TODO: add one real measure here if one exists (brands configured, moments scored per day, accounts in use). Nothing in the vault records one. %>
+        <p>The Growth team used Mod Heat to find reasons to reach out to clients and topics to raise when they did. It gave them a custom news feed for each account, with every story read through that client's priorities. A moment became the opening for a conversation about what was happening in the client's world.</p>
+        <p>The Organic Social team used it in their daily work. Social media both reflects and shapes culture, and a brand's window to participate can close quickly. Mod Heat became the feed the team checked for each client: which stories had an audience's attention, which were relevant to the brand, and where there was a reason to engage. The same signals supported two different actions, starting a client conversation and joining a public one.</p>
+    </section>
+
+    <section id="cs-foundation">
+        <h3>The foundation underneath</h3>
+        <p>Serving multiple clients made the requirements more demanding. Each client's view needed its own agency data and configuration. Confidential strategy and unreleased work had to stay within that client's boundaries. And the AI processing cost enough that we needed to separate the people who could configure the service and incur costs from the people who could simply use it.</p>
+        <p>So we made a shared foundation a requirement of the first release. The signal-processing work lived in Mod Heat. Accounts, organizations, permissions, and client configuration lived in a separate service, Nexus. At launch, the Brand Agents ran on OpenAI's Assistants API, and Nexus managed the user accounts, client details, and configuration around them. Both shipped in November 2024.</p>
+        <p>That separation gave later products somewhere to start. In 2025, we moved Brand Agents and their retrieval system into Nexus, where agents became something anyone at the agency could create, manage, and share. The <a href="/nexus">Orion and Nexus case study</a> follows that development.</p>
+    </section>
+
+    <section id="cs-building">
+        <h3>Learning while shipping</h3>
+        <p>Mod Heat was also the first product we built with Cursor. We picked it up in mid-2024, and I used it to contribute in a framework I had never worked in before, applying what I knew about engineering while learning the stack through the build.</p>
+        <p>As I later discussed on <a href="https://www.modop.com/podcasts/vibe-coding-the-future-of-ai-assisted-development-teams/" target="_blank" rel="noopener noreferrer">Leader Generation</a>, that experience changed how I wrote requirements. Breaking work into requests a coding assistant could understand forced me to be precise about the behavior we wanted. Reviewing, testing, and deciding whether to accept a change stayed with us.</p>
     </section>
 
     <section id="cs-changed">
-        <h3>The outcome</h3>
-        <p>The first release shipped internally in Q4 2024, and Mod Op <a href="https://www.modop.com/press/mod-op-expands-ai-suite-with-launch-of-mod-heat-ai-coach-and-ecommerce-agent/" target="_blank">launched Mod Heat publicly</a> in October 2025 as part of its AI suite. It is now <a href="https://www.modop.com/orion-ai/mod-heat/" target="_blank">part of Orion</a>. The product shortened the path from signal to action. Brand teams had a standing view of the moments worth discussing for each client, and an important one could move straight into an agent-assisted workflow. Client-facing moments are also served through Nexus MCP, the platform's Model Context Protocol integration, so a client's ranked moments can reach other AI tools and agents rather than living only in the Mod Heat interface. The context and decision logic we built here also gave our team an early model for applying brand context inside an AI product, which became useful as Nexus took shape.</p>
+        <h3>Where it stands</h3>
+        <p>After the November 2024 internal release, Mod Op <a href="https://www.modop.com/press/mod-op-expands-ai-suite-with-launch-of-mod-heat-ai-coach-and-ecommerce-agent/" target="_blank" rel="noopener noreferrer">announced Mod Heat publicly on October 2, 2025</a>. It became part of the Orion portfolio when that brand launched in July 2026.</p>
+        <p>The <a href="https://www.modop.com/orion-ai/mod-heat/" target="_blank" rel="noopener noreferrer">product</a> gives teams a standing view of relevant moments with concepts for how a brand might respond. Since the March 2026 <a href="/launchpad">Launchpad</a> sprint, a client's moments are also available through Nexus MCP, so an authorized external AI tool can read them under the platform's existing access controls and take them somewhere Mod Heat's own interface does not go.</p>
     </section>
 
     <section id="cs-learned">
@@ -50,24 +76,32 @@
             <%= image_tag "mod-heat-signal-field.jpg", alt: "Hand-drawn streams of cultural signals narrowing toward one clear point" %>
         </figure>
         <h3>What I learned</h3>
-        <p>Executive approval came in April, and the first release shipped in Q4. Most of my work between those points was deciding what belonged in the first version, what could wait, and how to keep the original idea intact as the scope changed.</p>
-        <p>It was also the first product we built with Cursor. We picked it up in mid-2024, and I built in a framework I had never used, learning it as the product took shape.</p>
+        <p>Mod Heat taught me to treat creative variation as something to design for. Giving an AI system room to explore and judging what it produced were separate jobs. The combination made room for less predictable ideas while keeping a standard for what reached the user.</p>
+        <p>It also taught me to watch what a product becomes once it meets real users. I designed Mod Heat for the people who make creative decisions about a brand. The Growth team picked it up as a way to know what to say to a client this week, a use I had not planned for and would not have prioritized. It turned out to be one of the product's most reliable habits. Since then I have tried to hold the first release loosely and let the second one be shaped by who actually shows up.</p>
     </section>
 
     <section id="cs-sources">
         <h3>Links</h3>
         <ul class="source-list">
             <li>
-                <a href="https://www.modop.com/orion-ai/mod-heat/" target="_blank">Mod Heat</a>
-                <span class="source-list__detail">Mod Op product page · public overview of the signal and brand-context workflow.</span>
+                <a href="https://www.modop.com/orion-ai/mod-heat/" target="_blank" rel="noopener noreferrer">Mod Heat</a>
+                <span class="source-list__detail">Mod Op product page · the signal, brand-context, and concept-generation workflow.</span>
             </li>
             <li>
-                <a href="https://www.modop.com/press/mod-op-expands-ai-suite-with-launch-of-mod-heat-ai-coach-and-ecommerce-agent/" target="_blank">Mod Op Expands AI Suite with Launch of Mod Heat, AI Coach and Ecommerce Agent</a>
+                <a href="https://www.modop.com/press/mod-op-expands-ai-suite-with-launch-of-mod-heat-ai-coach-and-ecommerce-agent/" target="_blank" rel="noopener noreferrer">Mod Op Expands AI Suite with Launch of Mod Heat, AI Coach and Ecommerce Agent</a>
                 <span class="source-list__detail">Mod Op press release · October 2025 public launch announcement.</span>
             </li>
             <li>
-                <a href="https://www.modop.com/podcasts/vibe-coding-the-future-of-ai-assisted-development-teams/" target="_blank">Vibe Coding: The Future of AI-Assisted Development Teams</a>
-                <span class="source-list__detail">Leader Generation podcast · the product-building workflow behind Mod Heat.</span>
+                <a href="https://www.modop.com/podcasts/vibe-coding-the-future-of-ai-assisted-development-teams/" target="_blank" rel="noopener noreferrer">Vibe Coding: The Future of AI-Assisted Development Teams</a>
+                <span class="source-list__detail">Leader Generation podcast · our experience building Mod Heat with AI coding assistance.</span>
+            </li>
+            <li>
+                <a href="/nexus">Orion and Nexus: the AI operating layer</a>
+                <span class="source-list__detail">Related case study · how Mod Heat's shared foundation grew into an agency-wide platform.</span>
+            </li>
+            <li>
+                <a href="/launchpad">Launchpad</a>
+                <span class="source-list__detail">Related case study · the prototyping program whose second sprint produced Nexus MCP.</span>
             </li>
         </ul>
     </section>
