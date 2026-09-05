@@ -8,6 +8,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
         <meta name="description" content="<%= page_description %>">
+        <% if action_name == "index" %>
+        <meta name="msvalidate.01" content="FDC44C179F35930AFEA192612EA01D33">
+        <% end %>
         <link rel="canonical" href="<%= canonical_page_url %>">
         <link rel="describedby" href="https://gran.do/llms.txt" type="text/plain">
         <script type="application/ld+json"><%= raw json_escape(page_structured_data(title: page_title, description: page_description).to_json) %></script>
