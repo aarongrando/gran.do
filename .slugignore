@@ -1,0 +1,3 @@
+# Preserve archived GIFs in git, but omit unused blog media from Heroku builds.
+# https://devcenter.heroku.com/articles/slug-compiler#ignoring-files-with-slugignore
+/app/assets/images/blog

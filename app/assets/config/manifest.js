@@ -1,4 +1,21 @@
-//= link_tree ../images
+// Only precompile images used by the site. Add new image dependencies here.
+//= link aaron-grando-og.png
+//= link geo-audit-results-first-frame.jpg
+//= link geo-cultivated-signal.jpg
+//= link geo-header-scan.jpg
+//= link geo-homepage-first-frame.jpg
+//= link launchpad-architecture-diagram.webp
+//= link launchpad-foundation-shelf.jpg
+//= link launchpad-observation-team.jpg
+//= link mod-chat-nexus-chat.gif
+//= link mod-heat-case-study.gif
+//= link mod-heat-focal-point.jpg
+//= link mod-heat-signal-field.jpg
+//= link mod-heat-working-table.jpg
+//= link nexus-branching-options.jpg
+//= link nexus-knowledge-layers-agent-stack-selected-user-choice.webp
+//= link orion-ecosystem.jpg
+//= link shield.svg
 //= link_tree ../../javascript .js
 //= link_tree ../../../vendor/javascript .js
 //= link_tree ../builds
