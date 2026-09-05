@@ -1,0 +1,24 @@
+# Aaron Grando — gran.do
+
+> Aaron Grando's professional portfolio and resume. Aaron is a Philadelphia-based AI product and technology leader, most recently VP, Creative Innovation at Mod Op.
+
+Aaron led a six-person product and engineering team and owned six products in Mod Op's AI portfolio. His background spans software engineering, creative technology, and product leadership. He is seeking his next full-time role in applied AI product leadership.
+
+The case studies describe Aaron's contributions to products built with colleagues at Mod Op. Nexus and Nexus Chat are internal platform names; Mod Op's public materials use Mod Engine and Mod Chat, and the broader portfolio became Orion in July 2026. The case studies explain the relationships and distinguish product scope, reporting periods, and the basis of outcome estimates.
+
+## Profile
+
+- [Aaron Grando](https://gran.do/): Professional overview, recent AI products, selected clients, talks, writing, and contact links.
+- [Resume](https://gran.do/resume): Career chronology, leadership scope, expertise, education, and public appearances.
+
+## Case studies
+
+- [Orion and Nexus](https://gran.do/nexus): Shared AI platform strategy, identity and permissions, brand knowledge, agents, chat, adoption measurement, and external tool integration.
+- [GEO by Mod Op](https://gran.do/geo): Turning a manual AI search visibility audit into a free automated product and an ongoing paid program.
+- [Launchpad](https://gran.do/launchpad): Prototype deployment and discovery, cross-team hackathons, and using feedback to guide product decisions.
+- [Mod Heat](https://gran.do/mod-heat): Brand-aware trend discovery, scoring cultural moments, creative idea generation, and lessons from shipping the product.
+
+## Optional
+
+- [LinkedIn](https://www.linkedin.com/in/aarongrando): Aaron Grando's professional profile.
+- [Orion launch announcement](https://www.modop.com/press/mod-op-unveils-orion-a-connected-intelligence-platform-redefining-the-creative-agency-model-for-the-ai-era/): Mod Op's July 2026 account of the platform and its reported outcomes.
