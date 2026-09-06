@@ -1,0 +1,4 @@
+<% measurement_id = ENV.fetch("GA4_MEASUREMENT_ID", "").strip %>
+<% if Rails.env.production? && measurement_id.match?(/\AG-[A-Z0-9]+\z/) %>
+  <%= javascript_include_tag "analytics", defer: true, data: { measurement_id: measurement_id, canonical_url: canonical_page_url } %>
+<% end %>

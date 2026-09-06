@@ -1680,6 +1680,7 @@
     </head>
     <body id="<%= params[:controller] %>" class="<%= params[:action] %><%= ' case-page' if %w[nexus geo launchpad mod_heat].include?(params[:action]) %>">
         <%= yield %>
+        <%= render "shared/analytics" %>
     </body>
     <%= render partial: 'shared/stache'%>
 </html>
