@@ -2,6 +2,23 @@
 
 ## Activation
 
+Activated September 6, 2026 under the existing site owner's Analytics account.
+The property is named **gran.do**, with a **gran.do website** web stream.
+The reporting timezone is America/New_York and the currency is USD.
+Account, property, and stream identifiers are kept out of this public repository;
+find them in the signed-in Analytics account. The production measurement ID is
+configured in Heroku.
+
+Heroku release v177 activates the tag through the production environment variable.
+Google's installation test detected the live tag successfully. All six public
+pages were checked for one analytics script with the correct ID and canonical URL.
+GA4 Realtime confirmed `page_view`, `section_view`, `content_progress`, and
+`portfolio_navigation` from a live Mod Heat to Nexus test. The navigation event
+included `content_id`, `content_group`, and `destination_id`; the destination
+value was verified as `nexus`. This test used `utm_source=qa`,
+`utm_medium=validation`, and `utm_campaign=ga4_setup`. No contact click was
+triggered during live validation, so the new contact key event has no test count.
+
 Set the production environment variable `GA4_MEASUREMENT_ID` to the gran.do web
 stream's `G-...` ID. The site does not load Google Analytics in development or
 when the ID is absent/invalid. The shared layout covers all six canonical pages.
@@ -27,7 +44,7 @@ Reading events reset on a new page load, so report users/sessions as well as cou
 
 ## GA4 property configuration
 
-Create event-scoped custom dimensions for:
+The following event-scoped custom dimensions were registered on September 6, 2026:
 
 - Content ID: `content_id`
 - Section ID: `section_id`
@@ -39,8 +56,9 @@ Create event-scoped custom dimensions for:
 - Contact method: `contact_method`
 
 `content_group`, `link_domain`, and `link_url` use GA4's existing parameters.
-Mark only `contact_click` as the primary key event initially. Keep reading, demo,
-LinkedIn, and resume clicks as secondary diagnostic signals so routine browsing
+`contact_click` is registered as a key event, counted once per session, with no
+default monetary value. Google's default `purchase` key event remains unused.
+Keep reading, demo, LinkedIn, and resume clicks as secondary diagnostic signals so routine browsing
 does not inflate the apparent number of inquiries.
 
 Enhanced measurement can remain enabled for its standard events. Its `scroll`
@@ -50,6 +68,9 @@ The portfolio has custom HTML5 demos, so enhanced YouTube video tracking does no
 replace `demo_open`. No video completion claim is made for the autoplay loops.
 
 ## Three useful reports
+
+The default Reports snapshot is set to Google's User behavior template.
+The following additional report configurations are recommended:
 
 1. **Content performance:** Pages and screens, grouped by Content group and
    page path. Compare users, views, average engagement time, and contact key
