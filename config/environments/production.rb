@@ -1,4 +1,5 @@
 require "active_support/core_ext/integer/time"
+require_relative "../../lib/fingerprinted_asset_cache"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -22,6 +23,7 @@ Rails.application.configure do
 
   # Enable static file serving from the `/public` folder (turn off if using NGINX/Apache for it).
   config.public_file_server.enabled = true
+  config.middleware.insert_before ActionDispatch::Static, FingerprintedAssetCache
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
